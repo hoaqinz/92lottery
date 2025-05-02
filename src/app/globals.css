@@ -73,7 +73,7 @@
   /* Set body background and text colors */
   body {
     background-color: #f6f1f1;
-    @apply bg-background text-foreground;
+    @apply bg-white text-gray-900;
     overflow-x: hidden;
   }
 }
