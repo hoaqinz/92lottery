@@ -13,7 +13,7 @@ const nextConfig = {
       "images.unsplash.com",
       "ext.same-assets.com",
       "ugc.same-assets.com",
-      "92lottery.com",
+      "92lottery.dev",
     ],
     remotePatterns: [
       {
@@ -38,7 +38,7 @@ const nextConfig = {
       },
       {
         protocol: "https",
-        hostname: "92lottery.com",
+        hostname: "92lottery.dev",
         pathname: "/**",
       },
     ],

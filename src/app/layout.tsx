@@ -12,13 +12,13 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "vi_VN",
-    url: "https://92lottery.com",
+    url: "https://92lottery.dev",
     title: "92Lottery - Cá cược xổ số & Casino trực tuyến hàng đầu",
     description: "92Lottery - Trang web cá cược xổ số, lottery, thể thao và casino trực tuyến hàng đầu Việt Nam. Đăng ký ngay để nhận khuyến mãi hấp dẫn.",
     siteName: "92Lottery",
     images: [
       {
-        url: "https://92lottery.com/images/og-image.jpg",
+        url: "https://92lottery.dev/images/og-image.jpg",
         width: 1200,
         height: 630,
         alt: "92Lottery - Cá cược xổ số & Casino trực tuyến",
@@ -30,10 +30,10 @@ export const metadata: Metadata = {
     title: "92Lottery - Cá cược xổ số & Casino trực tuyến hàng đầu",
     description: "92Lottery - Trang web cá cược xổ số, lottery, thể thao và casino trực tuyến hàng đầu Việt Nam.",
     creator: "@92lottery",
-    images: ["https://92lottery.com/images/twitter-image.jpg"],
+    images: ["https://92lottery.dev/images/twitter-image.jpg"],
   },
   alternates: {
-    canonical: "https://92lottery.com",
+    canonical: "https://92lottery.dev",
   },
   robots: {
     index: true,

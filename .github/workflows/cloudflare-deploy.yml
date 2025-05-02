@@ -27,8 +27,8 @@ jobs:
         run: npm run build
         env:
           NODE_ENV: production
-          NEXT_PUBLIC_BASE_URL: https://92lottery.com
-          NEXT_PUBLIC_API_URL: https://92lottery.com/api
+          NEXT_PUBLIC_BASE_URL: https://92lottery.dev
+          NEXT_PUBLIC_API_URL: https://92lottery.dev/api
 
       - name: Deploy to Cloudflare Pages
         uses: cloudflare/pages-action@v1

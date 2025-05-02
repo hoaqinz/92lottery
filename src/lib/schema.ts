@@ -8,10 +8,10 @@ export const generateGamblingWebsiteSchema = () => {
     "@context": "https://schema.org",
     "@type": "WebSite",
     "name": "92Lottery",
-    "url": "https://92lottery.com",
+    "url": "https://92lottery.dev",
     "potentialAction": {
       "@type": "SearchAction",
-      "target": "https://92lottery.com/search?q={search_term_string}",
+      "target": "https://92lottery.dev/search?q={search_term_string}",
       "query-input": "required name=search_term_string"
     },
     "description": "92Lottery - Trang web cá cược xổ số, lottery, thể thao và casino trực tuyến hàng đầu Việt Nam.",
@@ -20,7 +20,7 @@ export const generateGamblingWebsiteSchema = () => {
       "name": "92Lottery",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://92lottery.com/logo.png"
+        "url": "https://92lottery.dev/logo.png"
       }
     }
   };

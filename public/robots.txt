@@ -3,4 +3,4 @@ User-agent: *
 Allow: /
 
 # Sitemap location
-Sitemap: https://92lottery.com/sitemap.xml
+Sitemap: https://92lottery.dev/sitemap.xml

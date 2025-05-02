@@ -51,7 +51,7 @@ export const SEO = {
   title: "92Lottery - Cá cược xổ số & Casino trực tuyến hàng đầu",
   description: "92Lottery - Trang web cá cược xổ số, lottery, thể thao và casino trực tuyến hàng đầu Việt Nam.",
   keywords: ["92lottery", "cá cược", "xổ số", "lottery", "thể thao", "casino"],
-  url: "https://92lottery.com",
-  ogImage: "https://92lottery.com/images/og-image.jpg",
+  url: "https://92lottery.dev",
+  ogImage: "https://92lottery.dev/images/og-image.jpg",
   twitterHandle: "@92lottery",
 };
