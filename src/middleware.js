@@ -1,14 +1,7 @@
 import { NextResponse } from 'next/server';
 
 export function middleware(request) {
-  const url = request.nextUrl.clone();
-
-  // Nếu đường dẫn là root, chuyển hướng đến app router
-  if (url.pathname === '/') {
-    return NextResponse.rewrite(new URL('/', request.url));
-  }
-
-  // Xử lý các routes khác
+  // Xử lý các routes
   return NextResponse.next();
 }
 

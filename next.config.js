@@ -59,27 +59,7 @@ const nextConfig = {
   poweredByHeader: false, // Tắt header X-Powered-By
   reactStrictMode: true, // Bật strict mode cho React
 
-  // Cấu hình App Router và Pages Router
-  experimental: {
-    appDir: true, // Bật App Router
-  },
 
-  // Tối ưu hóa webpack
-  webpack: (config, { isServer }) => {
-    // Tối ưu hóa bundle size
-    config.optimization.minimize = true;
-
-    // Chia nhỏ các chunks
-    config.optimization.splitChunks = {
-      chunks: 'all',
-      maxInitialRequests: 25,
-      maxAsyncRequests: 25,
-      minSize: 20000,
-      maxSize: 20 * 1024 * 1024, // 20MB max size
-    };
-
-    return config;
-  },
 
   // Cấu hình đường dẫn
   trailingSlash: false,
