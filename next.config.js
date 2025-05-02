@@ -62,7 +62,7 @@ const nextConfig = {
 
 
   // Cấu hình đường dẫn
-  trailingSlash: true,
+  trailingSlash: false,
 
   // Cấu hình headers
   async headers() {
