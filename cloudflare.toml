@@ -1,0 +1,26 @@
+[build]
+command = "npm run build"
+publish = ".next"
+node_version = "18"
+
+[build.environment]
+NODE_VERSION = "18"
+NPM_VERSION = "9"
+
+[site]
+bucket = ".next"
+entry-point = "."
+
+[[redirects]]
+from = "/*"
+to = "/index.html"
+status = 200
+
+[[headers]]
+for = "/*"
+  [headers.values]
+  X-Frame-Options = "DENY"
+  X-XSS-Protection = "1; mode=block"
+  X-Content-Type-Options = "nosniff"
+  Referrer-Policy = "strict-origin-when-cross-origin"
+  Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://ext.same-assets.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://ext.same-assets.com https://ugc.same-assets.com; font-src 'self' data:; connect-src 'self' https://92lottery.com;"
