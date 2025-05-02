@@ -67,7 +67,7 @@
 
   /* Apply border color */
   * {
-    @apply border-border;
+    @apply border-gray-200;
   }
 
   /* Set body background and text colors */
