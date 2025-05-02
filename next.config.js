@@ -55,7 +55,8 @@ const nextConfig = {
   },
 
   // Cấu hình tối ưu hóa
-  swcMinify: true,
+  // swcMinify đã được bỏ trong Next.js 15.x
+  // swcMinify: true,
 
   // Cấu hình đường dẫn
   trailingSlash: false,

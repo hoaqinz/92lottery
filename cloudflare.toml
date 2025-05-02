@@ -1,10 +1,10 @@
 [build]
 command = "npm run build"
 publish = ".next"
-node_version = "18"
+node_version = "18.20.8"
 
 [build.environment]
-NODE_VERSION = "18"
+NODE_VERSION = "18.20.8"
 NPM_VERSION = "9"
 
 [site]
