@@ -15,6 +15,10 @@
 
 # next.js
 /.next/
+/.next/cache/
+/.next/webpack/
+/.next/server/chunks/webpack.js
+/.next/static/webpack/
 /out/
 
 # production

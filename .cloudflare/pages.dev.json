@@ -2,7 +2,13 @@
   "build": {
     "command": "npm run build",
     "output_directory": ".next",
-    "root_directory": "/"
+    "root_directory": "/",
+    "excludes": [
+      ".next/cache/**",
+      ".next/webpack/**",
+      ".next/server/chunks/webpack.js",
+      ".next/static/webpack/**"
+    ]
   },
   "compatibility_flags": ["nodejs_compat"],
   "compatibility_date": "2023-12-01",
@@ -12,6 +18,7 @@
     "NODE_ENV": "production",
     "NEXT_PUBLIC_BASE_URL": "https://92lottery.dev",
     "NEXT_PUBLIC_API_URL": "https://92lottery.dev/api",
-    "NEXT_TELEMETRY_DISABLED": "1"
+    "NEXT_TELEMETRY_DISABLED": "1",
+    "NODE_OPTIONS": "--max_old_space_size=4096"
   }
 }

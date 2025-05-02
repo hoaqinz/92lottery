@@ -55,8 +55,27 @@ const nextConfig = {
   },
 
   // Cấu hình tối ưu hóa
-  // swcMinify đã được bỏ trong Next.js 15.x
-  // swcMinify: true,
+  output: 'standalone', // Tạo build độc lập
+  compress: true, // Nén các file tĩnh
+  poweredByHeader: false, // Tắt header X-Powered-By
+  reactStrictMode: true, // Bật strict mode cho React
+
+  // Tối ưu hóa webpack
+  webpack: (config, { isServer }) => {
+    // Tối ưu hóa bundle size
+    config.optimization.minimize = true;
+
+    // Chia nhỏ các chunks
+    config.optimization.splitChunks = {
+      chunks: 'all',
+      maxInitialRequests: 25,
+      maxAsyncRequests: 25,
+      minSize: 20000,
+      maxSize: 20 * 1024 * 1024, // 20MB max size
+    };
+
+    return config;
+  },
 
   // Cấu hình đường dẫn
   trailingSlash: false,
