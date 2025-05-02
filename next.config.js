@@ -62,8 +62,7 @@ const nextConfig = {
   // Cấu hình cho Cloudflare Pages
   images: {
     unoptimized: true, // Tắt tối ưu hóa hình ảnh để tương thích với Cloudflare
-  }
-
+  },
 
 
   // Cấu hình đường dẫn
