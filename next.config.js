@@ -62,7 +62,7 @@ const nextConfig = {
   // Cấu hình App Router và Pages Router
   experimental: {
     appDir: true, // Bật App Router
-  }
+  },
 
   // Tối ưu hóa webpack
   webpack: (config, { isServer }) => {
