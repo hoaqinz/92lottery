@@ -55,7 +55,6 @@ const nextConfig = {
   },
 
   // Cấu hình tối ưu hóa
-  output: 'standalone', // Tạo build độc lập
   compress: true, // Nén các file tĩnh
   poweredByHeader: false, // Tắt header X-Powered-By
   reactStrictMode: true, // Bật strict mode cho React
