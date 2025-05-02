@@ -1,7 +1,11 @@
+name = "92lottery"
+compatibility_date = "2023-12-01"
+
 [build]
 command = "npm run build"
-publish = ".next"
-node_version = "18.20.8"
+
+[site]
+bucket = ".next"
 
 [build.environment]
 NODE_VERSION = "18.20.8"
@@ -9,20 +13,28 @@ NPM_VERSION = "9"
 NODE_ENV = "production"
 NEXT_PUBLIC_BASE_URL = "https://92lottery.dev"
 NEXT_PUBLIC_API_URL = "https://92lottery.dev/api"
+NEXT_TELEMETRY_DISABLED = "1"
 
-[site]
-bucket = ".next"
-entry-point = "."
+# Specify the directory where your built assets will be located
+[site.build]
+upload.format = "directory"
+output_dir = ".next"
 
-[[redirects]]
-from = "/*"
-to = "/index.html"
-status = 200
+# Configure headers
+[[headers]]
+pattern = "/*"
+[headers.cache]
+cache_control = "public, max-age=86400"
 
 [[headers]]
-for = "/*"
-  [headers.values]
-  X-Frame-Options = "DENY"
-  X-XSS-Protection = "1; mode=block"
-  X-Content-Type-Options = "nosniff"
-  Referrer-Policy = "strict-origin-when-cross-origin"
+pattern = "/*.(js|css|svg|jpg|jpeg|png|gif|ico|woff|woff2|ttf|otf)"
+[headers.cache]
+cache_control = "public, max-age=31536000, immutable"
+
+[[headers]]
+pattern = "/*"
+[headers.response]
+X-Frame-Options = "DENY"
+X-XSS-Protection = "1; mode=block"
+X-Content-Type-Options = "nosniff"
+Referrer-Policy = "strict-origin-when-cross-origin"
