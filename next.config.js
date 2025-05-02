@@ -59,6 +59,11 @@ const nextConfig = {
   poweredByHeader: false, // Tắt header X-Powered-By
   reactStrictMode: true, // Bật strict mode cho React
 
+  // Cấu hình App Router và Pages Router
+  experimental: {
+    appDir: true, // Bật App Router
+  }
+
   // Tối ưu hóa webpack
   webpack: (config, { isServer }) => {
     // Tối ưu hóa bundle size

@@ -6,7 +6,7 @@
   "author": "92Lottery",
   "scripts": {
     "dev": "next dev",
-    "build": "next build && rm -rf .next/cache && cp -r public/* .next/",
+    "build": "next build && rm -rf .next/cache && cp -r public/* .next/ && touch .next/BUILD_ID",
     "start": "next start",
     "lint": "next lint",
     "format": "prettier --write ."
