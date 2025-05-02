@@ -1,0 +1,17 @@
+{
+  "build": {
+    "command": "npm run build",
+    "output_directory": ".next",
+    "root_directory": "/"
+  },
+  "compatibility_flags": ["nodejs_compat"],
+  "compatibility_date": "2023-12-01",
+  "env": {
+    "NODE_VERSION": "18.20.8",
+    "NPM_VERSION": "9",
+    "NODE_ENV": "production",
+    "NEXT_PUBLIC_BASE_URL": "https://92lottery.dev",
+    "NEXT_PUBLIC_API_URL": "https://92lottery.dev/api",
+    "NEXT_TELEMETRY_DISABLED": "1"
+  }
+}
