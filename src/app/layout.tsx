@@ -1,8 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import "./globals.css";
 import { generateGamblingWebsiteSchema } from "@/lib/schema";
-import { Analytics } from "@vercel/analytics/react";
-import { SpeedInsights } from "@vercel/speed-insights/next";
 
 export const metadata: Metadata = {
   title: "92Lottery - Cá cược thể thao & Casino trực tuyến | Xổ số, Lottery",
@@ -80,8 +78,6 @@ export default function RootLayout({
         <div className="w-[420px] min-h-screen bg-white rounded-lg shadow-2xl relative overflow-x-hidden max-w-full">
           {children}
         </div>
-        <Analytics />
-        <SpeedInsights />
       </body>
     </html>
   );
