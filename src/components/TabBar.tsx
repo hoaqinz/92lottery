@@ -71,7 +71,7 @@ const tabItems: TabItem[] = [
 
 export default function TabBar() {
   return (
-    <footer className="fixed left-0 right-0 bottom-0 w-full max-w-[420px] mx-auto z-10 safe-bottom">
+    <footer className="fixed left-1/2 -translate-x-1/2 bottom-0 w-full max-w-[420px] z-10 safe-bottom">
       <nav
         className="grid grid-cols-5 shadow px-1 rounded-t-2xl h-[69px] w-full"
         style={{

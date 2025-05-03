@@ -27,11 +27,19 @@
   }
 }
 
-/* Fix footer jumping issue */
+/* Fix footer jumping issue but allow horizontal scrolling */
 footer nav {
   display: grid;
   grid-template-columns: repeat(5, minmax(0, 1fr));
   width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none; /* Firefox */
+}
+
+footer nav::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Edge */
 }
 
 footer nav button {
