@@ -103,7 +103,7 @@ const IncomeRanking: React.FC = () => {
                   }}
                 ></div>
                 <Image
-                  src="/anh/bxh/crow 2.png"
+                  src="/anh/bxh/crow2.png"
                   alt="Crown"
                   width={30}
                   height={30}
@@ -111,7 +111,7 @@ const IncomeRanking: React.FC = () => {
                   unoptimized
                 />
                 <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2" style={{ width: '60px', height: '30px' }}>
-                  <img src="/anh/bxh/no 2.png" alt="NO2" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
+                  <img src="/anh/bxh/no2.png" alt="NO2" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
                 </div>
                 <div className="absolute top-20 left-1/2 transform -translate-x-[53%] text-center w-28 bg-white bg-opacity-20 rounded p-1" style={{ zIndex: 10 }}>
                   <div className="text-xs font-medium text-white">{rankingData[1]?.username}</div>
@@ -131,7 +131,7 @@ const IncomeRanking: React.FC = () => {
                   }}
                 ></div>
                 <Image
-                  src="/anh/bxh/crow 1.png"
+                  src="/anh/bxh/crow1.png"
                   alt="Crown"
                   width={40}
                   height={40}
@@ -139,7 +139,7 @@ const IncomeRanking: React.FC = () => {
                   unoptimized
                 />
                 <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2" style={{ width: '70px', height: '35px' }}>
-                  <img src="/anh/bxh/no 1.png" alt="NO1" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
+                  <img src="/anh/bxh/no1.png" alt="NO1" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
                 </div>
                 <div className="absolute top-28 left-1/2 transform -translate-x-1/2 text-center w-32" style={{ zIndex: 10 }}>
                   <div className="text-sm font-medium text-white drop-shadow-md">{rankingData[0]?.username}</div>
@@ -159,7 +159,7 @@ const IncomeRanking: React.FC = () => {
                   }}
                 ></div>
                 <Image
-                  src="/anh/bxh/crow 3.png"
+                  src="/anh/bxh/crow3.png"
                   alt="Crown"
                   width={30}
                   height={30}
@@ -167,7 +167,7 @@ const IncomeRanking: React.FC = () => {
                   unoptimized
                 />
                 <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2" style={{ width: '60px', height: '30px' }}>
-                  <img src="/anh/bxh/no 3.png" alt="NO3" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
+                  <img src="/anh/bxh/no3.png" alt="NO3" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
                 </div>
                 <div className="absolute top-20 left-1/2 transform -translate-x-[47%] text-center w-28 bg-white bg-opacity-20 rounded p-1" style={{ zIndex: 10 }}>
                   <div className="text-xs font-medium text-white">{rankingData[2]?.username}</div>

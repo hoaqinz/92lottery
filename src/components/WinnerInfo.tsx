@@ -14,22 +14,22 @@ type Winner = {
 
 // Danh sách avatar
 const avatars = [
-  "/images/avatars/avata.png",
-  "/images/avatars/avata2.png",
-  "/images/avatars/avata3.png",
-  "/images/avatars/avata4.png",
-  "/images/avatars/avata5.png",
-  "/images/avatars/avata6.png",
-  "/images/avatars/avata7.png",
+  "/anh/avata/avata.png",
+  "/anh/avata/avata2.png",
+  "/anh/avata/avata3.png",
+  "/anh/avata/avata4.png",
+  "/anh/avata/avata5.png",
+  "/anh/avata/avata6.png",
+  "/anh/avata/avata7.png",
 ];
 
 // Danh sách game icon
 const gameIcons = [
-  "/images/games/game 1.png",
-  "/images/games/game 2.png",
-  "/images/games/game 3.png",
-  "/images/games/game 4.png",
-  "/images/games/game 5.png",
+  "/anh/icongame/game1.png",
+  "/anh/icongame/game2.png",
+  "/anh/icongame/game3.png",
+  "/anh/icongame/game4.png",
+  "/anh/icongame/game5.png",
 ];
 
 // Tạo tên người dùng ngẫu nhiên
