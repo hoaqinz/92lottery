@@ -8,6 +8,9 @@
       ".next/webpack/**",
       ".next/server/chunks/webpack.js",
       ".next/static/webpack/**"
+    ],
+    "includes": [
+      "public/**/*"
     ]
   },
   "compatibility_flags": ["nodejs_compat"],
