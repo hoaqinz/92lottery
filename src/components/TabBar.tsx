@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import { useAuth } from "@/contexts/AuthContext";
 
 type TabItem = {
   icon: React.ReactNode;
@@ -70,6 +71,15 @@ const tabItems: TabItem[] = [
 ];
 
 export default function TabBar() {
+  const { openAuthPopup, isLoggedIn } = useAuth();
+
+  const handleItemClick = () => {
+    if (!isLoggedIn) {
+      openAuthPopup();
+    }
+    // Nếu đã đăng nhập, xử lý chuyển hướng hoặc mở tính năng tương ứng
+  };
+
   return (
     <footer className="fixed left-1/2 -translate-x-1/2 bottom-0 w-full max-w-[420px] z-10 safe-bottom">
       <nav
@@ -88,6 +98,7 @@ export default function TabBar() {
                   <button
                     className="bg-[#e62e2e] w-[48px] h-[48px] rounded-full -mt-10 flex items-center justify-center border border-white shadow-lg hover:bg-[#d42a2a] transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#e62e2e] relative overflow-visible marketing-button"
                     aria-label={item.label}
+                    onClick={handleItemClick}
                   >
                     {/* Hiệu ứng sóng lan tỏa */}
                     <div className="absolute inset-0 rounded-full overflow-hidden">
@@ -107,9 +118,12 @@ export default function TabBar() {
               </>
             ) : (
               <div className="flex-1 flex items-center justify-center">
-                <div className="w-[22px] h-[22px] flex items-center justify-center text-gray-600">
+                <button
+                  className="w-[22px] h-[22px] flex items-center justify-center text-gray-600 focus:outline-none"
+                  onClick={handleItemClick}
+                >
                   {item.icon}
-                </div>
+                </button>
               </div>
             )}
             {/* Tất cả các text đều nằm ở cùng một vị trí */}

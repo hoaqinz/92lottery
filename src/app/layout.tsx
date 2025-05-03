@@ -1,6 +1,8 @@
 import type { Metadata, Viewport } from "next";
 import "./globals.css";
 import { generateGamblingWebsiteSchema } from "@/lib/schema";
+import { AuthProvider } from "@/contexts/AuthContext";
+import AuthPopup from "@/components/AuthPopup";
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://92lottery.dev'),
@@ -97,9 +99,12 @@ export default function RootLayout({
         />
       </head>
       <body className="flex justify-center min-h-screen items-start bg-gray-100 antialiased">
-        <div className="w-full max-w-[420px] min-h-screen bg-white rounded-lg shadow-2xl relative overflow-x-hidden">
-          {children}
-        </div>
+        <AuthProvider>
+          <div className="w-full max-w-[420px] min-h-screen bg-white rounded-lg shadow-2xl relative overflow-x-hidden">
+            {children}
+            <AuthPopup />
+          </div>
+        </AuthProvider>
       </body>
     </html>
   );

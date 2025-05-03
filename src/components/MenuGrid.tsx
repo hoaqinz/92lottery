@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import MenuBadge from "./MenuBadge";
+import { useAuth } from "@/contexts/AuthContext";
 
 type MenuItem = {
   icon: string;
@@ -71,6 +72,15 @@ const menuItems: MenuItem[] = [
 ];
 
 export default function MenuGrid() {
+  const { openAuthPopup, isLoggedIn } = useAuth();
+
+  const handleItemClick = () => {
+    if (!isLoggedIn) {
+      openAuthPopup();
+    }
+    // Nếu đã đăng nhập, xử lý chuyển hướng hoặc mở tính năng tương ứng
+  };
+
   return (
     <div className="dock-container py-2 bg-white" style={{ overflow: 'visible' }}>
       <div className="dock" style={{ overflow: 'visible' }}>
@@ -81,6 +91,7 @@ export default function MenuGrid() {
                 className="flex flex-col items-center focus:outline-none focus:ring-2 focus:ring-[#e62e2e] rounded-lg p-0.5"
                 aria-label={item.description}
                 title={item.description}
+                onClick={handleItemClick}
               >
                 <div className="w-14 h-14 mb-1 flex items-center justify-center relative overflow-visible" style={{ position: 'relative', zIndex: 1, isolation: 'isolate' }}>
                   {/* Khung tròn viền - hiệu ứng live stream */}

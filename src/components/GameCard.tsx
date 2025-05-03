@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { useState, useEffect } from "react";
+import { useAuth } from "@/contexts/AuthContext";
 
 type GameCardProps = {
   title: string;
@@ -13,6 +14,16 @@ type GameCardProps = {
 };
 
 export default function GameCard({ title, description, icon, backgroundImage, gradientFrom, gradientTo }: GameCardProps) {
+  const { openAuthPopup, isLoggedIn } = useAuth();
+
+  // Xử lý khi người dùng click vào game
+  const handleGameClick = () => {
+    if (!isLoggedIn) {
+      openAuthPopup();
+    }
+    // Nếu đã đăng nhập, xử lý chuyển hướng hoặc mở tính năng tương ứng
+  };
+
   // Tạo style object cho background
   const backgroundStyle = backgroundImage
     ? {
@@ -84,6 +95,7 @@ export default function GameCard({ title, description, icon, backgroundImage, gr
           boxShadow: "0 4px 15px rgba(0, 0, 0, 0.2)",
           transition: "all 0.3s ease"
         }}
+        onClick={handleGameClick}
       >
         <div className="p-3 relative h-full">
           {/* Tiêu đề ở trên cùng bên trái */}
