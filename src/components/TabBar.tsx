@@ -107,14 +107,14 @@ export default function TabBar() {
               </>
             ) : (
               <div className="flex-1 flex items-center justify-center">
-                <div className="w-[22px] h-[22px] flex items-center justify-center">
+                <div className="w-[22px] h-[22px] flex items-center justify-center text-gray-600">
                   {item.icon}
                 </div>
               </div>
             )}
             {/* Tất cả các text đều nằm ở cùng một vị trí */}
             <div className="h-[16px] flex items-center justify-center absolute bottom-1">
-              <span className="text-[11px] font-semibold tracking-wide">{item.label}</span>
+              <span className="text-[11px] font-semibold tracking-wide text-gray-600">{item.label}</span>
             </div>
           </div>
         ))}
