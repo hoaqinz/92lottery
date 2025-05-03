@@ -1,8 +1,5 @@
 import { Metadata } from 'next';
-import dynamic from 'next/dynamic';
-
-// Dynamically import the IframeLoader component with no SSR
-const IframeLoader = dynamic(() => import('@/components/IframeLoader'), { ssr: false });
+import ClientIframeWrapper from '@/components/ClientIframeWrapper';
 
 export const metadata: Metadata = {
   title: 'Đăng nhập | 92Lottery',
@@ -15,8 +12,8 @@ export const metadata: Metadata = {
 
 export default function LoginPage() {
   return (
-    <IframeLoader 
-      src="https://npq43b.com/#/login" 
+    <ClientIframeWrapper
+      src="https://npq43b.com/#/login"
       title="Đăng nhập 92Lottery"
     />
   );
