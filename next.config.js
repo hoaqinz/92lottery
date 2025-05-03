@@ -109,7 +109,7 @@ const nextConfig = {
   async headers() {
     return [
       {
-        source: '/(.*)',
+        source: '/((?!register|login).*)',
         headers: [
           {
             key: 'X-Content-Type-Options',
@@ -118,6 +118,20 @@ const nextConfig = {
           {
             key: 'X-Frame-Options',
             value: 'DENY',
+          },
+          {
+            key: 'X-XSS-Protection',
+            value: '1; mode=block',
+          },
+        ],
+      },
+      // Cho phép trang đăng ký và đăng nhập được nhúng trong iframe
+      {
+        source: '/(register|login)',
+        headers: [
+          {
+            key: 'X-Content-Type-Options',
+            value: 'nosniff',
           },
           {
             key: 'X-XSS-Protection',

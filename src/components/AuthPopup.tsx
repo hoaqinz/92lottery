@@ -3,10 +3,13 @@
 import { useEffect, useState } from 'react';
 import { useAuth } from '@/contexts/AuthContext';
 import Image from 'next/image';
+import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 
 export default function AuthPopup() {
   const { showAuthPopup, closeAuthPopup, login } = useAuth();
   const [isClosing, setIsClosing] = useState(false);
+  const router = useRouter();
 
   // Handle ESC key press to close popup
   useEffect(() => {
@@ -94,23 +97,30 @@ export default function AuthPopup() {
 
           {/* Buttons */}
           <div className="flex gap-3 mb-5">
-            <button
-              className="flex-1 relative rounded-md bg-transparent border border-[#4CAF50] text-[#4CAF50] font-bold py-2.5 px-4 hover:bg-[#4CAF50] hover:bg-opacity-10 transition-colors shadow-sm before:absolute before:right-1/2 before:top-1/2 before:-z-[1] before:h-3/4 before:w-2/3 before:origin-bottom-left before:-translate-y-1/2 before:translate-x-1/2 before:animate-ping before:rounded-md before:bg-[#4CAF50]"
-              onClick={login}
+            <Link
+              href="/login"
+              className="flex-1 relative rounded-md bg-transparent border border-[#4CAF50] text-[#4CAF50] font-bold py-2.5 px-4 hover:bg-[#4CAF50] hover:bg-opacity-10 transition-colors shadow-sm before:absolute before:right-1/2 before:top-1/2 before:-z-[1] before:h-3/4 before:w-2/3 before:origin-bottom-left before:-translate-y-1/2 before:translate-x-1/2 before:animate-ping before:rounded-md before:bg-[#4CAF50] text-center"
+              onClick={() => {
+                handleClose();
+              }}
             >
               Đăng nhập
-            </button>
-            <button
-              className="flex-1 relative rounded-md bg-[#e62e2e] px-4 py-2.5 font-bold text-white transition-colors duration-300 ease-linear before:absolute before:right-1/2 before:top-1/2 before:-z-[1] before:h-3/4 before:w-2/3 before:origin-bottom-left before:-translate-y-1/2 before:translate-x-1/2 before:animate-ping before:rounded-md before:bg-[#e62e2e] hover:bg-[#d42a2a] hover:before:bg-[#d42a2a]"
-              onClick={login}
+            </Link>
+            <Link
+              href="/register"
+              className="flex-1 relative rounded-md bg-[#e62e2e] px-4 py-2.5 font-bold text-white transition-colors duration-300 ease-linear before:absolute before:right-1/2 before:top-1/2 before:-z-[1] before:h-3/4 before:w-2/3 before:origin-bottom-left before:-translate-y-1/2 before:translate-x-1/2 before:animate-ping before:rounded-md before:bg-[#e62e2e] hover:bg-[#d42a2a] hover:before:bg-[#d42a2a] text-center"
+              onClick={() => {
+                handleClose();
+              }}
             >
               ĐĂNG KÝ
-            </button>
+            </Link>
           </div>
 
           {/* Bonus button */}
           <div className="relative mt-5">
-            <button type="button" className="lightning-button" onClick={login}>
+            <Link href="/register" className="block">
+              <button type="button" className="lightning-button" onClick={() => handleClose()}>
               <div className="points_wrapper">
                 <i className="point"></i>
                 <i className="point"></i>
@@ -142,6 +152,7 @@ export default function AuthPopup() {
                 ĐĂNG KÝ NHẬN 100K
               </span>
             </button>
+            </Link>
           </div>
         </div>
       </div>
