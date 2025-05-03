@@ -1,14 +1,34 @@
 import type { Metadata, Viewport } from "next";
 import "./globals.css";
 import { generateGamblingWebsiteSchema } from "@/lib/schema";
+import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/next";
+import dynamic from "next/dynamic";
+
+// Lazy load AddToHomeScreen component
+const AddToHomeScreen = dynamic(() => import('@/components/AddToHomeScreen'), {
+  ssr: false,
+});
 
 export const metadata: Metadata = {
-  title: "92Lottery - Cá cược thể thao & Casino trực tuyến | Xổ số, Lottery",
-  description: "92Lottery - Trang web cá cược xổ số, lottery, thể thao và casino trực tuyến hàng đầu Việt Nam. Đăng ký ngay để nhận khuyến mãi hấp dẫn từ 92Lottery.",
-  keywords: ["92lottery", "cá cược", "xổ số", "lottery", "thể thao", "casino", "trò chơi trực tuyến", "đánh bài", "cá cược trực tuyến"],
+  metadataBase: new URL('https://92lottery.dev'),
+  title: {
+    template: '%s | 92Lottery - Cá cược xổ số & Casino trực tuyến',
+    default: '92Lottery - Xổ số & Casino trực tuyến | Cá cược uy tín hàng đầu Việt Nam'
+  },
+  description: "92Lottery - Trang web cá cược xổ số, lottery, thể thao và casino trực tuyến hàng đầu Việt Nam với tỷ lệ trả thưởng cao nhất thị trường. Đăng ký ngay để nhận khuyến mãi đặc biệt từ 92lottery.",
+  keywords: ["92lottery", "cá cược", "xổ số", "lottery", "thể thao", "casino", "trò chơi trực tuyến", "đánh bài", "cá cược trực tuyến", "nhà cái uy tín", "92lottery việt nam"],
   authors: [{ name: "92Lottery" }],
   creator: "92Lottery",
   publisher: "92Lottery",
+  applicationName: "92Lottery",
+  generator: "Next.js",
+  referrer: "origin-when-cross-origin",
+  icons: {
+    icon: "/favicon.ico",
+    apple: "/apple-touch-icon.png"
+  },
+  manifest: "/manifest.json",
   openGraph: {
     type: "website",
     locale: "vi_VN",
@@ -42,9 +62,14 @@ export const metadata: Metadata = {
       index: true,
       follow: true,
       'max-image-preview': 'large',
+      'max-video-preview': -1,
       'max-snippet': -1,
     },
   },
+  verification: {
+    google: "google-site-verification-code",
+  },
+  category: "gambling",
 };
 
 export const viewport: Viewport = {
@@ -53,6 +78,7 @@ export const viewport: Viewport = {
   maximumScale: 5,
   userScalable: true,
   themeColor: "#bc2022",
+  colorScheme: "light",
 };
 
 export default function RootLayout({
@@ -65,19 +91,26 @@ export default function RootLayout({
   const schemaString = JSON.stringify(websiteSchema);
 
   return (
-    <html lang="vi" className="scroll-smooth">
+    <html lang="vi" className="scroll-smooth antialiased">
       <head>
         <link rel="preconnect" href="https://ext.same-assets.com" />
         <link rel="dns-prefetch" href="https://ext.same-assets.com" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+        <meta name="apple-mobile-web-app-title" content="92Lottery" />
+        <link rel="manifest" href="/manifest.json" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: schemaString }}
         />
       </head>
       <body className="flex justify-center min-h-screen items-start bg-gray-100 antialiased">
-        <div className="w-[420px] min-h-screen bg-white rounded-lg shadow-2xl relative overflow-x-hidden max-w-full">
+        <div className="w-full max-w-[420px] min-h-screen bg-white rounded-lg shadow-2xl relative overflow-x-hidden">
           {children}
+          <AddToHomeScreen />
         </div>
+        <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );

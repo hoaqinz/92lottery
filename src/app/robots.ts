@@ -1,15 +1,22 @@
 import { MetadataRoute } from 'next';
-import { SEO } from '@/lib/constants';
 
 export default function robots(): MetadataRoute.Robots {
-  const baseUrl = SEO.url || 'https://92lottery.com';
-  
+  const baseUrl = 'https://92lottery.dev';
+
   return {
-    rules: {
-      userAgent: '*',
-      allow: '/',
-      disallow: ['/api/', '/admin/', '/private/'],
-    },
+    rules: [
+      {
+        userAgent: '*',
+        allow: '/',
+        disallow: ['/api/', '/admin/', '/private/', '/_next/'],
+      },
+      {
+        userAgent: 'Googlebot',
+        allow: '/',
+        disallow: ['/api/', '/admin/', '/private/'],
+      },
+    ],
     sitemap: `${baseUrl}/sitemap.xml`,
+    host: baseUrl,
   };
 }

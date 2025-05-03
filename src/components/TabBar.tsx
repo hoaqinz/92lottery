@@ -71,31 +71,27 @@ const tabItems: TabItem[] = [
 
 export default function TabBar() {
   return (
-    <footer className="fixed left-1/2 -translate-x-1/2 bottom-0 w-[420px] max-w-full z-10">
+    <footer className="fixed left-1/2 -translate-x-1/2 bottom-0 w-full max-w-[420px] z-50 safe-bottom">
       <nav
-        className="flex items-center shadow px-2 rounded-t-2xl justify-between h-[69px]"
+        className="flex items-center shadow px-2 rounded-t-2xl justify-between h-[69px] bg-no-repeat bg-center bg-cover touch-target"
         style={{
           backgroundImage: "url('/anh/nenfooter.png')",
           backgroundSize: "100% 100%",
-          backgroundPosition: "center",
-          backgroundRepeat: "no-repeat"
         }}>
         {tabItems.map((item, index) => (
           item.isCenter ? (
             <div key={index} className="flex-1 flex items-center justify-center relative">
               <div className="flex flex-col items-center">
                 <button
-                  className="bg-[#e62e2e] w-[52px] h-[52px] rounded-full -mt-12 flex items-center justify-center border-4 border-white shadow-lg hover:bg-[#d42a2a] transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#e62e2e] relative overflow-visible marketing-button"
+                  className="bg-[#e62e2e] w-[52px] h-[52px] rounded-full -mt-12 flex items-center justify-center border-4 border-white shadow-lg hover:bg-[#d42a2a] active:scale-95 transition-all duration-150 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#e62e2e] relative overflow-visible marketing-button touch-target tap-highlight"
                   aria-label={item.label}
                 >
                   {/* Hiệu ứng sóng lan tỏa */}
                   <div className="absolute inset-0 rounded-full overflow-hidden">
                     <div className="ripple-effect">
-                      <div className="ripple-1" style={{ borderColor: 'rgba(255, 215, 0, 0.9)', boxShadow: '0 0 8px rgba(255, 215, 0, 0.7), inset 0 0 5px rgba(255, 215, 0, 0.4)' }}></div>
-                      <div className="ripple-2" style={{ borderColor: 'rgba(255, 215, 0, 0.9)', boxShadow: '0 0 8px rgba(255, 215, 0, 0.7), inset 0 0 5px rgba(255, 215, 0, 0.4)' }}></div>
-                      <div className="ripple-3" style={{ borderColor: 'rgba(255, 215, 0, 0.9)', boxShadow: '0 0 8px rgba(255, 215, 0, 0.7), inset 0 0 5px rgba(255, 215, 0, 0.4)' }}></div>
-                      <div className="ripple-4" style={{ borderColor: 'rgba(255, 215, 0, 0.9)', boxShadow: '0 0 8px rgba(255, 215, 0, 0.7), inset 0 0 5px rgba(255, 215, 0, 0.4)' }}></div>
-                      <div className="ripple-5" style={{ borderColor: 'rgba(255, 215, 0, 0.9)', boxShadow: '0 0 8px rgba(255, 215, 0, 0.7), inset 0 0 5px rgba(255, 215, 0, 0.4)' }}></div>
+                      <div className="ripple-1"></div>
+                      <div className="ripple-2"></div>
+                      <div className="ripple-3"></div>
                     </div>
                   </div>
                   <div className="text-white relative z-10 diamond-icon">
@@ -108,15 +104,101 @@ export default function TabBar() {
           ) : (
             <button
               key={index}
-              className="flex flex-col items-center flex-1 py-1 text-gray-600 hover:text-[#e62e2e] transition-colors focus:outline-none focus:text-[#e62e2e] mt-4"
+              className="flex flex-col items-center flex-1 py-1 text-gray-600 hover:text-[#e62e2e] active:text-[#e62e2e] active:scale-95 transition-all duration-150 focus:outline-none focus:text-[#e62e2e] mt-4 touch-target tap-highlight"
               aria-label={item.label}
             >
-              {item.icon}
+              <div className="relative">
+                {item.icon}
+                {/* Hiệu ứng glow khi hover */}
+                <div className="absolute inset-0 bg-[#e62e2e] opacity-0 blur-md rounded-full -z-10 hover:opacity-10 transition-opacity duration-300"></div>
+              </div>
               <span className="text-[13px] mt-0.5 font-semibold tracking-wide">{item.label}</span>
             </button>
           )
         ))}
       </nav>
+
+      {/* Add to Home Screen Prompt for iOS */}
+      <style jsx global>{`
+        @media (hover: hover) {
+          .touch-target {
+            cursor: pointer;
+          }
+        }
+
+        @media (hover: none) {
+          .touch-target {
+            -webkit-tap-highlight-color: transparent;
+          }
+        }
+
+        .tap-highlight {
+          -webkit-tap-highlight-color: transparent;
+        }
+
+        .ripple-effect {
+          position: absolute;
+          inset: 0;
+          overflow: hidden;
+          border-radius: 50%;
+        }
+
+        .ripple-1, .ripple-2, .ripple-3 {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          border-radius: 50%;
+          background-color: rgba(230, 46, 46, 0.3);
+          animation: ripple 2s linear infinite;
+        }
+
+        .ripple-2 {
+          animation-delay: 0.5s;
+        }
+
+        .ripple-3 {
+          animation-delay: 1s;
+        }
+
+        @keyframes ripple {
+          0% {
+            width: 0;
+            height: 0;
+            opacity: 0.5;
+          }
+          100% {
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+          }
+        }
+
+        .diamond-icon {
+          transform: rotate(45deg);
+          animation: pulse 2s infinite;
+        }
+
+        .diamond-icon svg {
+          transform: rotate(-45deg);
+        }
+
+        @keyframes pulse {
+          0% {
+            transform: rotate(45deg) scale(1);
+          }
+          50% {
+            transform: rotate(45deg) scale(1.05);
+          }
+          100% {
+            transform: rotate(45deg) scale(1);
+          }
+        }
+
+        .safe-bottom {
+          padding-bottom: env(safe-area-inset-bottom, 0);
+        }
+      `}</style>
     </footer>
   );
 }
