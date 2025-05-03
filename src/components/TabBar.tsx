@@ -84,25 +84,27 @@ export default function TabBar() {
           item.isCenter ? (
             <div key={index} className="flex items-center justify-center relative">
               <div className="flex flex-col items-center">
-                <button
-                  className="bg-[#e62e2e] w-[48px] h-[48px] rounded-full -mt-10 flex items-center justify-center border-3 border-white shadow-lg hover:bg-[#d42a2a] transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#e62e2e] relative overflow-visible marketing-button"
-                  aria-label={item.label}
-                >
-                  {/* Hiệu ứng sóng lan tỏa */}
-                  <div className="absolute inset-0 rounded-full overflow-hidden">
-                    <div className="ripple-effect">
-                      <div className="ripple-1" style={{ borderColor: 'rgba(255, 215, 0, 0.9)', boxShadow: '0 0 8px rgba(255, 215, 0, 0.7), inset 0 0 5px rgba(255, 215, 0, 0.4)' }}></div>
-                      <div className="ripple-2" style={{ borderColor: 'rgba(255, 215, 0, 0.9)', boxShadow: '0 0 8px rgba(255, 215, 0, 0.7), inset 0 0 5px rgba(255, 215, 0, 0.4)' }}></div>
-                      <div className="ripple-3" style={{ borderColor: 'rgba(255, 215, 0, 0.9)', boxShadow: '0 0 8px rgba(255, 215, 0, 0.7), inset 0 0 5px rgba(255, 215, 0, 0.4)' }}></div>
-                      <div className="ripple-4" style={{ borderColor: 'rgba(255, 215, 0, 0.9)', boxShadow: '0 0 8px rgba(255, 215, 0, 0.7), inset 0 0 5px rgba(255, 215, 0, 0.4)' }}></div>
-                      <div className="ripple-5" style={{ borderColor: 'rgba(255, 215, 0, 0.9)', boxShadow: '0 0 8px rgba(255, 215, 0, 0.7), inset 0 0 5px rgba(255, 215, 0, 0.4)' }}></div>
+                <div className="relative">
+                  <button
+                    className="bg-[#e62e2e] w-[48px] h-[48px] rounded-full -mt-10 flex items-center justify-center border-3 border-white shadow-lg hover:bg-[#d42a2a] transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#e62e2e] relative overflow-visible marketing-button"
+                    aria-label={item.label}
+                  >
+                    {/* Hiệu ứng sóng lan tỏa */}
+                    <div className="absolute inset-0 rounded-full overflow-hidden">
+                      <div className="ripple-effect">
+                        <div className="ripple-1" style={{ borderColor: 'rgba(255, 215, 0, 0.9)', boxShadow: '0 0 8px rgba(255, 215, 0, 0.7), inset 0 0 5px rgba(255, 215, 0, 0.4)' }}></div>
+                        <div className="ripple-2" style={{ borderColor: 'rgba(255, 215, 0, 0.9)', boxShadow: '0 0 8px rgba(255, 215, 0, 0.7), inset 0 0 5px rgba(255, 215, 0, 0.4)' }}></div>
+                        <div className="ripple-3" style={{ borderColor: 'rgba(255, 215, 0, 0.9)', boxShadow: '0 0 8px rgba(255, 215, 0, 0.7), inset 0 0 5px rgba(255, 215, 0, 0.4)' }}></div>
+                        <div className="ripple-4" style={{ borderColor: 'rgba(255, 215, 0, 0.9)', boxShadow: '0 0 8px rgba(255, 215, 0, 0.7), inset 0 0 5px rgba(255, 215, 0, 0.4)' }}></div>
+                        <div className="ripple-5" style={{ borderColor: 'rgba(255, 215, 0, 0.9)', boxShadow: '0 0 8px rgba(255, 215, 0, 0.7), inset 0 0 5px rgba(255, 215, 0, 0.4)' }}></div>
+                      </div>
                     </div>
-                  </div>
-                  <div className="text-white relative z-10 diamond-icon scale-90">
-                    {item.icon}
-                  </div>
-                </button>
-                <span className="text-[12px] text-gray-600 absolute font-semibold tracking-wide" style={{ bottom: '-18px' }}>{item.label}</span>
+                    <div className="text-white relative z-10 diamond-icon scale-90">
+                      {item.icon}
+                    </div>
+                  </button>
+                </div>
+                <span className="text-[11px] mt-1 font-semibold tracking-wide">{item.label}</span>
               </div>
             </div>
           ) : (
