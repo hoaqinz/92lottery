@@ -1,4 +1,8 @@
 import { Metadata } from 'next';
+import dynamic from 'next/dynamic';
+
+// Dynamically import the IframeLoader component with no SSR
+const IframeLoader = dynamic(() => import('@/components/IframeLoader'), { ssr: false });
 
 export const metadata: Metadata = {
   title: 'Đăng ký tài khoản | 92Lottery',
@@ -11,13 +15,9 @@ export const metadata: Metadata = {
 
 export default function RegisterPage() {
   return (
-    <div className="w-full h-screen flex flex-col">
-      <iframe 
-        src="https://npq43b.com/#/register?invitationCode=543571301457"
-        className="w-full h-full border-0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowFullScreen
-      />
-    </div>
+    <IframeLoader 
+      src="https://npq43b.com/#/register?invitationCode=543571301457" 
+      title="Đăng ký tài khoản 92Lottery"
+    />
   );
 }

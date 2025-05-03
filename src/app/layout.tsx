@@ -89,6 +89,8 @@ export default function RootLayout({
       <head>
         <link rel="preconnect" href="https://ext.same-assets.com" />
         <link rel="dns-prefetch" href="https://ext.same-assets.com" />
+        <link rel="preconnect" href="https://npq43b.com" crossOrigin="anonymous" />
+        <link rel="dns-prefetch" href="https://npq43b.com" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="black" />
         <meta name="apple-mobile-web-app-title" content="92Lottery" />

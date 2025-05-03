@@ -18,6 +18,16 @@ module.exports = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
+      animation: {
+        'progress': 'progress 2s ease-in-out infinite',
+      },
+      keyframes: {
+        progress: {
+          '0%': { width: '0%' },
+          '50%': { width: '100%' },
+          '100%': { width: '0%' },
+        },
+      },
     },
   },
   plugins: [],
