@@ -81,12 +81,12 @@ export default function TabBar() {
           backgroundRepeat: "no-repeat"
         }}>
         {tabItems.map((item, index) => (
-          item.isCenter ? (
-            <div key={index} className="flex items-center justify-center relative">
-              <div className="flex flex-col items-center">
-                <div className="relative">
+          <div key={index} className="relative flex flex-col items-center">
+            {item.isCenter ? (
+              <>
+                <div className="flex-1 flex items-center justify-center">
                   <button
-                    className="bg-[#e62e2e] w-[48px] h-[48px] rounded-full -mt-10 flex items-center justify-center border-3 border-white shadow-lg hover:bg-[#d42a2a] transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#e62e2e] relative overflow-visible marketing-button"
+                    className="bg-[#e62e2e] w-[48px] h-[48px] rounded-full -mt-10 flex items-center justify-center border border-white shadow-lg hover:bg-[#d42a2a] transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#e62e2e] relative overflow-visible marketing-button"
                     aria-label={item.label}
                   >
                     {/* Hiệu ứng sóng lan tỏa */}
@@ -99,30 +99,24 @@ export default function TabBar() {
                         <div className="ripple-5" style={{ borderColor: 'rgba(255, 215, 0, 0.9)', boxShadow: '0 0 8px rgba(255, 215, 0, 0.7), inset 0 0 5px rgba(255, 215, 0, 0.4)' }}></div>
                       </div>
                     </div>
-                    <div className="text-white relative z-10 diamond-icon scale-90">
+                    <div className="relative z-10 diamond-icon scale-90 text-white">
                       {item.icon}
                     </div>
                   </button>
                 </div>
-                <div className="h-[25px] flex items-end">
-                  <span className="text-[11px] font-semibold tracking-wide">{item.label}</span>
+              </>
+            ) : (
+              <div className="flex-1 flex items-center justify-center">
+                <div className="w-[22px] h-[22px] flex items-center justify-center">
+                  {item.icon}
                 </div>
               </div>
+            )}
+            {/* Tất cả các text đều nằm ở cùng một vị trí */}
+            <div className="h-[16px] flex items-center justify-center absolute bottom-1">
+              <span className="text-[11px] font-semibold tracking-wide">{item.label}</span>
             </div>
-          ) : (
-            <button
-              key={index}
-              className="flex flex-col items-center justify-center w-full h-full py-1 text-gray-600 hover:text-[#e62e2e] transition-colors focus:outline-none focus:text-[#e62e2e] mt-3 px-1"
-              aria-label={item.label}
-            >
-              <div className="w-[22px] h-[22px] flex items-center justify-center">
-                {item.icon}
-              </div>
-              <div className="h-[25px] flex items-end">
-                <span className="text-[11px] font-semibold tracking-wide">{item.label}</span>
-              </div>
-            </button>
-          )
+          </div>
         ))}
       </nav>
     </footer>
