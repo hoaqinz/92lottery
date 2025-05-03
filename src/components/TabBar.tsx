@@ -102,7 +102,7 @@ export default function TabBar() {
                     {item.icon}
                   </div>
                 </button>
-                <span className="text-[12px] text-gray-600 absolute font-semibold tracking-wide" style={{ top: '10px' }}>{item.label}</span>
+                <span className="text-[12px] text-gray-600 absolute font-semibold tracking-wide" style={{ bottom: '-18px' }}>{item.label}</span>
               </div>
             </div>
           ) : (
