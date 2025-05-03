@@ -1,14 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import "./globals.css";
 import { generateGamblingWebsiteSchema } from "@/lib/schema";
-import { Analytics } from "@vercel/analytics/react";
-import { SpeedInsights } from "@vercel/speed-insights/next";
-import dynamic from "next/dynamic";
-
-// Lazy load AddToHomeScreen component
-const AddToHomeScreen = dynamic(() => import('@/components/AddToHomeScreen'), {
-  ssr: false,
-});
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://92lottery.dev'),
@@ -107,10 +99,7 @@ export default function RootLayout({
       <body className="flex justify-center min-h-screen items-start bg-gray-100 antialiased">
         <div className="w-full max-w-[420px] min-h-screen bg-white rounded-lg shadow-2xl relative overflow-x-hidden">
           {children}
-          <AddToHomeScreen />
         </div>
-        <Analytics />
-        <SpeedInsights />
       </body>
     </html>
   );

@@ -1,5 +1,4 @@
 import Image, { ImageProps } from 'next/image';
-import { cn } from '@/lib/utils';
 
 interface ImageOptimizedProps extends Omit<ImageProps, 'alt'> {
   alt: string;
@@ -19,16 +18,14 @@ export default function ImageOptimized({
   ...props
 }: ImageOptimizedProps) {
   return (
-    <div className={cn('overflow-hidden', className)}>
+    <div className={className}>
       <Image
         src={src}
         alt={alt}
         width={width}
         height={height}
         loading={props.priority ? 'eager' : 'lazy'}
-        placeholder={props.placeholder || 'blur'}
-        blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+P+/HgAEtAJJXIDTjwAAAABJRU5ErkJggg=="
-        className={cn('object-cover transition-all duration-300', props.className)}
+        className={`object-cover transition-all duration-300 ${props.className || ''}`}
         {...props}
       />
     </div>

@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { SEO } from "@/lib/constants";
 
+
 export default function Footer() {
   return (
     <footer className="bg-[#e62e2e] text-white px-3 py-4 rounded-b-lg">

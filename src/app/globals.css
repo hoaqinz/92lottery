@@ -2,6 +2,53 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Mobile optimization styles */
+@media (hover: hover) {
+  .touch-target {
+    cursor: pointer;
+  }
+}
+
+@media (hover: none) {
+  .touch-target {
+    -webkit-tap-highlight-color: transparent;
+  }
+}
+
+/* Mobile footer optimization */
+@media (max-width: 360px) {
+  .diamond-icon {
+    transform: scale(0.85) rotate(45deg) !important;
+  }
+
+  .marketing-button {
+    width: 44px !important;
+    height: 44px !important;
+  }
+}
+
+/* Fix footer jumping issue */
+footer nav {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  width: 100%;
+}
+
+footer nav button {
+  width: 100%;
+  height: 100%;
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+
+.tap-highlight {
+  -webkit-tap-highlight-color: transparent;
+}
+
+.safe-bottom {
+  padding-bottom: env(safe-area-inset-bottom, 0);
+}
+
 @layer base {
   :root {
     --background: 0 0% 100%;
