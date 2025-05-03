@@ -1,13 +1,13 @@
 name = "92lottery"
 compatibility_date = "2025-05-02"
 compatibility_flags = ["nodejs_compat"]
+main = ".vercel/output/static/_worker.js"
 
-# Build configuration
 [build]
 command = "npm run pages:build"
 
-# Required for Cloudflare Pages
-pages_build_output_dir = ".vercel/output/static"
+[site]
+bucket = ".vercel/output/static"
 
 [build.environment]
 NODE_VERSION = "18.20.8"
@@ -17,7 +17,7 @@ NEXT_PUBLIC_BASE_URL = "https://92lottery.dev"
 NEXT_PUBLIC_API_URL = "https://92lottery.dev/api"
 NEXT_TELEMETRY_DISABLED = "1"
 
-# Headers configuration
+# Configure headers
 [[headers]]
 pattern = "/*"
 [headers.cache]

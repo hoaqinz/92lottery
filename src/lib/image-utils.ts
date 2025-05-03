@@ -6,22 +6,29 @@
  * @returns URL đã được tối ưu
  */
 export function getOptimizedImageUrl(src: string, width: number = 0, quality: number = 80): string {
-  // Nếu là URL từ ext.same-assets.com, giữ nguyên
+  // Nếu là URL từ ext.same-assets.com, thêm tham số cho Cloudflare Images
   if (src.startsWith('https://ext.same-assets.com/')) {
-    return src;
-  }
-  
-  // Nếu là URL từ unsplash, thêm tham số kích thước
-  if (src.includes('unsplash.com')) {
     const url = new URL(src);
-    url.searchParams.set('w', width.toString());
-    url.searchParams.set('q', quality.toString());
-    url.searchParams.set('auto', 'format');
-    url.searchParams.set('fit', 'crop');
+    url.searchParams.set('format', 'auto'); // Tự động chọn WebP hoặc AVIF
+    url.searchParams.set('quality', quality.toString());
+    if (width > 0) {
+      url.searchParams.set('width', width.toString());
+    }
     return url.toString();
   }
   
-  // Trả về URL gốc nếu không phù hợp với các điều kiện trên
+  // Nếu là URL từ thư mục public, sử dụng Cloudflare CDN
+  if (src.startsWith('/')) {
+    const baseUrl = 'https://92lottery.dev';
+    const url = new URL(src, baseUrl);
+    url.searchParams.set('format', 'auto');
+    url.searchParams.set('quality', quality.toString());
+    if (width > 0) {
+      url.searchParams.set('width', width.toString());
+    }
+    return url.toString();
+  }
+  
   return src;
 }
 
@@ -31,10 +38,8 @@ export function getOptimizedImageUrl(src: string, width: number = 0, quality: nu
  * @param sizes Mảng các kích thước cần tạo
  * @returns Chuỗi srcSet
  */
-export function generateSrcSet(src: string, sizes: number[] = [320, 640, 768, 1024]): string {
-  if (!src.includes('unsplash.com')) {
-    return '';
-  }
+export function generateSrcSet(src: string, sizes: number[] = [320, 480, 768, 1024]): string {
+  if (!src) return '';
   
   return sizes
     .map((size) => `${getOptimizedImageUrl(src, size)} ${size}w`)
@@ -43,9 +48,13 @@ export function generateSrcSet(src: string, sizes: number[] = [320, 640, 768, 10
 
 /**
  * Hàm tạo thuộc tính sizes cho thẻ img
- * @param defaultSize Kích thước mặc định
+ * @param defaultSize Kích thước mặc định cho màn hình lớn
  * @returns Chuỗi sizes
  */
 export function generateSizes(defaultSize: string = '100vw'): string {
-  return `(max-width: 768px) 100vw, ${defaultSize}`;
+  return `
+    (max-width: 420px) 100vw,
+    (max-width: 768px) 420px,
+    ${defaultSize}
+  `.trim();
 }
