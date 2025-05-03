@@ -104,7 +104,9 @@ export default function TabBar() {
                     </div>
                   </button>
                 </div>
-                <span className="text-[11px] mt-1 font-semibold tracking-wide">{item.label}</span>
+                <div className="h-[25px] flex items-end">
+                  <span className="text-[11px] font-semibold tracking-wide">{item.label}</span>
+                </div>
               </div>
             </div>
           ) : (
@@ -116,7 +118,9 @@ export default function TabBar() {
               <div className="w-[22px] h-[22px] flex items-center justify-center">
                 {item.icon}
               </div>
-              <span className="text-[11px] mt-0.5 font-semibold tracking-wide">{item.label}</span>
+              <div className="h-[25px] flex items-end">
+                <span className="text-[11px] font-semibold tracking-wide">{item.label}</span>
+              </div>
             </button>
           )
         ))}
