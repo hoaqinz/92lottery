@@ -21,25 +21,23 @@ export default function Header() {
           </div>
         </Link>
         <div className="flex items-center gap-2">
-          <button
-            className="w-9 h-9 flex items-center justify-center"
-            aria-label="Thông báo"
+          <Link
+            href="/huong-dan-dang-nhap"
+            className="relative overflow-hidden px-3 py-1.5 rounded-md bg-white/20 text-white text-sm font-medium transition-all duration-300 hover:bg-white/30 hover:shadow-lg group"
+            aria-label="Đăng nhập"
           >
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-              <path d="M21 15a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
-              <polyline points="3 9 12 15 21 9"></polyline>
-            </svg>
-          </button>
-          <button
-            className="w-9 h-9 flex items-center justify-center"
-            aria-label="Tải xuống"
+            <span className="relative z-10">Đăng nhập</span>
+            <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-white/0 via-white/30 to-white/0 -translate-x-full group-hover:animate-shimmer"></span>
+          </Link>
+          <Link
+            href="/huong-dan-dang-ky"
+            className="relative overflow-hidden px-3 py-1.5 rounded-md bg-yellow-500 text-white text-sm font-bold transition-all duration-300 hover:bg-yellow-400 hover:shadow-lg group"
+            aria-label="Đăng ký"
           >
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
-              <polyline points="7 10 12 15 17 10"></polyline>
-              <line x1="12" y1="15" x2="12" y2="3"></line>
-            </svg>
-          </button>
+            <span className="relative z-10">Đăng ký</span>
+            <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-white/0 via-white/30 to-white/0 -translate-x-full group-hover:animate-shimmer"></span>
+            <span className="absolute -inset-0.5 rounded-lg bg-gradient-to-r from-yellow-400 to-yellow-600 opacity-0 group-hover:opacity-100 blur-sm transition-all duration-500 group-hover:duration-200"></span>
+          </Link>
         </div>
       </div>
     </header>

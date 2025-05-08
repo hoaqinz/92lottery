@@ -78,11 +78,16 @@ export default {
         'shine': 'shine 3s ease-in-out infinite',
         'glow': 'glow 2s ease-in-out infinite',
         'float': 'float 3s ease-in-out infinite',
+        'shimmer': 'shimmer 2s linear infinite',
       },
       keyframes: {
         shine: {
           '0%': { transform: 'translateX(-100%)' },
           '50%, 100%': { transform: 'translateX(100%)' },
+        },
+        shimmer: {
+          '0%': { transform: 'translateX(-100%)' },
+          '100%': { transform: 'translateX(100%)' },
         },
         glow: {
           '0%, 100%': { filter: 'brightness(1) drop-shadow(0 0 5px rgba(255, 255, 255, 0.7))' },
