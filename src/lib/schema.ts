@@ -165,67 +165,59 @@ export const generateHomePageSchema = () => {
     }
   ];
 
-  return {
+  // Tạo schema cho trang chủ
+  const websiteSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "92Lottery - Cá cược xổ số & Casino trực tuyến",
+    "url": "https://92lottery.dev",
+    "description": "92Lottery - Trang web cá cược xổ số, lottery, thể thao và casino trực tuyến hàng đầu Việt Nam với tỷ lệ trả thưởng cao nhất thị trường.",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://92lottery.dev/search?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    },
+    "inLanguage": "vi-VN"
+  };
+
+  // Tạo schema cho FAQ
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": faqs.map(faq => ({
+      "@type": "Question",
+      "name": faq.question,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": faq.answer
+      }
+    }))
+  };
+
+  // Tạo schema cho danh sách trò chơi
+  const gameListSchema = {
     "@context": "https://schema.org",
     "@type": "ItemList",
-    "inLanguage": "vi-VN",
-    "itemListElement": [
-      {
-        "@type": "ListItem",
-        "position": 1,
-        "item": {
-          "@type": "WebSite",
-          "name": "92Lottery - Cá cược xổ số & Casino trực tuyến",
-          "url": "https://92lottery.dev",
-          "description": "92Lottery - Trang web cá cược xổ số, lottery, thể thao và casino trực tuyến hàng đầu Việt Nam với tỷ lệ trả thưởng cao nhất thị trường.",
-          "potentialAction": {
-            "@type": "SearchAction",
-            "target": "https://92lottery.dev/search?q={search_term_string}",
-            "query-input": "required name=search_term_string"
-          },
-          "inLanguage": "vi-VN"
-        }
-      },
-      {
-        "@type": "ListItem",
-        "position": 2,
-        "item": {
-          "@type": "FAQPage",
-          "mainEntity": faqs.map(faq => ({
-            "@type": "Question",
-            "name": faq.question,
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": faq.answer
-            }
-          }))
-        }
-      },
-      {
-        "@type": "ListItem",
-        "position": 3,
-        "item": {
-          "@type": "ItemList",
-          "name": "Trò chơi nổi bật tại 92Lottery",
-          "itemListElement": featuredGames.map((game, index) => ({
-            "@type": "ListItem",
-            "position": index + 1,
-            "item": {
-              "@type": "Game",
-              "name": game.name,
-              "description": game.description,
-              "url": game.url,
-              "image": game.image,
-              "genre": "Lottery",
-              "gamePlatform": "Web Browser",
-              "provider": {
-                "@type": "Organization",
-                "name": "92Lottery"
-              }
-            }
-          }))
+    "name": "Trò chơi nổi bật tại 92Lottery",
+    "itemListElement": featuredGames.map((game, index) => ({
+      "@type": "ListItem",
+      "position": index + 1,
+      "item": {
+        "@type": "Game",
+        "name": game.name,
+        "description": game.description,
+        "url": game.url,
+        "image": game.image,
+        "genre": "Lottery",
+        "gamePlatform": "Web Browser",
+        "provider": {
+          "@type": "Organization",
+          "name": "92Lottery"
         }
       }
-    ]
+    }))
   };
+
+  // Trả về mảng các schema riêng biệt thay vì ItemList lồng nhau
+  return [websiteSchema, faqSchema, gameListSchema];
 };

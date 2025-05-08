@@ -8,6 +8,13 @@ export const metadata: Metadata = {
     index: true,
     follow: true,
   },
+  alternates: {
+    canonical: 'https://92lottery.dev/register',
+    languages: {
+      'vi': 'https://92lottery.dev/register',
+      'x-default': 'https://92lottery.dev/register'
+    }
+  },
 };
 
 export default function RegisterPage() {

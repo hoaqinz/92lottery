@@ -8,6 +8,13 @@ export const metadata: Metadata = {
     index: true,
     follow: true,
   },
+  alternates: {
+    canonical: 'https://92lottery.dev/login',
+    languages: {
+      'vi': 'https://92lottery.dev/login',
+      'x-default': 'https://92lottery.dev/login'
+    }
+  },
 };
 
 export default function LoginPage() {

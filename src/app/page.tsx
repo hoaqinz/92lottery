@@ -13,16 +13,18 @@ import { generateHomePageSchema } from "@/lib/schema";
 
 export default function HomePage() {
   // Generate schema for the homepage
-  const homePageSchema = generateHomePageSchema();
-  const schemaString = JSON.stringify(homePageSchema);
+  const homePageSchemas = generateHomePageSchema();
 
   return (
     <div className="flex flex-col w-full min-h-screen bg-[#f6f1f1]">
       {/* Schema.org JSON-LD */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: schemaString }}
-      />
+      {homePageSchemas.map((schema, index) => (
+        <script
+          key={`schema-${index}`}
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+        />
+      ))}
 
       {/* Main content */}
       <Header />
