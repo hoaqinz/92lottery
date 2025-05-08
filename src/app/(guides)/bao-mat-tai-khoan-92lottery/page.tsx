@@ -9,10 +9,10 @@ export const metadata: Metadata = {
   description: 'Hướng dẫn chi tiết cách bảo mật tài khoản 92Lottery. Tìm hiểu các biện pháp bảo vệ tài khoản, cách thiết lập xác thực hai yếu tố và mẹo phòng tránh lừa đảo.',
   keywords: ['bảo mật tài khoản 92lottery', 'bảo vệ tài khoản 92lottery', 'xác thực hai yếu tố 92lottery', 'mật khẩu mạnh 92lottery', 'phòng tránh lừa đảo 92lottery', 'an toàn tài khoản 92lottery'],
   alternates: {
-    canonical: 'https://92lottery.dev',
+    canonical: 'https://92lottery.dev/bao-mat-tai-khoan-92lottery',
     languages: {
-      'vi': 'https://92lottery.dev',
-      'x-default': 'https://92lottery.dev'
+      'vi': 'https://92lottery.dev/bao-mat-tai-khoan-92lottery',
+      'x-default': 'https://92lottery.dev/bao-mat-tai-khoan-92lottery'
     }
   },
 };
@@ -62,7 +62,7 @@ export default function AccountSecurityPage() {
       type: 'application/ld+json',
       dangerouslySetInnerHTML: { __html: breadcrumbSchemaString }
     }),
-    
+
     // Breadcrumb
     React.createElement('div', { className: "bg-gray-100 py-2 px-4" },
       React.createElement('nav', { className: "text-sm" },
@@ -75,68 +75,68 @@ export default function AccountSecurityPage() {
         )
       )
     ),
-    
+
     // Main Content
     React.createElement('div', { className: "px-4 py-6" },
       React.createElement('h1', { className: "text-3xl font-bold text-[#bc2022] mb-6" }, "Bảo mật tài khoản 92Lottery - Hướng dẫn và mẹo bảo vệ tài khoản"),
-      
+
       React.createElement('div', { className: "prose max-w-none" },
-        React.createElement('p', { className: "text-lg mb-6" }, 
+        React.createElement('p', { className: "text-lg mb-6" },
           "Bảo mật tài khoản là yếu tố vô cùng quan trọng khi tham gia cá cược trực tuyến tại 92Lottery. Với số tiền thật trong tài khoản, việc đảm bảo an toàn thông tin cá nhân và tài sản của bạn là ưu tiên hàng đầu. Bài viết này sẽ hướng dẫn chi tiết các biện pháp bảo mật tài khoản 92Lottery, giúp bạn tránh khỏi các rủi ro bị xâm nhập và đánh cắp thông tin."
         ),
-        
+
         React.createElement('h2', { className: "text-2xl font-semibold text-[#bc2022] mt-8 mb-4" }, "Các biện pháp bảo mật cơ bản"),
-        
+
         React.createElement('div', { className: "mb-8" },
           React.createElement('h3', { className: "text-xl font-semibold mb-3" }, "1. Tạo mật khẩu mạnh"),
-          React.createElement('p', { className: "mb-4" }, 
+          React.createElement('p', { className: "mb-4" },
             "Mật khẩu là lớp bảo vệ đầu tiên và quan trọng nhất cho tài khoản của bạn. Một mật khẩu mạnh sẽ giúp ngăn chặn các nỗ lực đoán mật khẩu hoặc tấn công brute-force."
           ),
-          
+
           React.createElement('h3', { className: "text-xl font-semibold mb-3" }, "2. Bật xác thực hai yếu tố (2FA)"),
-          React.createElement('p', { className: "mb-4" }, 
+          React.createElement('p', { className: "mb-4" },
             "Xác thực hai yếu tố là biện pháp bảo mật hiệu quả, yêu cầu hai hình thức xác thực khác nhau khi đăng nhập: mật khẩu và một mã xác thực từ thiết bị của bạn."
           ),
-          
+
           React.createElement('h3', { className: "text-xl font-semibold mb-3" }, "3. Cảnh giác với lừa đảo"),
-          React.createElement('p', { className: "mb-4" }, 
+          React.createElement('p', { className: "mb-4" },
             "Phishing là hình thức lừa đảo phổ biến nhất. Luôn kiểm tra URL trước khi đăng nhập và không cung cấp thông tin đăng nhập qua email hoặc tin nhắn."
           )
         ),
-        
+
         // FAQ Section
         React.createElement('h2', { className: "text-2xl font-semibold text-[#bc2022] mt-8 mb-4" }, "Các câu hỏi thường gặp về bảo mật tài khoản 92Lottery"),
-        
+
         React.createElement('div', { className: "space-y-6 mb-8" },
-          faqItems.map((faq, index) => 
+          faqItems.map((faq, index) =>
             React.createElement('div', { key: index, className: "border-b border-gray-200 pb-4" },
               React.createElement('h3', { className: "text-xl font-semibold mb-2" }, faq.question),
               React.createElement('p', null, faq.answer)
             )
           )
         ),
-        
+
         // Related Articles
         React.createElement('div', { className: "bg-gray-100 p-6 rounded-lg mt-8" },
           React.createElement('h3', { className: "text-xl font-semibold mb-4" }, "Các bài viết liên quan"),
           React.createElement('ul', { className: "space-y-2" },
             React.createElement('li', null,
-              React.createElement(Link, { href: "/huong-dan-dang-ky", className: "text-blue-600 hover:text-blue-800" }, 
+              React.createElement(Link, { href: "/huong-dan-dang-ky", className: "text-blue-600 hover:text-blue-800" },
                 "Hướng dẫn đăng ký 92Lottery chi tiết"
               )
             ),
             React.createElement('li', null,
-              React.createElement(Link, { href: "/huong-dan-dang-nhap", className: "text-blue-600 hover:text-blue-800" }, 
+              React.createElement(Link, { href: "/huong-dan-dang-nhap", className: "text-blue-600 hover:text-blue-800" },
                 "Hướng dẫn đăng nhập 92Lottery"
               )
             ),
             React.createElement('li', null,
-              React.createElement(Link, { href: "/92lottery-co-lua-dao-khong", className: "text-blue-600 hover:text-blue-800" }, 
+              React.createElement(Link, { href: "/92lottery-co-lua-dao-khong", className: "text-blue-600 hover:text-blue-800" },
                 "92Lottery có lừa đảo không? Đánh giá uy tín từ chuyên gia"
               )
             ),
             React.createElement('li', null,
-              React.createElement(Link, { href: "/app-92lottery", className: "text-blue-600 hover:text-blue-800" }, 
+              React.createElement(Link, { href: "/app-92lottery", className: "text-blue-600 hover:text-blue-800" },
                 "Cách tải và cài đặt App 92Lottery trên điện thoại Android và iOS"
               )
             )

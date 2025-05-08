@@ -9,6 +9,13 @@ export const metadata: Metadata = {
   title: '92Lottery - Xổ số & Lottery trực tuyến | Cơ hội trúng thưởng lớn',
   description: 'Tham gia xổ số và lottery trực tuyến tại 92Lottery với nhiều giải thưởng hấp dẫn. Đa dạng các loại xổ số, dễ chơi, dễ trúng thưởng.',
   keywords: ['92lottery', 'xổ số', 'lottery', 'xổ số trực tuyến', 'lottery trực tuyến', 'trúng thưởng', 'giải thưởng lớn'],
+  alternates: {
+    canonical: 'https://92lottery.dev/lottery',
+    languages: {
+      'vi': 'https://92lottery.dev/lottery',
+      'x-default': 'https://92lottery.dev/lottery'
+    }
+  },
 };
 
 // Danh sách các trò chơi lottery

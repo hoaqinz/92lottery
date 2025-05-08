@@ -8,10 +8,10 @@ export const metadata: Metadata = {
   description: 'Hướng dẫn đăng ký tài khoản 92Lottery chi tiết từng bước. Đăng ký nhanh chóng, nhận ngay 100K và nhiều ưu đãi hấp dẫn khác tại 92Lottery.',
   keywords: ['đăng ký 92lottery', 'hướng dẫn đăng ký 92lottery', 'tạo tài khoản 92lottery', 'đăng ký nhận 100k', '92lottery'],
   alternates: {
-    canonical: 'https://92lottery.dev',
+    canonical: 'https://92lottery.dev/huong-dan-dang-ky',
     languages: {
-      'vi': 'https://92lottery.dev',
-      'x-default': 'https://92lottery.dev'
+      'vi': 'https://92lottery.dev/huong-dan-dang-ky',
+      'x-default': 'https://92lottery.dev/huong-dan-dang-ky'
     }
   },
 };

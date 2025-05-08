@@ -9,10 +9,10 @@ export const metadata: Metadata = {
   description: 'Hướng dẫn chi tiết cách chơi 92Lottery hiệu quả. Tìm hiểu các chiến thuật quản lý vốn, mẹo chơi từng trò chơi và cách tối ưu hóa cơ hội thắng cược.',
   keywords: ['cách chơi 92lottery', 'chiến thuật 92lottery', 'mẹo chơi 92lottery', 'quản lý vốn 92lottery', 'thắng lớn 92lottery', 'hướng dẫn 92lottery'],
   alternates: {
-    canonical: 'https://92lottery.dev',
+    canonical: 'https://92lottery.dev/cach-choi-92lottery-hieu-qua',
     languages: {
-      'vi': 'https://92lottery.dev',
-      'x-default': 'https://92lottery.dev'
+      'vi': 'https://92lottery.dev/cach-choi-92lottery-hieu-qua',
+      'x-default': 'https://92lottery.dev/cach-choi-92lottery-hieu-qua'
     }
   },
 };
@@ -62,7 +62,7 @@ export default function PlayingGuidePage() {
       type: 'application/ld+json',
       dangerouslySetInnerHTML: { __html: breadcrumbSchemaString }
     }),
-    
+
     // Breadcrumb
     React.createElement('div', { className: "bg-gray-100 py-2 px-4" },
       React.createElement('nav', { className: "text-sm" },
@@ -75,68 +75,68 @@ export default function PlayingGuidePage() {
         )
       )
     ),
-    
+
     // Main Content
     React.createElement('div', { className: "px-4 py-6" },
       React.createElement('h1', { className: "text-3xl font-bold text-[#bc2022] mb-6" }, "Cách chơi 92Lottery hiệu quả - Chiến thuật và mẹo thắng lớn"),
-      
+
       React.createElement('div', { className: "prose max-w-none" },
-        React.createElement('p', { className: "text-lg mb-6" }, 
+        React.createElement('p', { className: "text-lg mb-6" },
           "92Lottery cung cấp nhiều trò chơi hấp dẫn với cơ hội thắng thưởng lớn. Tuy nhiên, để chơi hiệu quả và tối ưu hóa cơ hội thắng cược, bạn cần có chiến thuật phù hợp và kỹ năng quản lý vốn tốt. Bài viết này sẽ hướng dẫn chi tiết các chiến thuật chơi 92Lottery hiệu quả, giúp bạn nâng cao trải nghiệm và cơ hội thắng cược."
         ),
-        
+
         React.createElement('h2', { className: "text-2xl font-semibold text-[#bc2022] mt-8 mb-4" }, "Nguyên tắc quản lý vốn khi chơi 92Lottery"),
-        
+
         React.createElement('div', { className: "mb-8" },
           React.createElement('h3', { className: "text-xl font-semibold mb-3" }, "1. Xác định ngân sách cá cược"),
-          React.createElement('p', { className: "mb-4" }, 
+          React.createElement('p', { className: "mb-4" },
             "Trước khi bắt đầu chơi, hãy xác định rõ số tiền bạn có thể chi cho cá cược mà không ảnh hưởng đến tài chính cá nhân. Đây là nguyên tắc quan trọng nhất để chơi 92Lottery hiệu quả và an toàn."
           ),
-          
+
           React.createElement('h3', { className: "text-xl font-semibold mb-3" }, "2. Áp dụng quy tắc phần trăm"),
-          React.createElement('p', { className: "mb-4" }, 
+          React.createElement('p', { className: "mb-4" },
             "Chỉ đặt cược 1-3% tổng vốn cho mỗi lượt chơi. Điều này giúp bạn có thể chơi lâu dài và vượt qua các chuỗi thua liên tiếp mà không bị cháy túi."
           ),
-          
+
           React.createElement('h3', { className: "text-xl font-semibold mb-3" }, "3. Đặt giới hạn thắng/thua"),
-          React.createElement('p', { className: "mb-4" }, 
+          React.createElement('p', { className: "mb-4" },
             "Xác định trước số tiền thắng hoặc thua tối đa trong một phiên chơi. Khi đạt đến giới hạn này, hãy dừng lại ngay lập tức, bất kể bạn đang thắng hay thua."
           )
         ),
-        
+
         // FAQ Section
         React.createElement('h2', { className: "text-2xl font-semibold text-[#bc2022] mt-8 mb-4" }, "Các câu hỏi thường gặp về cách chơi 92Lottery hiệu quả"),
-        
+
         React.createElement('div', { className: "space-y-6 mb-8" },
-          faqItems.map((faq, index) => 
+          faqItems.map((faq, index) =>
             React.createElement('div', { key: index, className: "border-b border-gray-200 pb-4" },
               React.createElement('h3', { className: "text-xl font-semibold mb-2" }, faq.question),
               React.createElement('p', null, faq.answer)
             )
           )
         ),
-        
+
         // Related Articles
         React.createElement('div', { className: "bg-gray-100 p-6 rounded-lg mt-8" },
           React.createElement('h3', { className: "text-xl font-semibold mb-4" }, "Các bài viết liên quan"),
           React.createElement('ul', { className: "space-y-2" },
             React.createElement('li', null,
-              React.createElement(Link, { href: "/huong-dan-dang-ky", className: "text-blue-600 hover:text-blue-800" }, 
+              React.createElement(Link, { href: "/huong-dan-dang-ky", className: "text-blue-600 hover:text-blue-800" },
                 "Hướng dẫn đăng ký 92Lottery chi tiết"
               )
             ),
             React.createElement('li', null,
-              React.createElement(Link, { href: "/huong-dan-dang-nhap", className: "text-blue-600 hover:text-blue-800" }, 
+              React.createElement(Link, { href: "/huong-dan-dang-nhap", className: "text-blue-600 hover:text-blue-800" },
                 "Hướng dẫn đăng nhập 92Lottery"
               )
             ),
             React.createElement('li', null,
-              React.createElement(Link, { href: "/92lottery-co-lua-dao-khong", className: "text-blue-600 hover:text-blue-800" }, 
+              React.createElement(Link, { href: "/92lottery-co-lua-dao-khong", className: "text-blue-600 hover:text-blue-800" },
                 "92Lottery có lừa đảo không? Đánh giá uy tín từ chuyên gia"
               )
             ),
             React.createElement('li', null,
-              React.createElement(Link, { href: "/cong-dong-92lottery", className: "text-blue-600 hover:text-blue-800" }, 
+              React.createElement(Link, { href: "/cong-dong-92lottery", className: "text-blue-600 hover:text-blue-800" },
                 "Cộng đồng 92Lottery - Tham gia và kết nối với người chơi khác"
               )
             )
