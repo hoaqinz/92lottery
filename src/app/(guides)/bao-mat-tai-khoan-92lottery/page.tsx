@@ -5,9 +5,9 @@ import Image from 'next/image';
 import { generateFAQSchema, generateBreadcrumbSchema } from '@/lib/schema';
 
 export const metadata: Metadata = {
-  title: 'Bảo mật tài khoản 92Lottery - Hướng dẫn chi tiết và toàn diện',
-  description: 'Hướng dẫn chi tiết về cách bảo mật tài khoản 92Lottery. Tìm hiểu cách tạo mật khẩu mạnh, thiết lập xác thực hai yếu tố và phòng tránh lừa đảo.',
-  keywords: ['bảo mật tài khoản 92lottery', 'bảo vệ tài khoản 92lottery', 'mật khẩu mạnh 92lottery', 'xác thực hai yếu tố 92lottery', '2FA 92lottery', 'chống lừa đảo 92lottery'],
+  title: 'Bảo mật tài khoản 92Lottery - Hướng dẫn và mẹo bảo vệ tài khoản',
+  description: 'Hướng dẫn chi tiết cách bảo mật tài khoản 92Lottery. Tìm hiểu các biện pháp bảo vệ tài khoản, cách thiết lập xác thực hai yếu tố và mẹo phòng tránh lừa đảo.',
+  keywords: ['bảo mật tài khoản 92lottery', 'bảo vệ tài khoản 92lottery', 'xác thực hai yếu tố 92lottery', 'mật khẩu mạnh 92lottery', 'phòng tránh lừa đảo 92lottery', 'an toàn tài khoản 92lottery'],
   alternates: {
     canonical: 'https://92lottery.dev',
     languages: {
@@ -17,24 +17,24 @@ export const metadata: Metadata = {
   },
 };
 
-export default function SecurityGuidePage() {
+export default function AccountSecurityPage() {
   // FAQ Schema
   const faqItems = [
     {
       question: "Làm thế nào để tạo mật khẩu mạnh cho tài khoản 92Lottery?",
-      answer: "Để tạo mật khẩu mạnh cho tài khoản 92Lottery, bạn nên: 1) Sử dụng ít nhất 8 ký tự, 2) Kết hợp chữ hoa, chữ thường, số và ký tự đặc biệt, 3) Tránh sử dụng thông tin cá nhân dễ đoán như ngày sinh, 4) Không sử dụng từ điển hoặc cụm từ phổ biến, 5) Sử dụng mật khẩu khác nhau cho các tài khoản khác nhau."
+      answer: "Để tạo mật khẩu mạnh cho tài khoản 92Lottery, bạn nên: 1) Sử dụng ít nhất 8 ký tự, 2) Kết hợp chữ hoa, chữ thường, số và ký tự đặc biệt, 3) Tránh sử dụng thông tin cá nhân dễ đoán như ngày sinh, tên, số điện thoại, 4) Không sử dụng từ điển hoặc cụm từ phổ biến, 5) Sử dụng mật khẩu khác với các tài khoản khác, 6) Thay đổi mật khẩu định kỳ 3-6 tháng một lần."
     },
     {
-      question: "Xác thực hai yếu tố (2FA) là gì và làm thế nào để bật nó trên 92Lottery?",
-      answer: "Xác thực hai yếu tố (2FA) là biện pháp bảo mật bổ sung yêu cầu hai hình thức xác thực khác nhau khi đăng nhập. Để bật 2FA trên 92Lottery: 1) Đăng nhập vào tài khoản, 2) Truy cập phần Cài đặt hoặc Bảo mật, 3) Tìm mục Xác thực hai yếu tố, 4) Chọn phương thức xác thực (SMS, Email, hoặc Ứng dụng xác thực), 5) Làm theo hướng dẫn trên màn hình để hoàn tất thiết lập."
+      question: "Xác thực hai yếu tố (2FA) trên 92Lottery hoạt động như thế nào?",
+      answer: "Xác thực hai yếu tố (2FA) trên 92Lottery hoạt động bằng cách yêu cầu hai hình thức xác thực khác nhau khi đăng nhập: 1) Mật khẩu của bạn (yếu tố đầu tiên), 2) Mã xác thực gửi qua SMS hoặc email, hoặc mã từ ứng dụng xác thực như Google Authenticator (yếu tố thứ hai). Khi bật 2FA, ngay cả khi ai đó biết mật khẩu của bạn, họ vẫn không thể đăng nhập nếu không có quyền truy cập vào thiết bị nhận mã xác thực, giúp bảo vệ tài khoản khỏi các cuộc tấn công trái phép."
     },
     {
       question: "Làm thế nào để nhận biết và tránh các nỗ lực lừa đảo nhắm vào người dùng 92Lottery?",
-      answer: "Để nhận biết và tránh lừa đảo: 1) Kiểm tra URL trước khi đăng nhập (URL chính thức là 92lottery.dev), 2) Cảnh giác với email/tin nhắn yêu cầu thông tin đăng nhập hoặc mã OTP, 3) 92Lottery không bao giờ yêu cầu mật khẩu qua email/điện thoại, 4) Không nhấp vào liên kết đáng ngờ, 5) Sử dụng bookmark để truy cập trực tiếp trang web, 6) Cập nhật thường xuyên thiết bị và phần mềm bảo mật."
+      answer: "Để nhận biết và tránh lừa đảo nhắm vào người dùng 92Lottery, hãy chú ý: 1) 92Lottery chính thức không bao giờ yêu cầu mật khẩu, mã OTP hoặc thông tin đăng nhập qua tin nhắn, email hoặc cuộc gọi, 2) Kiểm tra kỹ URL trước khi đăng nhập (phải là 92lottery.dev hoặc link chính thức), 3) Không nhấp vào liên kết từ nguồn không xác định, 4) Cảnh giác với các ưu đãi quá hấp dẫn hoặc yêu cầu chuyển tiền gấp, 5) Không tải ứng dụng từ nguồn không chính thức, 6) Báo cáo ngay cho 92Lottery nếu nghi ngờ bị lừa đảo."
     },
     {
       question: "Tôi nên làm gì nếu nghi ngờ tài khoản 92Lottery bị xâm nhập?",
-      answer: "Nếu nghi ngờ tài khoản bị xâm nhập: 1) Đổi mật khẩu ngay lập tức nếu vẫn đăng nhập được, 2) Liên hệ hỗ trợ khách hàng 92Lottery qua live chat hoặc hotline 24/7, 3) Kiểm tra lịch sử giao dịch và báo cáo các giao dịch đáng ngờ, 4) Tạm khóa tài khoản (nếu cần) thông qua bộ phận hỗ trợ, 5) Bật xác thực hai yếu tố nếu chưa bật, 6) Kiểm tra thiết bị của bạn với phần mềm diệt virus, 7) Thay đổi mật khẩu email liên kết với tài khoản 92Lottery."
+      answer: "Nếu nghi ngờ tài khoản 92Lottery bị xâm nhập, hãy thực hiện ngay các bước sau: 1) Đổi mật khẩu ngay lập tức nếu vẫn đăng nhập được, 2) Liên hệ hỗ trợ khách hàng 92Lottery qua live chat hoặc hotline 24/7, 3) Kiểm tra lịch sử giao dịch và báo cáo các giao dịch đáng ngờ, 4) Tạm khóa tài khoản (nếu cần) thông qua bộ phận hỗ trợ, 5) Bật xác thực hai yếu tố nếu chưa bật, 6) Kiểm tra thiết bị của bạn với phần mềm diệt virus, 7) Thay đổi mật khẩu email liên kết với tài khoản 92Lottery."
     }
   ];
   const faqSchema = generateFAQSchema(faqItems);
@@ -78,116 +78,126 @@ export default function SecurityGuidePage() {
 
       {/* Main Content */}
       <div className="px-4 py-6">
-        <h1 className="text-3xl font-bold text-[#bc2022] mb-6">Bảo mật tài khoản 92Lottery - Hướng dẫn chi tiết và toàn diện</h1>
+        <h1 className="text-3xl font-bold text-[#bc2022] mb-6">Bảo mật tài khoản 92Lottery - Hướng dẫn và mẹo bảo vệ tài khoản</h1>
 
         <div className="prose max-w-none">
           <p className="text-lg mb-6">
-            Bảo mật tài khoản là yếu tố quan trọng hàng đầu khi tham gia cá cược trực tuyến tại 92Lottery.
-            Bài viết này sẽ hướng dẫn bạn các biện pháp bảo mật hiệu quả để bảo vệ tài khoản và tài sản
-            của mình một cách toàn diện.
+            Bảo mật tài khoản là yếu tố vô cùng quan trọng khi tham gia cá cược trực tuyến tại 92Lottery.
+            Với số tiền thật trong tài khoản, việc đảm bảo an toàn thông tin cá nhân và tài sản của bạn
+            là ưu tiên hàng đầu. Bài viết này sẽ hướng dẫn chi tiết các biện pháp bảo mật tài khoản 92Lottery,
+            giúp bạn tránh khỏi các rủi ro bị xâm nhập và đánh cắp thông tin.
           </p>
 
           <div className="bg-gray-100 p-4 rounded-lg mb-6">
             <h3 className="text-lg font-semibold mb-2">Tại sao bảo mật tài khoản 92Lottery lại quan trọng?</h3>
             <ul className="list-disc pl-5 mb-0">
-              <li>Bảo vệ thông tin cá nhân khỏi bị đánh cắp</li>
-              <li>Ngăn chặn truy cập trái phép vào tài khoản</li>
-              <li>Bảo vệ số dư và tiền thắng cược</li>
+              <li>Bảo vệ tiền thật trong tài khoản</li>
+              <li>Ngăn chặn việc đánh cắp thông tin cá nhân</li>
+              <li>Tránh bị lợi dụng tài khoản cho mục đích xấu</li>
               <li>Đảm bảo trải nghiệm cá cược an toàn và yên tâm</li>
-              <li>Tránh các rủi ro từ lừa đảo trực tuyến</li>
+              <li>Tuân thủ các quy định về bảo mật của 92Lottery</li>
             </ul>
           </div>
 
-          <h2 className="text-2xl font-semibold text-[#bc2022] mt-8 mb-4">Tạo và quản lý mật khẩu mạnh</h2>
+          <h2 className="text-2xl font-semibold text-[#bc2022] mt-8 mb-4">Các biện pháp bảo mật cơ bản</h2>
 
           <div className="mb-8">
+            <h3 className="text-xl font-semibold mb-3">1. Tạo mật khẩu mạnh</h3>
             <p className="mb-4">
-              Mật khẩu là lớp bảo vệ đầu tiên và quan trọng nhất cho tài khoản 92Lottery của bạn.
-              Một mật khẩu mạnh sẽ giúp ngăn chặn các nỗ lực truy cập trái phép vào tài khoản.
+              Mật khẩu là lớp bảo vệ đầu tiên và quan trọng nhất cho tài khoản của bạn. Một mật khẩu mạnh sẽ giúp
+              ngăn chặn các nỗ lực đoán mật khẩu hoặc tấn công brute-force.
             </p>
-
-            <h3 className="text-xl font-semibold mb-3">1. Tiêu chuẩn của một mật khẩu mạnh</h3>
-            <ul className="list-disc pl-6 mb-4">
-              <li className="mb-2"><strong>Độ dài:</strong> Ít nhất 8 ký tự, tốt nhất là 12 ký tự trở lên</li>
-              <li className="mb-2"><strong>Tính phức tạp:</strong> Kết hợp chữ hoa, chữ thường, số và ký tự đặc biệt (@, #, $, %, v.v.)</li>
-              <li className="mb-2"><strong>Tính độc đáo:</strong> Không sử dụng thông tin cá nhân dễ đoán như tên, ngày sinh, số điện thoại</li>
-              <li className="mb-2"><strong>Tính ngẫu nhiên:</strong> Tránh các từ điển hoặc cụm từ phổ biến</li>
-              <li className="mb-2"><strong>Tính độc lập:</strong> Sử dụng mật khẩu khác với các tài khoản khác</li>
-            </ul>
-
-            <h3 className="text-xl font-semibold mb-3">2. Ví dụ về mật khẩu mạnh và yếu</h3>
-            <div className="overflow-x-auto mb-4">
-              <table className="min-w-full bg-white border border-gray-300">
-                <thead>
-                  <tr className="bg-gray-100">
-                    <th className="py-2 px-4 border-b">Mật khẩu yếu</th>
-                    <th className="py-2 px-4 border-b">Mật khẩu mạnh</th>
-                    <th className="py-2 px-4 border-b">Lý do</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td className="py-2 px-4 border-b">password123</td>
-                    <td className="py-2 px-4 border-b">P@s$w0rd!2025</td>
-                    <td className="py-2 px-4 border-b">Kết hợp các loại ký tự khác nhau</td>
-                  </tr>
-                  <tr>
-                    <td className="py-2 px-4 border-b">92lottery</td>
-                    <td className="py-2 px-4 border-b">9L#t3rY*k!Ng</td>
-                    <td className="py-2 px-4 border-b">Không sử dụng tên dịch vụ làm mật khẩu</td>
-                  </tr>
-                  <tr>
-                    <td className="py-2 px-4 border-b">01011990</td>
-                    <td className="py-2 px-4 border-b">Bk7@Tm9#pQ2!</td>
-                    <td className="py-2 px-4 border-b">Tránh sử dụng ngày tháng dễ đoán</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-
-            <h3 className="text-xl font-semibold mb-3">3. Công cụ quản lý mật khẩu</h3>
-            <p className="mb-4">
-              Sử dụng công cụ quản lý mật khẩu là cách hiệu quả để tạo và lưu trữ các mật khẩu mạnh mà không cần phải nhớ tất cả.
-              Một số công cụ quản lý mật khẩu phổ biến bao gồm:
-            </p>
-            <ul className="list-disc pl-6 mb-4">
-              <li className="mb-2">LastPass</li>
-              <li className="mb-2">Bitwarden</li>
-              <li className="mb-2">1Password</li>
-              <li className="mb-2">Dashlane</li>
-              <li className="mb-2">KeePass</li>
-            </ul>
             <div className="bg-gray-100 p-4 rounded-lg mb-4">
-              <p className="font-semibold text-[#bc2022]">Mẹo quan trọng:</p>
-              <p>Thay đổi mật khẩu 92Lottery của bạn định kỳ (ít nhất 3 tháng một lần) và ngay lập tức nếu bạn nghi ngờ có vấn đề về bảo mật.</p>
+              <p className="font-semibold text-[#bc2022]">Tiêu chuẩn mật khẩu mạnh:</p>
+              <ul className="list-disc pl-6 mb-0">
+                <li>Độ dài ít nhất 8 ký tự (khuyến nghị 12-16 ký tự)</li>
+                <li>Kết hợp chữ hoa, chữ thường, số và ký tự đặc biệt (@, #, $, %, v.v.)</li>
+                <li>Không sử dụng thông tin cá nhân dễ đoán (ngày sinh, tên, số điện thoại)</li>
+                <li>Không sử dụng từ điển hoặc cụm từ phổ biến</li>
+                <li>Không sử dụng mật khẩu đã dùng cho các tài khoản khác</li>
+              </ul>
             </div>
+            <p className="mb-4">
+              <strong>Ví dụ về mật khẩu yếu:</strong> 123456, password, tên + năm sinh
+            </p>
+            <p className="mb-4">
+              <strong>Ví dụ về mật khẩu mạnh:</strong> P@s$w0rd92L*tT3ry, Tr0ng!M@nh92#2025
+            </p>
+            <div className="bg-gray-100 p-4 rounded-lg mb-4">
+              <p className="font-semibold text-[#bc2022]">Mẹo:</p>
+              <p>Sử dụng công cụ quản lý mật khẩu như LastPass, Dashlane hoặc 1Password để tạo và lưu trữ mật khẩu mạnh một cách an toàn.</p>
+            </div>
+
+            <h3 className="text-xl font-semibold mb-3">2. Thay đổi mật khẩu định kỳ</h3>
+            <p className="mb-4">
+              Việc thay đổi mật khẩu định kỳ là biện pháp bảo mật quan trọng, giúp giảm thiểu rủi ro nếu mật khẩu
+              của bạn đã bị lộ mà bạn không biết.
+            </p>
+            <ul className="list-disc pl-6 mb-4">
+              <li className="mb-2">Thay đổi mật khẩu 92Lottery ít nhất 3-6 tháng một lần</li>
+              <li className="mb-2">Không sử dụng lại mật khẩu cũ hoặc mật khẩu tương tự</li>
+              <li className="mb-2">Thay đổi mật khẩu ngay lập tức nếu nghi ngờ tài khoản bị xâm nhập</li>
+              <li className="mb-2">Thay đổi mật khẩu sau khi sử dụng thiết bị công cộng hoặc mạng Wi-Fi công cộng</li>
+            </ul>
+
+            <h3 className="text-xl font-semibold mb-3">3. Bảo mật email liên kết</h3>
+            <p className="mb-4">
+              Email liên kết với tài khoản 92Lottery của bạn là phương tiện quan trọng để khôi phục tài khoản và
+              nhận thông báo. Việc bảo mật email cũng quan trọng không kém việc bảo mật tài khoản 92Lottery.
+            </p>
+            <ul className="list-disc pl-6 mb-4">
+              <li className="mb-2">Sử dụng email riêng cho tài khoản 92Lottery, không dùng chung với các dịch vụ khác</li>
+              <li className="mb-2">Đặt mật khẩu mạnh cho email và bật xác thực hai yếu tố</li>
+              <li className="mb-2">Kiểm tra thường xuyên các hoạt động đáng ngờ trong email</li>
+              <li className="mb-2">Không chia sẻ quyền truy cập email với người khác</li>
+            </ul>
+
+            <h3 className="text-xl font-semibold mb-3">4. Cập nhật thông tin liên hệ</h3>
+            <p className="mb-4">
+              Đảm bảo thông tin liên hệ của bạn luôn được cập nhật để nhận các thông báo bảo mật và khôi phục
+              tài khoản khi cần thiết.
+            </p>
+            <ul className="list-disc pl-6 mb-4">
+              <li className="mb-2">Cập nhật số điện thoại chính xác để nhận mã xác thực</li>
+              <li className="mb-2">Đảm bảo email liên kết vẫn hoạt động và bạn có quyền truy cập</li>
+              <li className="mb-2">Thông báo cho 92Lottery khi thay đổi thông tin liên hệ</li>
+            </ul>
           </div>
 
           <h2 className="text-2xl font-semibold text-[#bc2022] mt-8 mb-4">Xác thực hai yếu tố (2FA)</h2>
 
           <div className="mb-8">
             <p className="mb-4">
-              Xác thực hai yếu tố (2FA) là biện pháp bảo mật bổ sung, yêu cầu hai hình thức xác thực khác nhau
-              khi đăng nhập. Ngay cả khi mật khẩu bị lộ, kẻ tấn công vẫn không thể truy cập vào tài khoản
-              nếu không có yếu tố xác thực thứ hai.
+              Xác thực hai yếu tố (2FA) là một trong những biện pháp bảo mật hiệu quả nhất để bảo vệ tài khoản 92Lottery.
+              Với 2FA, ngay cả khi mật khẩu bị lộ, kẻ tấn công vẫn không thể truy cập vào tài khoản của bạn nếu không có
+              yếu tố xác thực thứ hai.
             </p>
 
-            <h3 className="text-xl font-semibold mb-3">1. Lợi ích của xác thực hai yếu tố</h3>
+            <h3 className="text-xl font-semibold mb-3">1. Cách thức hoạt động của 2FA</h3>
+            <p className="mb-4">
+              Xác thực hai yếu tố yêu cầu hai hình thức xác thực khác nhau:
+            </p>
             <ul className="list-disc pl-6 mb-4">
-              <li className="mb-2">Tăng cường bảo mật cho tài khoản</li>
-              <li className="mb-2">Ngăn chặn truy cập trái phép ngay cả khi mật khẩu bị lộ</li>
-              <li className="mb-2">Cảnh báo khi có người đang cố gắng đăng nhập vào tài khoản của bạn</li>
-              <li className="mb-2">Bảo vệ thông tin cá nhân và tài chính</li>
-              <li className="mb-2">Giảm thiểu rủi ro từ các cuộc tấn công lừa đảo</li>
+              <li className="mb-2"><strong>Yếu tố đầu tiên:</strong> Thứ bạn biết (mật khẩu)</li>
+              <li className="mb-2"><strong>Yếu tố thứ hai:</strong> Thứ bạn có (điện thoại để nhận mã SMS hoặc ứng dụng xác thực)</li>
             </ul>
+            <p className="mb-4">
+              Khi đăng nhập, sau khi nhập mật khẩu, bạn sẽ được yêu cầu nhập mã xác thực từ SMS hoặc ứng dụng xác thực.
+            </p>
 
-            <h3 className="text-xl font-semibold mb-3">2. Các phương thức xác thực hai yếu tố</h3>
+            <h3 className="text-xl font-semibold mb-3">2. Các phương thức 2FA tại 92Lottery</h3>
+            <p className="mb-4">
+              92Lottery hỗ trợ nhiều phương thức xác thực hai yếu tố:
+            </p>
             <ul className="list-disc pl-6 mb-4">
-              <li className="mb-2"><strong>SMS:</strong> Nhận mã xác thực qua tin nhắn điện thoại</li>
-              <li className="mb-2"><strong>Email:</strong> Nhận mã xác thực qua email</li>
-              <li className="mb-2"><strong>Ứng dụng xác thực:</strong> Sử dụng ứng dụng như Google Authenticator, Microsoft Authenticator, Authy</li>
-              <li className="mb-2"><strong>Khóa bảo mật vật lý:</strong> Sử dụng thiết bị phần cứng như YubiKey</li>
+              <li className="mb-2"><strong>SMS OTP:</strong> Mã xác thực gửi qua tin nhắn SMS</li>
+              <li className="mb-2"><strong>Email OTP:</strong> Mã xác thực gửi qua email</li>
+              <li className="mb-2"><strong>Ứng dụng xác thực:</strong> Google Authenticator, Microsoft Authenticator, Authy</li>
             </ul>
+            <div className="bg-gray-100 p-4 rounded-lg mb-4">
+              <p className="font-semibold text-[#bc2022]">Lưu ý:</p>
+              <p>Ứng dụng xác thực thường an toàn hơn SMS hoặc email OTP, vì SMS và email có thể bị chặn hoặc đánh cắp.</p>
+            </div>
           </div>
 
             <h3 className="text-xl font-semibold mb-3">3. Hướng dẫn bật 2FA trên 92Lottery</h3>

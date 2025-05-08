@@ -8,10 +8,10 @@ export const metadata: Metadata = {
   description: 'Phân tích chi tiết về độ uy tín của 92Lottery. Tìm hiểu 92Lottery có lừa đảo không, giấy phép hoạt động, bảo mật và đánh giá từ chuyên gia cá cược.',
   keywords: ['92lottery có lừa đảo không', 'đánh giá 92lottery', 'uy tín 92lottery', '92lottery lừa đảo', '92lottery có uy tín không', 'review 92lottery', 'nhận xét 92lottery'],
   alternates: {
-    canonical: 'https://92lottery.dev',
+    canonical: 'https://92lottery.dev/92lottery-co-lua-dao-khong',
     languages: {
-      'vi': 'https://92lottery.dev',
-      'x-default': 'https://92lottery.dev'
+      'vi': 'https://92lottery.dev/92lottery-co-lua-dao-khong',
+      'x-default': 'https://92lottery.dev/92lottery-co-lua-dao-khong'
     }
   },
 };

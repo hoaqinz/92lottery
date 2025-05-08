@@ -8,10 +8,10 @@ export const metadata: Metadata = {
   description: 'Hướng dẫn chi tiết các phương thức nạp tiền vào tài khoản 92Lottery. Nạp tiền nhanh chóng, an toàn và nhận thêm khuyến mãi hấp dẫn.',
   keywords: ['nạp tiền 92lottery', 'hướng dẫn nạp tiền 92lottery', 'cách nạp tiền 92lottery', 'phương thức thanh toán 92lottery', 'khuyến mãi nạp tiền 92lottery'],
   alternates: {
-    canonical: 'https://92lottery.dev',
+    canonical: 'https://92lottery.dev/huong-dan-nap-tien',
     languages: {
-      'vi': 'https://92lottery.dev',
-      'x-default': 'https://92lottery.dev'
+      'vi': 'https://92lottery.dev/huong-dan-nap-tien',
+      'x-default': 'https://92lottery.dev/huong-dan-nap-tien'
     }
   },
 };

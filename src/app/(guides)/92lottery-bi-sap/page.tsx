@@ -8,10 +8,10 @@ export const metadata: Metadata = {
   description: 'Hướng dẫn khắc phục khi 92Lottery bị sập, lỗi truy cập và các giải pháp hiệu quả. Tìm hiểu nguyên nhân và cách truy cập 92Lottery khi website gặp sự cố.',
   keywords: ['92lottery bị sập', 'lỗi truy cập 92lottery', '92lottery không vào được', 'khắc phục 92lottery', 'link dự phòng 92lottery', 'domain 92lottery', 'dns 92lottery'],
   alternates: {
-    canonical: 'https://92lottery.dev',
+    canonical: 'https://92lottery.dev/92lottery-bi-sap',
     languages: {
-      'vi': 'https://92lottery.dev',
-      'x-default': 'https://92lottery.dev'
+      'vi': 'https://92lottery.dev/92lottery-bi-sap',
+      'x-default': 'https://92lottery.dev/92lottery-bi-sap'
     }
   },
 };

@@ -8,10 +8,10 @@ export const metadata: Metadata = {
   description: 'Hướng dẫn chi tiết cách đăng nhập vào tài khoản 92Lottery. Khắc phục các lỗi đăng nhập phổ biến và mẹo bảo mật tài khoản hiệu quả.',
   keywords: ['đăng nhập 92lottery', 'hướng dẫn đăng nhập 92lottery', 'cách đăng nhập 92lottery', 'lỗi đăng nhập 92lottery', 'quên mật khẩu 92lottery'],
   alternates: {
-    canonical: 'https://92lottery.dev',
+    canonical: 'https://92lottery.dev/huong-dan-dang-nhap',
     languages: {
-      'vi': 'https://92lottery.dev',
-      'x-default': 'https://92lottery.dev'
+      'vi': 'https://92lottery.dev/huong-dan-dang-nhap',
+      'x-default': 'https://92lottery.dev/huong-dan-dang-nhap'
     }
   },
 };
