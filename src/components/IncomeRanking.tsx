@@ -3,77 +3,74 @@
 import React from 'react';
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
-
-interface RankingMember {
-  username: string;
-  amount: string;
-  position: number;
-}
+import { getRankingData, type RankingMember } from '@/services/rankingService';
+import AmountDisplay from './AmountDisplay';
 
 const IncomeRanking: React.FC = () => {
-  // Dữ liệu mẫu cho bảng xếp hạng
-  const [rankingData, setRankingData] = useState<RankingMember[]>([
-    {
-      username: 'Mem***5US',
-      amount: '6,411,777,400.00₫',
-      position: 1
-    },
-    {
-      username: 'Mem***6EN',
-      amount: '3,084,944,450.00₫',
-      position: 2
-    },
-    {
-      username: 'Mem***X8W',
-      amount: '1,027,040,000.00₫',
-      position: 3
-    },
-    {
-      username: 'Mem***MPD',
-      amount: '1,019,674,320.00₫',
-      position: 4
-    },
-    {
-      username: 'Mem***SOX',
-      amount: '880,040,000.00₫',
-      position: 5
-    },
-    {
-      username: 'Mem***POU',
-      amount: '558,033,560.00₫',
-      position: 6
-    },
-    {
-      username: 'LH***N',
-      amount: '489,586,250.00₫',
-      position: 7
-    },
-    {
-      username: 'Tin***inh',
-      amount: '398,472,900.00₫',
-      position: 8
-    },
-    {
-      username: 'Tri***uDõ',
-      amount: '386,457,610.00₫',
-      position: 9
-    },
-    {
-      username: 'Mem***XVF',
-      amount: '337,602,160.00₫',
-      position: 10
-    }
-  ]);
+  // State cho dữ liệu bảng xếp hạng
+  const [rankingData, setRankingData] = useState<RankingMember[]>([]);
+  const [lastUpdated, setLastUpdated] = useState<Date | null>(null);
+  const [isUpdating, setIsUpdating] = useState(false);
 
+  // Hàm cập nhật dữ liệu
+  const updateRankingData = () => {
+    setIsUpdating(true);
+
+    // Thêm timeout để tạo hiệu ứng loading
+    setTimeout(() => {
+      const data = getRankingData();
+      setRankingData(data);
+      setLastUpdated(new Date());
+      setIsUpdating(false);
+    }, 800); // Đợi 800ms để tạo hiệu ứng
+  };
+
+  // Khởi tạo dữ liệu khi component mount
   useEffect(() => {
-    // Đây là nơi bạn có thể gọi API để lấy dữ liệu thực tế
+    updateRankingData();
+
+    // Cập nhật dữ liệu mỗi 2 tiếng
+    const intervalId = setInterval(() => {
+      updateRankingData();
+    }, 2 * 60 * 60 * 1000); // 2 giờ
+
+    // Cleanup interval khi component unmount
+    return () => clearInterval(intervalId);
   }, []);
 
   return (
     <div className="mb-4 bg-white p-0 rounded-lg">
-      <div className="flex items-center mb-[50px] p-4">
-        <div className="w-1 h-6 bg-[#e62e2e] mr-2"></div>
-        <h2 className="text-xl font-bold">BXH thu nhập hôm nay</h2>
+      <div className="flex flex-col mb-[50px] p-4">
+        <div className="flex items-center justify-between">
+          <div className="flex items-center">
+            <div className="w-1 h-6 bg-[#e62e2e] mr-2"></div>
+            <h2 className="text-xl font-bold">BXH thu nhập hôm nay</h2>
+          </div>
+          <button
+            onClick={updateRankingData}
+            disabled={isUpdating}
+            className={`text-xs text-white px-2 py-1 rounded-md transition-colors flex items-center ${
+              isUpdating ? 'bg-gray-400 cursor-not-allowed' : 'bg-[#e62e2e] hover:bg-[#d42a2a]'
+            }`}
+          >
+            {isUpdating ? (
+              <>
+                <svg className="animate-spin -ml-1 mr-2 h-4 w-4 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                  <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                  <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                </svg>
+                Đang cập nhật...
+              </>
+            ) : (
+              'Cập nhật'
+            )}
+          </button>
+        </div>
+        {lastUpdated && (
+          <div className="text-xs text-gray-500 mt-1 ml-3">
+            Cập nhật: {lastUpdated.toLocaleTimeString('vi-VN', { hour: '2-digit', minute: '2-digit' })}
+          </div>
+        )}
       </div>
 
       <div className="relative">
@@ -115,7 +112,9 @@ const IncomeRanking: React.FC = () => {
                 </div>
                 <div className="absolute top-20 left-1/2 transform -translate-x-[53%] text-center w-28 bg-white bg-opacity-20 rounded p-1" style={{ zIndex: 10 }}>
                   <div className="text-xs font-medium text-white">{rankingData[1]?.username}</div>
-                  <div className="text-[10px] text-white font-bold">{rankingData[1]?.amount}</div>
+                  <div className="text-[10px] text-white font-bold">
+                    <AmountDisplay amount={rankingData[1]?.amount || ''} />
+                  </div>
                 </div>
               </div>
 
@@ -143,7 +142,9 @@ const IncomeRanking: React.FC = () => {
                 </div>
                 <div className="absolute top-28 left-1/2 transform -translate-x-1/2 text-center w-32" style={{ zIndex: 10 }}>
                   <div className="text-sm font-medium text-white drop-shadow-md">{rankingData[0]?.username}</div>
-                  <div className="text-xs text-white font-bold drop-shadow-md">{rankingData[0]?.amount}</div>
+                  <div className="text-xs text-white font-bold drop-shadow-md">
+                    <AmountDisplay amount={rankingData[0]?.amount || ''} />
+                  </div>
                 </div>
               </div>
 
@@ -171,7 +172,9 @@ const IncomeRanking: React.FC = () => {
                 </div>
                 <div className="absolute top-20 left-1/2 transform -translate-x-[47%] text-center w-28 bg-white bg-opacity-20 rounded p-1" style={{ zIndex: 10 }}>
                   <div className="text-xs font-medium text-white">{rankingData[2]?.username}</div>
-                  <div className="text-[10px] text-white font-bold">{rankingData[2]?.amount}</div>
+                  <div className="text-[10px] text-white font-bold">
+                    <AmountDisplay amount={rankingData[2]?.amount || ''} />
+                  </div>
                 </div>
               </div>
             </div>
@@ -197,7 +200,7 @@ const IncomeRanking: React.FC = () => {
                 <div className="ml-2 text-xs text-gray-600">{item.username}</div>
               </div>
               <div className="bg-red-600 text-white text-xs px-4 py-1 rounded-full shadow-md">
-                {item.amount}
+                <AmountDisplay amount={item.amount} />
               </div>
             </div>
           ))}
