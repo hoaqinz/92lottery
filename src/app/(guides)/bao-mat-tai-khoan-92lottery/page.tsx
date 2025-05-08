@@ -48,7 +48,7 @@ export default function SecurityGuidePage() {
   const breadcrumbSchemaString = JSON.stringify(breadcrumbSchema);
 
   return (
-    <>
+    <div>
       {/* Schema.org JSON-LD */}
       <script
         type="application/ld+json"
@@ -370,6 +370,6 @@ export default function SecurityGuidePage() {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 }

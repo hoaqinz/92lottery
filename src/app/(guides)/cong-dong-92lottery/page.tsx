@@ -48,7 +48,7 @@ export default function CommunityPage() {
   const breadcrumbSchemaString = JSON.stringify(breadcrumbSchema);
 
   return (
-    <>
+    <div>
       {/* Schema.org JSON-LD */}
       <script
         type="application/ld+json"
@@ -373,6 +373,6 @@ export default function CommunityPage() {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 }

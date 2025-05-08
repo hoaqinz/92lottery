@@ -48,7 +48,7 @@ export default function EarnMoneyPage() {
   const breadcrumbSchemaString = JSON.stringify(breadcrumbSchema);
 
   return (
-    <>
+    <div>
       {/* Schema.org JSON-LD */}
       <script
         type="application/ld+json"
@@ -412,6 +412,6 @@ export default function EarnMoneyPage() {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 }
