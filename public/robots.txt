@@ -2,21 +2,16 @@
 User-agent: *
 Allow: /
 Allow: /_next/image*
-Allow: /_next/static/chunks/
-Allow: /_next/static/css/
-Allow: /_next/static/media/
+Allow: /_next/static/
 Disallow: /api/
 Disallow: /admin/
 Disallow: /private/
-Disallow: /_next/data/
 
 # Googlebot specific rules
 User-agent: Googlebot
 Allow: /
 Allow: /_next/image*
-Allow: /_next/static/chunks/
-Allow: /_next/static/css/
-Allow: /_next/static/media/
+Allow: /_next/static/
 Disallow: /api/
 Disallow: /admin/
 Disallow: /private/

@@ -2,7 +2,7 @@ import { Metadata } from 'next';
 import ClientIframeWrapper from '@/components/ClientIframeWrapper';
 
 export const metadata: Metadata = {
-  title: 'Đăng nhập | 92Lottery',
+  title: 'Đăng nhập',
   description: 'Đăng nhập vào tài khoản 92Lottery để tham gia các trò chơi xổ số, casino và nhận thưởng.',
   robots: {
     index: true,

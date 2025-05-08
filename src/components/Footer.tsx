@@ -22,34 +22,46 @@ export default function Footer() {
               Giới thiệu
             </Link>
             <Link
-              href="/huong-dan-dang-ky"
+              href="/danh-gia-92lottery-2025"
               className="text-sm text-center py-2 px-3 bg-white/10 rounded-md hover:bg-white/20 transition-colors"
             >
-              Đăng ký
+              Đánh giá
             </Link>
             <Link
-              href="/huong-dan-dang-nhap"
+              href="/cach-choi-92lottery-hieu-qua"
               className="text-sm text-center py-2 px-3 bg-white/10 rounded-md hover:bg-white/20 transition-colors"
             >
-              Đăng nhập
+              Cách chơi
             </Link>
             <Link
-              href="/huong-dan-nap-tien"
+              href="/so-sanh-92lottery"
               className="text-sm text-center py-2 px-3 bg-white/10 rounded-md hover:bg-white/20 transition-colors"
             >
-              Nạp tiền
+              So sánh
             </Link>
             <Link
-              href="/terms"
+              href="/lich-su-phat-trien-92lottery"
               className="text-sm text-center py-2 px-3 bg-white/10 rounded-md hover:bg-white/20 transition-colors"
             >
-              Điều khoản
+              Lịch sử
             </Link>
             <Link
-              href="/privacy"
+              href="/92lottery-co-lua-dao-khong"
               className="text-sm text-center py-2 px-3 bg-white/10 rounded-md hover:bg-white/20 transition-colors"
             >
-              Chính sách
+              Uy tín
+            </Link>
+            <Link
+              href="/bao-mat-tai-khoan-92lottery"
+              className="text-sm text-center py-2 px-3 bg-white/10 rounded-md hover:bg-white/20 transition-colors"
+            >
+              Bảo mật
+            </Link>
+            <Link
+              href="/app-92lottery"
+              className="text-sm text-center py-2 px-3 bg-white/10 rounded-md hover:bg-white/20 transition-colors"
+            >
+              Tải App
             </Link>
           </div>
 

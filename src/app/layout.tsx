@@ -3,12 +3,13 @@ import "./globals.css";
 import { generateGamblingWebsiteSchema } from "@/lib/schema";
 import { AuthProvider } from "@/contexts/AuthContext";
 import AuthPopup from "@/components/AuthPopup";
+import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://92lottery.dev'),
   title: {
-    template: '%s | 92Lottery - Cá cược xổ số & Casino trực tuyến',
-    default: '92Lottery - Trang chủ chính thức | Đăng ký, đăng nhập, tải app, nạp rút tiền'
+    template: '%s | 92Lottery',
+    default: '92Lottery - Trang chủ chính thức'
   },
   description: "92Lottery - Trang chủ chính thức cung cấp đăng ký, đăng nhập, tải app, nạp rút tiền, mini game, club VIP. Nhà cái uy tín hàng đầu Việt Nam với tỷ lệ trả thưởng cao nhất thị trường.",
   keywords: ["92lottery", "92lottery đăng nhập", "92lottery đăng ký", "92lottery bị sập", "92lottery telegram", "92lottery có lừa đảo không", "92lottery mini", "92lottery club", "app 92lottery", "cách đăng ký 92lottery", "rút tiền 92lottery", "nạp tiền 92lottery", "tải 92lottery", "link 92lottery", "92lottery việt nam"],
@@ -27,7 +28,7 @@ export const metadata: Metadata = {
     type: "website",
     locale: "vi_VN",
     url: "https://92lottery.dev",
-    title: "92Lottery - Trang chủ chính thức | Đăng ký, đăng nhập, tải app, nạp rút tiền",
+    title: "92Lottery - Trang chủ chính thức",
     description: "92Lottery - Trang chủ chính thức cung cấp đăng ký, đăng nhập, tải app, nạp rút tiền, mini game, club VIP. Nhà cái uy tín hàng đầu Việt Nam.",
     siteName: "92Lottery",
     images: [
@@ -41,7 +42,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "92Lottery - Trang chủ chính thức | Đăng ký, đăng nhập, tải app",
+    title: "92Lottery - Trang chủ chính thức",
     description: "92Lottery - Trang chủ chính thức cung cấp đăng ký, đăng nhập, tải app, nạp rút tiền, mini game, club VIP. Nhà cái uy tín hàng đầu Việt Nam.",
     creator: "@92lottery",
     images: ["https://92lottery.dev/images/twitter-image.jpg"],
@@ -108,6 +109,7 @@ export default function RootLayout({
         <AuthProvider>
           <div className="w-full max-w-[420px] min-h-screen bg-white rounded-lg shadow-2xl relative overflow-x-hidden">
             {children}
+            <Footer />
             <AuthPopup />
           </div>
         </AuthProvider>
