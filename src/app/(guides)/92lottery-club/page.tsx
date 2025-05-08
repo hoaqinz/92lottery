@@ -8,10 +8,10 @@ export const metadata: Metadata = {
   description: 'Tìm hiểu về 92Lottery Club, chương trình thành viên VIP với nhiều đặc quyền hấp dẫn. Khám phá các cấp độ VIP, lợi ích độc quyền và cách tham gia 92Lottery Club.',
   keywords: ['92lottery club', 'vip 92lottery', 'thành viên vip 92lottery', 'đặc quyền 92lottery', 'cấp độ vip 92lottery', 'hoàn trả 92lottery', 'khuyến mãi vip 92lottery'],
   alternates: {
-    canonical: 'https://92lottery.dev/92lottery-club',
+    canonical: 'https://92lottery.dev',
     languages: {
-      'vi': 'https://92lottery.dev/92lottery-club',
-      'x-default': 'https://92lottery.dev/92lottery-club'
+      'vi': 'https://92lottery.dev',
+      'x-default': 'https://92lottery.dev'
     }
   },
 };

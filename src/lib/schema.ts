@@ -106,22 +106,62 @@ export const generateHomePageSchema = () => {
     }
   ];
 
+  // Tổng hợp tất cả các FAQ từ các trang con
   const faqs = [
+    // Trang chủ
     {
       question: "92Lottery là gì?",
       answer: "92Lottery là nền tảng cá cược xổ số, lottery, thể thao và casino trực tuyến uy tín hàng đầu Việt Nam, cung cấp đa dạng các trò chơi với tỷ lệ trả thưởng cao nhất thị trường."
     },
+    // Đăng ký
     {
       question: "Làm thế nào để đăng ký tài khoản tại 92Lottery?",
       answer: "Để đăng ký tài khoản tại 92Lottery, bạn chỉ cần nhấp vào nút 'Đăng ký' trên trang chủ, điền thông tin cá nhân và làm theo hướng dẫn. Sau khi đăng ký thành công, bạn sẽ nhận được khuyến mãi 100K."
     },
+    // Đăng nhập
     {
-      question: "92Lottery có những trò chơi nào?",
-      answer: "92Lottery cung cấp nhiều trò chơi hấp dẫn như Win Go, K3 Lotre, 5D Lotre, Trx Win, cùng nhiều trò chơi casino và thể thao trực tuyến khác."
+      question: "Làm thế nào để đăng nhập vào 92Lottery?",
+      answer: "Để đăng nhập vào 92Lottery, bạn cần truy cập trang chủ 92lottery.dev, nhấp vào nút 'Đăng nhập', nhập số điện thoại và mật khẩu của bạn, sau đó nhấp vào nút 'Đăng nhập' để truy cập vào tài khoản."
     },
+    // Nạp tiền
     {
-      question: "Làm thế nào để nạp và rút tiền tại 92Lottery?",
-      answer: "92Lottery hỗ trợ nhiều phương thức thanh toán như chuyển khoản ngân hàng, ví điện tử, và tiền điện tử. Quá trình nạp và rút tiền đều được xử lý nhanh chóng và an toàn."
+      question: "92Lottery có những phương thức nạp tiền nào?",
+      answer: "92Lottery hỗ trợ nhiều phương thức nạp tiền khác nhau, bao gồm: chuyển khoản ngân hàng, ví điện tử (Momo, ZaloPay, VNPay), thẻ cào điện thoại, và tiền điện tử (USDT, BTC)."
+    },
+    // Rút tiền
+    {
+      question: "Thời gian rút tiền từ 92Lottery mất bao lâu?",
+      answer: "Thời gian rút tiền từ 92Lottery phụ thuộc vào phương thức rút tiền bạn chọn. Chuyển khoản ngân hàng và ví điện tử thường được xử lý trong vòng 5-30 phút. Rút tiền qua tiền điện tử có thể mất từ 30 phút đến 2 giờ."
+    },
+    // App
+    {
+      question: "Làm thế nào để tải App 92Lottery?",
+      answer: "Để tải App 92Lottery, bạn cần truy cập trang chủ 92lottery.dev, nhấp vào nút 'Tải ứng dụng', chọn phiên bản phù hợp với thiết bị của bạn (Android/iOS), và làm theo hướng dẫn cài đặt."
+    },
+    // Mini game
+    {
+      question: "Win Go là gì và cách chơi như thế nào?",
+      answer: "Win Go là mini game xổ số 1 phút tại 92Lottery, cho phép người chơi đoán kết quả số từ 0-9 hoặc màu sắc (Xanh/Đỏ/Tím). Cách chơi đơn giản: chọn số hoặc màu bạn dự đoán, đặt cược, và chờ kết quả sau 1 phút."
+    },
+    // Club VIP
+    {
+      question: "92Lottery Club là gì?",
+      answer: "92Lottery Club là chương trình thành viên VIP của 92Lottery, mang đến nhiều đặc quyền và ưu đãi độc quyền cho người chơi trung thành. Chương trình gồm 6 cấp độ VIP, từ Bronze đến Diamond, với lợi ích tăng dần theo cấp độ."
+    },
+    // Bị sập
+    {
+      question: "Tại sao 92Lottery bị sập hoặc không truy cập được?",
+      answer: "92Lottery có thể không truy cập được do nhiều nguyên nhân: bảo trì hệ thống, thay đổi địa chỉ domain, chặn DNS từ nhà mạng, tấn công DDoS, lỗi kết nối internet của người dùng, hoặc lỗi cache trình duyệt."
+    },
+    // Telegram
+    {
+      question: "Nhóm Telegram chính thức của 92Lottery là gì?",
+      answer: "Nhóm Telegram chính thức của 92Lottery là @92lottery_official, được quản lý bởi đội ngũ 92Lottery. Đây là kênh thông tin chính thức để nhận thông báo về khuyến mãi, sự kiện, link dự phòng, và hỗ trợ trực tiếp."
+    },
+    // Lừa đảo
+    {
+      question: "92Lottery có lừa đảo không?",
+      answer: "Không, 92Lottery không lừa đảo. 92Lottery là nhà cái uy tín với giấy phép hoạt động hợp pháp, hệ thống bảo mật tiên tiến, chính sách thanh toán minh bạch và đội ngũ hỗ trợ khách hàng chuyên nghiệp."
     }
   ];
 

@@ -8,10 +8,10 @@ export const metadata: Metadata = {
   description: 'Giới thiệu về 92Lottery - Nhà cái xổ số, lottery, thể thao và casino trực tuyến uy tín hàng đầu Việt Nam. Tìm hiểu về lịch sử, sứ mệnh, tầm nhìn và các dịch vụ của 92Lottery.',
   keywords: ['giới thiệu 92lottery', 'về 92lottery', 'nhà cái 92lottery', 'lịch sử 92lottery', 'dịch vụ 92lottery', 'uy tín 92lottery'],
   alternates: {
-    canonical: 'https://92lottery.dev/gioi-thieu',
+    canonical: 'https://92lottery.dev',
     languages: {
-      'vi': 'https://92lottery.dev/gioi-thieu',
-      'x-default': 'https://92lottery.dev/gioi-thieu'
+      'vi': 'https://92lottery.dev',
+      'x-default': 'https://92lottery.dev'
     }
   },
 };

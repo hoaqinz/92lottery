@@ -8,10 +8,10 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://92lottery.dev'),
   title: {
     template: '%s | 92Lottery - Cá cược xổ số & Casino trực tuyến',
-    default: '92Lottery - Xổ số & Casino trực tuyến | Cá cược uy tín hàng đầu Việt Nam'
+    default: '92Lottery - Trang chủ chính thức | Đăng ký, đăng nhập, tải app, nạp rút tiền'
   },
-  description: "92Lottery - Trang web cá cược xổ số, lottery, thể thao và casino trực tuyến hàng đầu Việt Nam với tỷ lệ trả thưởng cao nhất thị trường. Đăng ký ngay để nhận khuyến mãi đặc biệt từ 92lottery.",
-  keywords: ["92lottery", "cá cược", "xổ số", "lottery", "thể thao", "casino", "trò chơi trực tuyến", "đánh bài", "cá cược trực tuyến", "nhà cái uy tín", "92lottery việt nam"],
+  description: "92Lottery - Trang chủ chính thức cung cấp đăng ký, đăng nhập, tải app, nạp rút tiền, mini game, club VIP. Nhà cái uy tín hàng đầu Việt Nam với tỷ lệ trả thưởng cao nhất thị trường.",
+  keywords: ["92lottery", "92lottery đăng nhập", "92lottery đăng ký", "92lottery bị sập", "92lottery telegram", "92lottery có lừa đảo không", "92lottery mini", "92lottery club", "app 92lottery", "cách đăng ký 92lottery", "rút tiền 92lottery", "nạp tiền 92lottery", "tải 92lottery", "link 92lottery", "92lottery việt nam"],
   authors: [{ name: "92Lottery" }],
   creator: "92Lottery",
   publisher: "92Lottery",
@@ -27,22 +27,22 @@ export const metadata: Metadata = {
     type: "website",
     locale: "vi_VN",
     url: "https://92lottery.dev",
-    title: "92Lottery - Cá cược xổ số & Casino trực tuyến hàng đầu",
-    description: "92Lottery - Trang web cá cược xổ số, lottery, thể thao và casino trực tuyến hàng đầu Việt Nam. Đăng ký ngay để nhận khuyến mãi hấp dẫn.",
+    title: "92Lottery - Trang chủ chính thức | Đăng ký, đăng nhập, tải app, nạp rút tiền",
+    description: "92Lottery - Trang chủ chính thức cung cấp đăng ký, đăng nhập, tải app, nạp rút tiền, mini game, club VIP. Nhà cái uy tín hàng đầu Việt Nam.",
     siteName: "92Lottery",
     images: [
       {
         url: "https://92lottery.dev/images/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "92Lottery - Cá cược xổ số & Casino trực tuyến",
+        alt: "92Lottery - Trang chủ chính thức",
       }
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "92Lottery - Cá cược xổ số & Casino trực tuyến hàng đầu",
-    description: "92Lottery - Trang web cá cược xổ số, lottery, thể thao và casino trực tuyến hàng đầu Việt Nam.",
+    title: "92Lottery - Trang chủ chính thức | Đăng ký, đăng nhập, tải app",
+    description: "92Lottery - Trang chủ chính thức cung cấp đăng ký, đăng nhập, tải app, nạp rút tiền, mini game, club VIP. Nhà cái uy tín hàng đầu Việt Nam.",
     creator: "@92lottery",
     images: ["https://92lottery.dev/images/twitter-image.jpg"],
   },

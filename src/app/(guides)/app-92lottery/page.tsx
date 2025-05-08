@@ -8,10 +8,10 @@ export const metadata: Metadata = {
   description: 'Hướng dẫn chi tiết cách tải và cài đặt App 92Lottery trên điện thoại Android và iOS. Trải nghiệm cá cược xổ số, casino và thể thao mọi lúc mọi nơi với ứng dụng di động 92Lottery.',
   keywords: ['app 92lottery', 'tải app 92lottery', 'cài đặt 92lottery', 'ứng dụng 92lottery', '92lottery mobile', 'app cá cược 92lottery', 'download 92lottery'],
   alternates: {
-    canonical: 'https://92lottery.dev/app-92lottery',
+    canonical: 'https://92lottery.dev',
     languages: {
-      'vi': 'https://92lottery.dev/app-92lottery',
-      'x-default': 'https://92lottery.dev/app-92lottery'
+      'vi': 'https://92lottery.dev',
+      'x-default': 'https://92lottery.dev'
     }
   },
 };

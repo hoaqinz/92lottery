@@ -8,10 +8,10 @@ export const metadata: Metadata = {
   description: 'Hướng dẫn chi tiết cách rút tiền từ 92Lottery nhanh chóng và an toàn. Tìm hiểu các phương thức rút tiền, thời gian xử lý, hạn mức và các lưu ý quan trọng.',
   keywords: ['rút tiền 92lottery', 'cách rút tiền 92lottery', 'hướng dẫn rút tiền 92lottery', 'thời gian rút tiền 92lottery', 'hạn mức rút tiền 92lottery', 'phí rút tiền 92lottery'],
   alternates: {
-    canonical: 'https://92lottery.dev/rut-tien-92lottery',
+    canonical: 'https://92lottery.dev',
     languages: {
-      'vi': 'https://92lottery.dev/rut-tien-92lottery',
-      'x-default': 'https://92lottery.dev/rut-tien-92lottery'
+      'vi': 'https://92lottery.dev',
+      'x-default': 'https://92lottery.dev'
     }
   },
 };

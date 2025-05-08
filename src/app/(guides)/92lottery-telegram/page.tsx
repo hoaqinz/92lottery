@@ -8,10 +8,10 @@ export const metadata: Metadata = {
   description: 'Hướng dẫn tham gia nhóm Telegram chính thức của 92Lottery. Nhận thông báo mới nhất về khuyến mãi, sự kiện, link dự phòng và hỗ trợ trực tiếp từ đội ngũ 92Lottery.',
   keywords: ['92lottery telegram', 'nhóm telegram 92lottery', 'kênh telegram 92lottery', 'thông báo 92lottery', 'link dự phòng 92lottery', 'hỗ trợ 92lottery telegram', 'cộng đồng 92lottery'],
   alternates: {
-    canonical: 'https://92lottery.dev/92lottery-telegram',
+    canonical: 'https://92lottery.dev',
     languages: {
-      'vi': 'https://92lottery.dev/92lottery-telegram',
-      'x-default': 'https://92lottery.dev/92lottery-telegram'
+      'vi': 'https://92lottery.dev',
+      'x-default': 'https://92lottery.dev'
     }
   },
 };

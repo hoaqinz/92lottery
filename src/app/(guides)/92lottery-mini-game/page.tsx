@@ -8,10 +8,10 @@ export const metadata: Metadata = {
   description: 'Hướng dẫn chi tiết về các mini game tại 92Lottery như Win Go, K3, 5D, TRX. Tìm hiểu luật chơi, chiến thuật và mẹo thắng lớn khi tham gia mini game tại 92Lottery.',
   keywords: ['92lottery mini game', 'win go 92lottery', 'k3 92lottery', '5d 92lottery', 'trx 92lottery', 'mini game 92lottery', 'cách chơi mini game 92lottery', 'mẹo thắng mini game 92lottery'],
   alternates: {
-    canonical: 'https://92lottery.dev/92lottery-mini-game',
+    canonical: 'https://92lottery.dev',
     languages: {
-      'vi': 'https://92lottery.dev/92lottery-mini-game',
-      'x-default': 'https://92lottery.dev/92lottery-mini-game'
+      'vi': 'https://92lottery.dev',
+      'x-default': 'https://92lottery.dev'
     }
   },
 };
