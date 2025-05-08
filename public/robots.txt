@@ -1,6 +1,23 @@
 # Allow all crawlers
 User-agent: *
 Allow: /
+Allow: /_next/image*
+Disallow: /api/
+Disallow: /admin/
+Disallow: /private/
+Disallow: /_next/static/
+Disallow: /_next/data/
+
+# Googlebot specific rules
+User-agent: Googlebot
+Allow: /
+Allow: /_next/image*
+Disallow: /api/
+Disallow: /admin/
+Disallow: /private/
 
 # Sitemap location
 Sitemap: https://92lottery.dev/sitemap.xml
+
+# Host
+Host: https://92lottery.dev
