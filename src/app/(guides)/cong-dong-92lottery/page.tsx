@@ -1,4 +1,3 @@
-import React from 'react';
 import { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -49,7 +48,7 @@ export default function CommunityPage() {
   const breadcrumbSchemaString = JSON.stringify(breadcrumbSchema);
 
   return (
-    <React.Fragment>
+    <div>
       {/* Schema.org JSON-LD */}
       <script
         type="application/ld+json"
@@ -374,6 +373,6 @@ export default function CommunityPage() {
           </div>
         </div>
       </div>
-    </React.Fragment>
+    </div>
   );
 }
