@@ -48,7 +48,7 @@ export default function ComparisonPage() {
   const breadcrumbSchemaString = JSON.stringify(breadcrumbSchema);
 
   return (
-    <div>
+    <>
       {/* Schema.org JSON-LD */}
       <script
         type="application/ld+json"
@@ -651,6 +651,6 @@ export default function ComparisonPage() {
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 }

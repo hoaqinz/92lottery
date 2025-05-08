@@ -48,7 +48,7 @@ export default function PopularGamesPage() {
   const breadcrumbSchemaString = JSON.stringify(breadcrumbSchema);
 
   return (
-    <div>
+    <>
       {/* Schema.org JSON-LD */}
       <script
         type="application/ld+json"
@@ -448,6 +448,6 @@ export default function PopularGamesPage() {
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 }

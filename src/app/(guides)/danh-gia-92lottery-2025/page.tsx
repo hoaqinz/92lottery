@@ -48,7 +48,7 @@ export default function ReviewPage() {
   const breadcrumbSchemaString = JSON.stringify(breadcrumbSchema);
 
   return (
-    <div>
+    <>
       {/* Schema.org JSON-LD */}
       <script
         type="application/ld+json"
@@ -474,6 +474,6 @@ export default function ReviewPage() {
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 }
