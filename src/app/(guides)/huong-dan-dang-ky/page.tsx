@@ -1,8 +1,6 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
-import Header from "@/components/Header";
-import TabBar from "@/components/TabBar";
 import { generateFAQSchema, generateBreadcrumbSchema } from '@/lib/schema';
 
 export const metadata: Metadata = {
@@ -50,7 +48,7 @@ export default function RegisterGuidePage() {
   const breadcrumbSchemaString = JSON.stringify(breadcrumbSchema);
 
   return (
-    <div className="flex flex-col w-full min-h-screen bg-[#f6f1f1]">
+    <>
       {/* Schema.org JSON-LD */}
       <script
         type="application/ld+json"
@@ -61,45 +59,41 @@ export default function RegisterGuidePage() {
         dangerouslySetInnerHTML={{ __html: breadcrumbSchemaString }}
       />
 
-      {/* Main content */}
-      <Header />
+      {/* Breadcrumb */}
+      <div className="bg-gray-100 py-2 px-4">
+        <nav className="text-sm">
+          <ol className="list-none p-0 inline-flex">
+            <li className="flex items-center">
+              <Link href="/" className="text-blue-600 hover:text-blue-800">
+                Trang chủ
+              </Link>
+              <span className="mx-2">/</span>
+            </li>
+            <li className="text-gray-700">Hướng dẫn đăng ký</li>
+          </ol>
+        </nav>
+      </div>
 
-      <main>
-        {/* Breadcrumb */}
-        <div className="bg-gray-100 py-2 px-4">
-          <nav className="text-sm">
-            <ol className="list-none p-0 inline-flex">
-              <li className="flex items-center">
-                <Link href="/" className="text-blue-600 hover:text-blue-800">
-                  Trang chủ
-                </Link>
-                <span className="mx-2">/</span>
-              </li>
-              <li className="text-gray-700">Hướng dẫn đăng ký</li>
-            </ol>
-          </nav>
-        </div>
-
-        {/* Main Content */}
-        <div className="px-4 py-6">
+      {/* Main Content */}
+      <div className="px-4 py-6">
         <h1 className="text-3xl font-bold text-[#bc2022] mb-6">Hướng dẫn đăng ký tài khoản 92Lottery chi tiết nhất 2025</h1>
-
+        
         <div className="prose max-w-none">
           <p className="text-lg mb-6">
-            92Lottery là nền tảng cá cược xổ số, lottery, thể thao và casino trực tuyến uy tín hàng đầu Việt Nam.
-            Bài viết này sẽ hướng dẫn bạn cách đăng ký tài khoản 92Lottery chi tiết từng bước để nhận ngay 100K và
+            92Lottery là nền tảng cá cược xổ số, lottery, thể thao và casino trực tuyến uy tín hàng đầu Việt Nam. 
+            Bài viết này sẽ hướng dẫn bạn cách đăng ký tài khoản 92Lottery chi tiết từng bước để nhận ngay 100K và 
             tham gia các trò chơi hấp dẫn.
           </p>
 
           <h2 className="text-2xl font-semibold text-[#bc2022] mt-8 mb-4">Các bước đăng ký tài khoản 92Lottery</h2>
-
+          
           <div className="mb-8">
             <h3 className="text-xl font-semibold mb-3">Bước 1: Truy cập trang đăng ký 92Lottery</h3>
             <p className="mb-4">
               Đầu tiên, bạn cần truy cập vào trang chủ của 92Lottery tại địa chỉ{' '}
               <Link href="/" className="text-blue-600 hover:text-blue-800">
                 92lottery.dev
-              </Link>.
+              </Link>. 
               Sau đó, nhấp vào nút "ĐĂNG KÝ" ở góc phải trên cùng của trang hoặc truy cập trực tiếp vào trang đăng ký tại{' '}
               <Link href="/register" className="text-blue-600 hover:text-blue-800">
                 92lottery.dev/register
@@ -131,7 +125,7 @@ export default function RegisterGuidePage() {
           <div className="mb-8">
             <h3 className="text-xl font-semibold mb-3">Bước 3: Xác nhận đăng ký</h3>
             <p className="mb-4">
-              Sau khi điền đầy đủ thông tin, nhấp vào nút "ĐĂNG KÝ" để hoàn tất quá trình. Hệ thống sẽ gửi mã xác nhận đến số điện thoại của bạn.
+              Sau khi điền đầy đủ thông tin, nhấp vào nút "ĐĂNG KÝ" để hoàn tất quá trình. Hệ thống sẽ gửi mã xác nhận đến số điện thoại của bạn. 
               Nhập mã xác nhận để kích hoạt tài khoản.
             </p>
           </div>
@@ -139,7 +133,7 @@ export default function RegisterGuidePage() {
           <div className="mb-8">
             <h3 className="text-xl font-semibold mb-3">Bước 4: Đăng nhập và nhận thưởng</h3>
             <p className="mb-4">
-              Sau khi đăng ký thành công, bạn có thể đăng nhập vào tài khoản của mình bằng số điện thoại và mật khẩu đã đăng ký.
+              Sau khi đăng ký thành công, bạn có thể đăng nhập vào tài khoản của mình bằng số điện thoại và mật khẩu đã đăng ký. 
               Khuyến mãi 100K sẽ được cộng vào tài khoản của bạn ngay sau khi đăng ký thành công.
             </p>
             <p className="mb-4">
@@ -151,7 +145,7 @@ export default function RegisterGuidePage() {
           </div>
 
           <h2 className="text-2xl font-semibold text-[#bc2022] mt-8 mb-4">Các câu hỏi thường gặp khi đăng ký 92Lottery</h2>
-
+          
           <div className="space-y-6 mb-8">
             {faqItems.map((faq, index) => (
               <div key={index} className="border-b border-gray-200 pb-4">
@@ -162,14 +156,14 @@ export default function RegisterGuidePage() {
           </div>
 
           <h2 className="text-2xl font-semibold text-[#bc2022] mt-8 mb-4">Kết luận</h2>
-
+          
           <p className="mb-4">
-            Đăng ký tài khoản 92Lottery là một quá trình đơn giản và nhanh chóng. Chỉ với vài bước đơn giản,
+            Đăng ký tài khoản 92Lottery là một quá trình đơn giản và nhanh chóng. Chỉ với vài bước đơn giản, 
             bạn đã có thể tham gia vào thế giới giải trí và cơ hội trúng thưởng hấp dẫn tại 92Lottery.
           </p>
-
+          
           <p className="mb-4">
-            Nếu bạn gặp bất kỳ khó khăn nào trong quá trình đăng ký, đừng ngần ngại liên hệ với đội ngũ hỗ trợ khách hàng
+            Nếu bạn gặp bất kỳ khó khăn nào trong quá trình đăng ký, đừng ngần ngại liên hệ với đội ngũ hỗ trợ khách hàng 
             của 92Lottery qua live chat hoặc hotline để được hỗ trợ kịp thời.
           </p>
 
@@ -194,10 +188,7 @@ export default function RegisterGuidePage() {
             </ul>
           </div>
         </div>
-      </main>
-
-      {/* Tab Bar */}
-      <TabBar />
-    </div>
+      </div>
+    </>
   );
 }

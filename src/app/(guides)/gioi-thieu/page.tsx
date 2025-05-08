@@ -1,8 +1,6 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
-import Header from "@/components/Header";
-import TabBar from "@/components/TabBar";
 import { generateFAQSchema, generateBreadcrumbSchema } from '@/lib/schema';
 
 export const metadata: Metadata = {
@@ -50,7 +48,7 @@ export default function AboutPage() {
   const breadcrumbSchemaString = JSON.stringify(breadcrumbSchema);
 
   return (
-    <div className="flex flex-col w-full min-h-screen bg-[#f6f1f1]">
+    <>
       {/* Schema.org JSON-LD */}
       <script
         type="application/ld+json"
@@ -61,42 +59,38 @@ export default function AboutPage() {
         dangerouslySetInnerHTML={{ __html: breadcrumbSchemaString }}
       />
 
-      {/* Main content */}
-      <Header />
+      {/* Breadcrumb */}
+      <div className="bg-gray-100 py-2 px-4">
+        <nav className="text-sm">
+          <ol className="list-none p-0 inline-flex">
+            <li className="flex items-center">
+              <Link href="/" className="text-blue-600 hover:text-blue-800">
+                Trang chủ
+              </Link>
+              <span className="mx-2">/</span>
+            </li>
+            <li className="text-gray-700">Giới thiệu</li>
+          </ol>
+        </nav>
+      </div>
 
-      <main>
-        {/* Breadcrumb */}
-        <div className="bg-gray-100 py-2 px-4">
-          <nav className="text-sm">
-            <ol className="list-none p-0 inline-flex">
-              <li className="flex items-center">
-                <Link href="/" className="text-blue-600 hover:text-blue-800">
-                  Trang chủ
-                </Link>
-                <span className="mx-2">/</span>
-              </li>
-              <li className="text-gray-700">Giới thiệu</li>
-            </ol>
-          </nav>
-        </div>
-
-        {/* Main Content */}
-        <div className="px-4 py-6">
+      {/* Main Content */}
+      <div className="px-4 py-6">
         <h1 className="text-3xl font-bold text-[#bc2022] mb-6">Giới thiệu 92Lottery - Nhà cái xổ số & Casino trực tuyến uy tín hàng đầu</h1>
-
+        
         <div className="prose max-w-none">
           <p className="text-lg mb-6">
-            92Lottery là nền tảng cá cược xổ số, lottery, thể thao và casino trực tuyến uy tín hàng đầu Việt Nam.
-            Với sứ mệnh mang đến trải nghiệm giải trí trực tuyến đẳng cấp, an toàn và công bằng, 92Lottery đã và đang
+            92Lottery là nền tảng cá cược xổ số, lottery, thể thao và casino trực tuyến uy tín hàng đầu Việt Nam. 
+            Với sứ mệnh mang đến trải nghiệm giải trí trực tuyến đẳng cấp, an toàn và công bằng, 92Lottery đã và đang 
             trở thành lựa chọn hàng đầu của hàng triệu người chơi tại Việt Nam và khu vực Đông Nam Á.
           </p>
 
           <h2 className="text-2xl font-semibold text-[#bc2022] mt-8 mb-4">Lịch sử hình thành và phát triển</h2>
-
+          
           <div className="mb-8">
             <p className="mb-4">
-              92Lottery được thành lập vào năm 2018 bởi một nhóm các chuyên gia trong ngành công nghiệp cá cược trực tuyến
-              với hơn 15 năm kinh nghiệm. Với tầm nhìn trở thành nền tảng cá cược trực tuyến hàng đầu tại Việt Nam,
+              92Lottery được thành lập vào năm 2018 bởi một nhóm các chuyên gia trong ngành công nghiệp cá cược trực tuyến 
+              với hơn 15 năm kinh nghiệm. Với tầm nhìn trở thành nền tảng cá cược trực tuyến hàng đầu tại Việt Nam, 
               92Lottery đã không ngừng đổi mới và phát triển để mang đến cho người chơi những trải nghiệm tốt nhất.
             </p>
             <p className="mb-4">
@@ -114,24 +108,24 @@ export default function AboutPage() {
           </div>
 
           <h2 className="text-2xl font-semibold text-[#bc2022] mt-8 mb-4">Sứ mệnh và tầm nhìn</h2>
-
+          
           <div className="mb-8">
             <h3 className="text-xl font-semibold mb-3">Sứ mệnh</h3>
             <p className="mb-4">
-              Sứ mệnh của 92Lottery là mang đến cho người chơi trải nghiệm cá cược trực tuyến an toàn, công bằng và giải trí.
-              Chúng tôi cam kết cung cấp các sản phẩm và dịch vụ chất lượng cao, đồng thời thúc đẩy cá cược có trách nhiệm
+              Sứ mệnh của 92Lottery là mang đến cho người chơi trải nghiệm cá cược trực tuyến an toàn, công bằng và giải trí. 
+              Chúng tôi cam kết cung cấp các sản phẩm và dịch vụ chất lượng cao, đồng thời thúc đẩy cá cược có trách nhiệm 
               và bảo vệ quyền lợi của người chơi.
             </p>
 
             <h3 className="text-xl font-semibold mb-3">Tầm nhìn</h3>
             <p className="mb-4">
-              Tầm nhìn của 92Lottery là trở thành nền tảng cá cược trực tuyến hàng đầu tại Việt Nam và khu vực Đông Nam Á,
+              Tầm nhìn của 92Lottery là trở thành nền tảng cá cược trực tuyến hàng đầu tại Việt Nam và khu vực Đông Nam Á, 
               được biết đến với sự uy tín, đa dạng sản phẩm, và trải nghiệm người dùng xuất sắc.
             </p>
           </div>
 
           <h2 className="text-2xl font-semibold text-[#bc2022] mt-8 mb-4">Các sản phẩm và dịch vụ</h2>
-
+          
           <div className="mb-8">
             <p className="mb-4">
               92Lottery cung cấp đa dạng các sản phẩm và dịch vụ cá cược trực tuyến, bao gồm:
@@ -181,7 +175,7 @@ export default function AboutPage() {
           </div>
 
           <h2 className="text-2xl font-semibold text-[#bc2022] mt-8 mb-4">Uy tín và bảo mật</h2>
-
+          
           <div className="mb-8">
             <p className="mb-4">
               92Lottery luôn đặt uy tín và bảo mật lên hàng đầu. Chúng tôi cam kết:
@@ -196,7 +190,7 @@ export default function AboutPage() {
           </div>
 
           <h2 className="text-2xl font-semibold text-[#bc2022] mt-8 mb-4">Trách nhiệm xã hội</h2>
-
+          
           <div className="mb-8">
             <p className="mb-4">
               92Lottery cam kết thúc đẩy cá cược có trách nhiệm và bảo vệ người chơi:
@@ -209,7 +203,7 @@ export default function AboutPage() {
           </div>
 
           <h2 className="text-2xl font-semibold text-[#bc2022] mt-8 mb-4">Các câu hỏi thường gặp về 92Lottery</h2>
-
+          
           <div className="space-y-6 mb-8">
             {faqItems.map((faq, index) => (
               <div key={index} className="border-b border-gray-200 pb-4">
@@ -220,14 +214,14 @@ export default function AboutPage() {
           </div>
 
           <h2 className="text-2xl font-semibold text-[#bc2022] mt-8 mb-4">Kết luận</h2>
-
+          
           <p className="mb-4">
-            92Lottery tự hào là nhà cái xổ số và casino trực tuyến uy tín hàng đầu Việt Nam, mang đến cho người chơi
-            trải nghiệm cá cược an toàn, công bằng và giải trí. Với đa dạng sản phẩm, hệ thống bảo mật tiên tiến,
-            và dịch vụ khách hàng chuyên nghiệp, 92Lottery cam kết đồng hành cùng người chơi trên hành trình chinh phục
+            92Lottery tự hào là nhà cái xổ số và casino trực tuyến uy tín hàng đầu Việt Nam, mang đến cho người chơi 
+            trải nghiệm cá cược an toàn, công bằng và giải trí. Với đa dạng sản phẩm, hệ thống bảo mật tiên tiến, 
+            và dịch vụ khách hàng chuyên nghiệp, 92Lottery cam kết đồng hành cùng người chơi trên hành trình chinh phục 
             những giải thưởng lớn.
           </p>
-
+          
           <p className="mb-4">
             Hãy tham gia 92Lottery ngay hôm nay để trải nghiệm những điều tuyệt vời nhất mà chúng tôi mang lại!
           </p>
@@ -253,10 +247,7 @@ export default function AboutPage() {
             </ul>
           </div>
         </div>
-      </main>
-
-      {/* Tab Bar */}
-      <TabBar />
-    </div>
+      </div>
+    </>
   );
 }

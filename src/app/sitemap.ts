@@ -53,7 +53,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'weekly' as const,
       priority: 0.8,
     },
-    // Các trang hướng dẫn và giới thiệu mới
+    // Các trang hướng dẫn và giới thiệu
     {
       url: `${baseUrl}/huong-dan-dang-ky`,
       lastModified: new Date(),

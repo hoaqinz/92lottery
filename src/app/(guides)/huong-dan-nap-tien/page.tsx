@@ -1,8 +1,6 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
-import Header from "@/components/Header";
-import TabBar from "@/components/TabBar";
 import { generateFAQSchema, generateBreadcrumbSchema } from '@/lib/schema';
 
 export const metadata: Metadata = {
@@ -50,7 +48,7 @@ export default function DepositGuidePage() {
   const breadcrumbSchemaString = JSON.stringify(breadcrumbSchema);
 
   return (
-    <div className="flex flex-col w-full min-h-screen bg-[#f6f1f1]">
+    <>
       {/* Schema.org JSON-LD */}
       <script
         type="application/ld+json"
@@ -61,41 +59,37 @@ export default function DepositGuidePage() {
         dangerouslySetInnerHTML={{ __html: breadcrumbSchemaString }}
       />
 
-      {/* Main content */}
-      <Header />
+      {/* Breadcrumb */}
+      <div className="bg-gray-100 py-2 px-4">
+        <nav className="text-sm">
+          <ol className="list-none p-0 inline-flex">
+            <li className="flex items-center">
+              <Link href="/" className="text-blue-600 hover:text-blue-800">
+                Trang chủ
+              </Link>
+              <span className="mx-2">/</span>
+            </li>
+            <li className="text-gray-700">Hướng dẫn nạp tiền</li>
+          </ol>
+        </nav>
+      </div>
 
-      <main>
-        {/* Breadcrumb */}
-        <div className="bg-gray-100 py-2 px-4">
-          <nav className="text-sm">
-            <ol className="list-none p-0 inline-flex">
-              <li className="flex items-center">
-                <Link href="/" className="text-blue-600 hover:text-blue-800">
-                  Trang chủ
-                </Link>
-                <span className="mx-2">/</span>
-              </li>
-              <li className="text-gray-700">Hướng dẫn nạp tiền</li>
-            </ol>
-          </nav>
-        </div>
-
-        {/* Main Content */}
-        <div className="px-4 py-6">
+      {/* Main Content */}
+      <div className="px-4 py-6">
         <h1 className="text-3xl font-bold text-[#bc2022] mb-6">Hướng dẫn nạp tiền 92Lottery nhanh chóng và an toàn</h1>
-
+        
         <div className="prose max-w-none">
           <p className="text-lg mb-6">
-            Nạp tiền vào tài khoản 92Lottery là bước quan trọng để bạn có thể tham gia các trò chơi hấp dẫn và có cơ hội trúng thưởng lớn.
+            Nạp tiền vào tài khoản 92Lottery là bước quan trọng để bạn có thể tham gia các trò chơi hấp dẫn và có cơ hội trúng thưởng lớn. 
             Bài viết này sẽ hướng dẫn bạn chi tiết các phương thức nạp tiền vào 92Lottery, giúp bạn nạp tiền nhanh chóng, an toàn và nhận thêm nhiều khuyến mãi hấp dẫn.
           </p>
 
           <h2 className="text-2xl font-semibold text-[#bc2022] mt-8 mb-4">Các phương thức nạp tiền 92Lottery</h2>
-
+          
           <div className="mb-8">
             <h3 className="text-xl font-semibold mb-3">1. Chuyển khoản ngân hàng</h3>
             <p className="mb-4">
-              Chuyển khoản ngân hàng là phương thức nạp tiền phổ biến và an toàn nhất tại 92Lottery.
+              Chuyển khoản ngân hàng là phương thức nạp tiền phổ biến và an toàn nhất tại 92Lottery. 
               Bạn có thể chuyển khoản từ bất kỳ ngân hàng nào tại Việt Nam.
             </p>
             <h4 className="text-lg font-semibold mb-2">Các bước nạp tiền qua chuyển khoản ngân hàng:</h4>
@@ -172,7 +166,7 @@ export default function DepositGuidePage() {
           </div>
 
           <h2 className="text-2xl font-semibold text-[#bc2022] mt-8 mb-4">Khuyến mãi nạp tiền 92Lottery</h2>
-
+          
           <div className="mb-8">
             <p className="mb-4">
               92Lottery thường xuyên có các chương trình khuyến mãi nạp tiền hấp dẫn dành cho người chơi. Dưới đây là một số khuyến mãi phổ biến:
@@ -190,7 +184,7 @@ export default function DepositGuidePage() {
           </div>
 
           <h2 className="text-2xl font-semibold text-[#bc2022] mt-8 mb-4">Các câu hỏi thường gặp khi nạp tiền 92Lottery</h2>
-
+          
           <div className="space-y-6 mb-8">
             {faqItems.map((faq, index) => (
               <div key={index} className="border-b border-gray-200 pb-4">
@@ -201,15 +195,15 @@ export default function DepositGuidePage() {
           </div>
 
           <h2 className="text-2xl font-semibold text-[#bc2022] mt-8 mb-4">Kết luận</h2>
-
+          
           <p className="mb-4">
-            Nạp tiền vào 92Lottery là một quá trình đơn giản và nhanh chóng. Với nhiều phương thức nạp tiền khác nhau,
-            bạn có thể dễ dàng chọn phương thức phù hợp nhất với mình. Hãy nhớ tận dụng các chương trình khuyến mãi nạp tiền
+            Nạp tiền vào 92Lottery là một quá trình đơn giản và nhanh chóng. Với nhiều phương thức nạp tiền khác nhau, 
+            bạn có thể dễ dàng chọn phương thức phù hợp nhất với mình. Hãy nhớ tận dụng các chương trình khuyến mãi nạp tiền 
             để tối đa hóa giá trị nạp của bạn.
           </p>
-
+          
           <p className="mb-4">
-            Nếu bạn gặp bất kỳ khó khăn nào trong quá trình nạp tiền, đừng ngần ngại liên hệ với đội ngũ hỗ trợ khách hàng
+            Nếu bạn gặp bất kỳ khó khăn nào trong quá trình nạp tiền, đừng ngần ngại liên hệ với đội ngũ hỗ trợ khách hàng 
             của 92Lottery qua live chat hoặc hotline để được hỗ trợ kịp thời.
           </p>
 
@@ -234,10 +228,7 @@ export default function DepositGuidePage() {
             </ul>
           </div>
         </div>
-      </main>
-
-      {/* Tab Bar */}
-      <TabBar />
-    </div>
+      </div>
+    </>
   );
 }

@@ -1,8 +1,6 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
-import Header from "@/components/Header";
-import TabBar from "@/components/TabBar";
 import { generateFAQSchema, generateBreadcrumbSchema } from '@/lib/schema';
 
 export const metadata: Metadata = {
@@ -50,7 +48,7 @@ export default function LoginGuidePage() {
   const breadcrumbSchemaString = JSON.stringify(breadcrumbSchema);
 
   return (
-    <div className="flex flex-col w-full min-h-screen bg-[#f6f1f1]">
+    <>
       {/* Schema.org JSON-LD */}
       <script
         type="application/ld+json"
@@ -61,44 +59,40 @@ export default function LoginGuidePage() {
         dangerouslySetInnerHTML={{ __html: breadcrumbSchemaString }}
       />
 
-      {/* Main content */}
-      <Header />
+      {/* Breadcrumb */}
+      <div className="bg-gray-100 py-2 px-4">
+        <nav className="text-sm">
+          <ol className="list-none p-0 inline-flex">
+            <li className="flex items-center">
+              <Link href="/" className="text-blue-600 hover:text-blue-800">
+                Trang chủ
+              </Link>
+              <span className="mx-2">/</span>
+            </li>
+            <li className="text-gray-700">Hướng dẫn đăng nhập</li>
+          </ol>
+        </nav>
+      </div>
 
-      <main>
-        {/* Breadcrumb */}
-        <div className="bg-gray-100 py-2 px-4">
-          <nav className="text-sm">
-            <ol className="list-none p-0 inline-flex">
-              <li className="flex items-center">
-                <Link href="/" className="text-blue-600 hover:text-blue-800">
-                  Trang chủ
-                </Link>
-                <span className="mx-2">/</span>
-              </li>
-              <li className="text-gray-700">Hướng dẫn đăng nhập</li>
-            </ol>
-          </nav>
-        </div>
-
-        {/* Main Content */}
-        <div className="px-4 py-6">
+      {/* Main Content */}
+      <div className="px-4 py-6">
         <h1 className="text-3xl font-bold text-[#bc2022] mb-6">Hướng dẫn đăng nhập 92Lottery đơn giản và nhanh chóng</h1>
-
+        
         <div className="prose max-w-none">
           <p className="text-lg mb-6">
-            Đăng nhập vào tài khoản 92Lottery là bước đầu tiên để bạn có thể tham gia các trò chơi hấp dẫn và cơ hội trúng thưởng lớn.
+            Đăng nhập vào tài khoản 92Lottery là bước đầu tiên để bạn có thể tham gia các trò chơi hấp dẫn và cơ hội trúng thưởng lớn. 
             Bài viết này sẽ hướng dẫn bạn cách đăng nhập 92Lottery chi tiết, cũng như cách khắc phục các lỗi đăng nhập phổ biến.
           </p>
 
           <h2 className="text-2xl font-semibold text-[#bc2022] mt-8 mb-4">Các bước đăng nhập 92Lottery</h2>
-
+          
           <div className="mb-8">
             <h3 className="text-xl font-semibold mb-3">Bước 1: Truy cập trang đăng nhập 92Lottery</h3>
             <p className="mb-4">
               Đầu tiên, bạn cần truy cập vào trang chủ của 92Lottery tại địa chỉ{' '}
               <Link href="/" className="text-blue-600 hover:text-blue-800">
                 92lottery.dev
-              </Link>.
+              </Link>. 
               Sau đó, nhấp vào nút "Đăng nhập" ở góc phải trên cùng của trang hoặc truy cập trực tiếp vào trang đăng nhập tại{' '}
               <Link href="/login" className="text-blue-600 hover:text-blue-800">
                 92lottery.dev/login
@@ -132,13 +126,13 @@ export default function LoginGuidePage() {
           <div className="mb-8">
             <h3 className="text-xl font-semibold mb-3">Bước 3: Nhấp vào nút "Đăng nhập"</h3>
             <p className="mb-4">
-              Sau khi nhập đầy đủ thông tin, nhấp vào nút "Đăng nhập" để truy cập vào tài khoản của bạn.
+              Sau khi nhập đầy đủ thông tin, nhấp vào nút "Đăng nhập" để truy cập vào tài khoản của bạn. 
               Nếu thông tin đăng nhập chính xác, bạn sẽ được chuyển hướng đến trang chủ hoặc trang cá nhân của 92Lottery.
             </p>
           </div>
 
           <h2 className="text-2xl font-semibold text-[#bc2022] mt-8 mb-4">Khắc phục các lỗi đăng nhập phổ biến</h2>
-
+          
           <div className="mb-8">
             <h3 className="text-xl font-semibold mb-3">1. Quên mật khẩu</h3>
             <p className="mb-4">
@@ -156,7 +150,7 @@ export default function LoginGuidePage() {
           <div className="mb-8">
             <h3 className="text-xl font-semibold mb-3">2. Tài khoản bị khóa</h3>
             <p className="mb-4">
-              Nếu bạn nhập sai mật khẩu nhiều lần, tài khoản của bạn có thể bị khóa tạm thời vì lý do bảo mật.
+              Nếu bạn nhập sai mật khẩu nhiều lần, tài khoản của bạn có thể bị khóa tạm thời vì lý do bảo mật. 
               Trong trường hợp này, hãy liên hệ với đội ngũ hỗ trợ khách hàng của 92Lottery qua live chat hoặc hotline để được hỗ trợ mở khóa tài khoản.
             </p>
           </div>
@@ -176,7 +170,7 @@ export default function LoginGuidePage() {
           </div>
 
           <h2 className="text-2xl font-semibold text-[#bc2022] mt-8 mb-4">Mẹo bảo mật tài khoản 92Lottery</h2>
-
+          
           <div className="mb-8">
             <p className="mb-4">
               Để bảo vệ tài khoản 92Lottery của bạn, hãy tuân thủ các mẹo bảo mật sau:
@@ -191,7 +185,7 @@ export default function LoginGuidePage() {
           </div>
 
           <h2 className="text-2xl font-semibold text-[#bc2022] mt-8 mb-4">Các câu hỏi thường gặp khi đăng nhập 92Lottery</h2>
-
+          
           <div className="space-y-6 mb-8">
             {faqItems.map((faq, index) => (
               <div key={index} className="border-b border-gray-200 pb-4">
@@ -202,14 +196,14 @@ export default function LoginGuidePage() {
           </div>
 
           <h2 className="text-2xl font-semibold text-[#bc2022] mt-8 mb-4">Kết luận</h2>
-
+          
           <p className="mb-4">
-            Đăng nhập vào 92Lottery là một quá trình đơn giản và nhanh chóng. Với hướng dẫn chi tiết này,
+            Đăng nhập vào 92Lottery là một quá trình đơn giản và nhanh chóng. Với hướng dẫn chi tiết này, 
             bạn có thể dễ dàng truy cập vào tài khoản của mình và tận hưởng các trò chơi hấp dẫn tại 92Lottery.
           </p>
-
+          
           <p className="mb-4">
-            Nếu bạn gặp bất kỳ khó khăn nào trong quá trình đăng nhập, đừng ngần ngại liên hệ với đội ngũ hỗ trợ khách hàng
+            Nếu bạn gặp bất kỳ khó khăn nào trong quá trình đăng nhập, đừng ngần ngại liên hệ với đội ngũ hỗ trợ khách hàng 
             của 92Lottery để được hỗ trợ kịp thời.
           </p>
 
@@ -234,10 +228,7 @@ export default function LoginGuidePage() {
             </ul>
           </div>
         </div>
-      </main>
-
-      {/* Tab Bar */}
-      <TabBar />
-    </div>
+      </div>
+    </>
   );
 }
