@@ -311,55 +311,17 @@ export default function PopularGamesPage() {
             </div>
           </div>
 
-          <h2 className="text-2xl font-semibold text-[#bc2022] mt-8 mb-4">6. Roulette (Casino trực tuyến)</h2>
-
-          <div className="mb-8">
-            <p className="mb-4">
-              Roulette là trò chơi casino cổ điển được yêu thích tại 92Lottery, với nhiều lựa chọn cược và cơ hội thắng đa dạng.
-            </p>
-
-            <h3 className="text-xl font-semibold mb-3">Luật chơi Roulette</h3>
-            <p className="mb-4">
-              Roulette dựa trên việc quay một bánh xe có 37 ô (0-36) và đặt cược vào ô nào sẽ trúng:
-            </p>
-            <ul className="list-disc pl-6 mb-4">
-              <li className="mb-2"><strong>Cược bên ngoài:</strong>
-                <ul className="list-disc pl-6 mt-1">
-                  <li><strong>Red/Black (Đỏ/Đen):</strong> Đặt cược vào màu đỏ hoặc đen - Tỷ lệ trả thưởng 1:1</li>
-                  <li><strong>Odd/Even (Lẻ/Chẵn):</strong> Đặt cược vào số lẻ hoặc chẵn - Tỷ lệ trả thưởng 1:1</li>
-                  <li><strong>1-18/19-36:</strong> Đặt cược vào nửa đầu hoặc nửa sau - Tỷ lệ trả thưởng 1:1</li>
-                  <li><strong>Dozens (Chục):</strong> Đặt cược vào 1-12, 13-24, hoặc 25-36 - Tỷ lệ trả thưởng 2:1</li>
-                  <li><strong>Columns (Cột):</strong> Đặt cược vào một trong ba cột - Tỷ lệ trả thưởng 2:1</li>
-                </ul>
-              </li>
-              <li className="mb-2"><strong>Cược bên trong:</strong>
-                <ul className="list-disc pl-6 mt-1">
-                  <li><strong>Straight Up (Số đơn):</strong> Đặt cược vào một số cụ thể - Tỷ lệ trả thưởng 35:1</li>
-                  <li><strong>Split (Cặp số):</strong> Đặt cược vào hai số liền kề - Tỷ lệ trả thưởng 17:1</li>
-                  <li><strong>Street (Dòng):</strong> Đặt cược vào ba số trong một hàng - Tỷ lệ trả thưởng 11:1</li>
-                  <li><strong>Corner (Góc):</strong> Đặt cược vào bốn số tạo thành hình vuông - Tỷ lệ trả thưởng 8:1</li>
-                </ul>
-              </li>
-            </ul>
-
-            <h3 className="text-xl font-semibold mb-3">Chiến thuật chơi Roulette hiệu quả</h3>
-            <ul className="list-disc pl-6 mb-4">
-              <li className="mb-2"><strong>Chiến thuật Martingale:</strong> Áp dụng cho các cược có tỷ lệ trả thưởng 1:1 như Red/Black, Odd/Even.</li>
-              <li className="mb-2"><strong>Chiến thuật D'Alembert:</strong> An toàn hơn Martingale, cũng áp dụng cho các cược 1:1.</li>
-              <li className="mb-2"><strong>Chiến thuật Fibonacci:</strong> Sử dụng dãy số Fibonacci để quyết định số tiền cược.</li>
-              <li className="mb-2"><strong>Chiến thuật cược bao phủ (coverage betting):</strong> Đặt nhiều cược để bao phủ nhiều số trên bàn.</li>
-            </ul>
-            <div className="bg-gray-100 p-4 rounded-lg mb-4">
-              <p className="font-semibold text-[#bc2022]">Mẹo chơi Roulette:</p>
-              <p>Ưu tiên chơi Roulette Châu Âu (European Roulette) thay vì Roulette Mỹ (American Roulette) vì lợi thế nhà cái thấp hơn (2.7% so với 5.26%).</p>
-            </div>
-          </div>
-
           <h2 className="text-2xl font-semibold text-[#bc2022] mt-8 mb-4">Các trò chơi phổ biến khác tại 92Lottery</h2>
 
           <div className="mb-8">
             <p className="mb-4">
-              Ngoài 6 trò chơi phổ biến nhất đã đề cập ở trên, 92Lottery còn cung cấp nhiều trò chơi hấp dẫn khác:
+              Ngoài 5 trò chơi phổ biến nhất đã đề cập ở trên, 92Lottery còn cung cấp nhiều trò chơi hấp dẫn khác:
+            </p>
+
+            <h3 className="text-xl font-semibold mb-3">6. Roulette</h3>
+            <p className="mb-4">
+              Roulette là trò chơi casino cổ điển với bánh xe có 37 ô (0-36). Người chơi có thể đặt cược vào số cụ thể,
+              màu sắc (đỏ/đen), chẵn/lẻ, và nhiều lựa chọn khác với tỷ lệ trả thưởng từ 1:1 đến 35:1.
             </p>
 
             <h3 className="text-xl font-semibold mb-3">7. Dragon Tiger</h3>
