@@ -22,7 +22,8 @@ export const generateGamblingWebsiteSchema = () => {
         "@type": "ImageObject",
         "url": "https://92lottery.dev/logo.png"
       }
-    }
+    },
+    "inLanguage": "vi-VN"
   };
 };
 
@@ -127,6 +128,7 @@ export const generateHomePageSchema = () => {
   return {
     "@context": "https://schema.org",
     "@type": "ItemList",
+    "inLanguage": "vi-VN",
     "itemListElement": [
       {
         "@type": "ListItem",
@@ -140,7 +142,8 @@ export const generateHomePageSchema = () => {
             "@type": "SearchAction",
             "target": "https://92lottery.dev/search?q={search_term_string}",
             "query-input": "required name=search_term_string"
-          }
+          },
+          "inLanguage": "vi-VN"
         }
       },
       {

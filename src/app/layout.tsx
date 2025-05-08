@@ -48,6 +48,10 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical: "https://92lottery.dev",
+    languages: {
+      'vi': 'https://92lottery.dev',
+      'x-default': 'https://92lottery.dev'
+    }
   },
   robots: {
     index: true,
