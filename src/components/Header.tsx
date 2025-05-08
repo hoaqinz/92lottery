@@ -20,23 +20,20 @@ export default function Header() {
             />
           </div>
         </Link>
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-3">
           <Link
             href="/huong-dan-dang-nhap"
-            className="relative overflow-hidden px-3 py-1.5 rounded-md bg-white/20 text-white text-sm font-medium transition-all duration-300 hover:bg-white/30 hover:shadow-lg group"
+            className="relative px-4 py-1.5 rounded-full border border-white/50 text-white text-sm font-medium transition-all duration-300 hover:border-white hover:bg-white/10 hover:shadow-[0_0_10px_rgba(255,255,255,0.3)] group"
             aria-label="Đăng nhập"
           >
-            <span className="relative z-10">Đăng nhập</span>
-            <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-white/0 via-white/30 to-white/0 -translate-x-full group-hover:animate-shimmer"></span>
+            <span>Đăng nhập</span>
           </Link>
           <Link
             href="/huong-dan-dang-ky"
-            className="relative overflow-hidden px-3 py-1.5 rounded-md bg-yellow-500 text-white text-sm font-bold transition-all duration-300 hover:bg-yellow-400 hover:shadow-lg group"
+            className="relative px-4 py-1.5 rounded-full bg-gradient-to-r from-amber-500 to-red-500 text-white text-sm font-bold transition-all duration-300 hover:shadow-[0_0_15px_rgba(239,68,68,0.5)] hover:from-amber-400 hover:to-red-400"
             aria-label="Đăng ký"
           >
-            <span className="relative z-10">Đăng ký</span>
-            <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-white/0 via-white/30 to-white/0 -translate-x-full group-hover:animate-shimmer"></span>
-            <span className="absolute -inset-0.5 rounded-lg bg-gradient-to-r from-yellow-400 to-yellow-600 opacity-0 group-hover:opacity-100 blur-sm transition-all duration-500 group-hover:duration-200"></span>
+            <span>Đăng ký</span>
           </Link>
         </div>
       </div>
