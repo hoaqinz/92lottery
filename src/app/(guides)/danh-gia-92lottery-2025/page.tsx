@@ -48,108 +48,106 @@ export default function ReviewPage() {
   const breadcrumbSchema = generateBreadcrumbSchema(breadcrumbItems);
   const breadcrumbSchemaString = JSON.stringify(breadcrumbSchema);
 
-  return (
-    <>
-      {/* Schema.org JSON-LD */}
-      <script
-        key="faq-schema"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: faqSchemaString }}
-      />
-      <script
-        key="breadcrumb-schema"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: breadcrumbSchemaString }}
-      />
+  return React.createElement(
+    React.Fragment,
+    null,
+    // Schema.org JSON-LD
+    React.createElement('script', {
+      key: 'faq-schema',
+      type: 'application/ld+json',
+      dangerouslySetInnerHTML: { __html: faqSchemaString }
+    }),
+    React.createElement('script', {
+      key: 'breadcrumb-schema',
+      type: 'application/ld+json',
+      dangerouslySetInnerHTML: { __html: breadcrumbSchemaString }
+    }),
 
-      {/* Breadcrumb */}
-      <div className="bg-gray-100 py-2 px-4">
-        <nav className="text-sm">
-          <ol className="list-none p-0 inline-flex">
-            <li className="flex items-center">
-              <Link href="/" className="text-blue-600 hover:text-blue-800">
-                Trang chủ
-              </Link>
-              <span className="mx-2">/</span>
-            </li>
-            <li className="text-gray-700">Đánh giá 92Lottery 2025</li>
-          </ol>
-        </nav>
-      </div>
+    // Breadcrumb
+    React.createElement('div', { className: "bg-gray-100 py-2 px-4" },
+      React.createElement('nav', { className: "text-sm" },
+        React.createElement('ol', { className: "list-none p-0 inline-flex" },
+          React.createElement('li', { className: "flex items-center" },
+            React.createElement(Link, { href: "/", className: "text-blue-600 hover:text-blue-800" }, "Trang chủ"),
+            React.createElement('span', { className: "mx-2" }, "/")
+          ),
+          React.createElement('li', { className: "text-gray-700" }, "Đánh giá 92Lottery 2025")
+        )
+      )
+    ),
 
-      {/* Main Content */}
-      <div className="px-4 py-6">
-        <h1 className="text-3xl font-bold text-[#bc2022] mb-6">Đánh giá 92Lottery 2025 - Review chi tiết từ chuyên gia</h1>
+    // Main Content
+    React.createElement('div', { className: "px-4 py-6" },
+      React.createElement('h1', { className: "text-3xl font-bold text-[#bc2022] mb-6" }, "Đánh giá 92Lottery 2025 - Review chi tiết từ chuyên gia"),
 
-        <div className="prose max-w-none">
-          <p className="text-lg mb-6">
-            92Lottery là một trong những nhà cái trực tuyến phát triển nhanh chóng tại Việt Nam trong những năm gần đây. Với nhiều trò chơi hấp dẫn, khuyến mãi phong phú và giao diện thân thiện, 92Lottery đã thu hút được một lượng lớn người chơi. Bài đánh giá này sẽ cung cấp cái nhìn toàn diện về 92Lottery trong năm 2025, giúp bạn quyết định liệu đây có phải là nhà cái phù hợp với nhu cầu của mình hay không.
-          </p>
+      React.createElement('div', { className: "prose max-w-none" },
+        React.createElement('p', { className: "text-lg mb-6" },
+          "92Lottery là một trong những nhà cái trực tuyến phát triển nhanh chóng tại Việt Nam trong những năm gần đây. Với nhiều trò chơi hấp dẫn, khuyến mãi phong phú và giao diện thân thiện, 92Lottery đã thu hút được một lượng lớn người chơi. Bài đánh giá này sẽ cung cấp cái nhìn toàn diện về 92Lottery trong năm 2025, giúp bạn quyết định liệu đây có phải là nhà cái phù hợp với nhu cầu của mình hay không."
+        ),
 
-          <h2 className="text-2xl font-semibold text-[#bc2022] mt-8 mb-4">Tổng quan về 92Lottery</h2>
+        React.createElement('h2', { className: "text-2xl font-semibold text-[#bc2022] mt-8 mb-4" }, "Tổng quan về 92Lottery"),
 
-          <div className="mb-8">
-            <p className="mb-4">
-              92Lottery là nhà cái trực tuyến cung cấp đa dạng các trò chơi cá cược, bao gồm xổ số, casino trực tuyến, slot game, và thể thao. Được thành lập từ nhiều năm trước, 92Lottery đã không ngừng cải tiến và nâng cấp dịch vụ để mang đến trải nghiệm tốt nhất cho người chơi.
-            </p>
+        React.createElement('div', { className: "mb-8" },
+          React.createElement('p', { className: "mb-4" },
+            "92Lottery là nhà cái trực tuyến cung cấp đa dạng các trò chơi cá cược, bao gồm xổ số, casino trực tuyến, slot game, và thể thao. Được thành lập từ nhiều năm trước, 92Lottery đã không ngừng cải tiến và nâng cấp dịch vụ để mang đến trải nghiệm tốt nhất cho người chơi."
+          ),
 
-            <h3 className="text-xl font-semibold mb-3">Ưu điểm nổi bật</h3>
-            <ul className="list-disc pl-6 mb-4">
-              <li className="mb-2">Đa dạng trò chơi với tỷ lệ trả thưởng cao</li>
-              <li className="mb-2">Giao diện người dùng thân thiện và dễ sử dụng</li>
-              <li className="mb-2">Nhiều phương thức thanh toán an toàn</li>
-              <li className="mb-2">Khuyến mãi hấp dẫn cho người chơi mới và thành viên</li>
-              <li className="mb-2">Hỗ trợ khách hàng 24/7</li>
-            </ul>
+          React.createElement('h3', { className: "text-xl font-semibold mb-3" }, "Ưu điểm nổi bật"),
+          React.createElement('ul', { className: "list-disc pl-6 mb-4" },
+            React.createElement('li', { className: "mb-2" }, "Đa dạng trò chơi với tỷ lệ trả thưởng cao"),
+            React.createElement('li', { className: "mb-2" }, "Giao diện người dùng thân thiện và dễ sử dụng"),
+            React.createElement('li', { className: "mb-2" }, "Nhiều phương thức thanh toán an toàn"),
+            React.createElement('li', { className: "mb-2" }, "Khuyến mãi hấp dẫn cho người chơi mới và thành viên"),
+            React.createElement('li', { className: "mb-2" }, "Hỗ trợ khách hàng 24/7")
+          ),
 
-            <h3 className="text-xl font-semibold mb-3">Nhược điểm</h3>
-            <ul className="list-disc pl-6 mb-4">
-              <li className="mb-2">Một số khuyến mãi có điều kiện cược khá cao</li>
-              <li className="mb-2">Thời gian xử lý rút tiền đôi khi chậm vào giờ cao điểm</li>
-              <li className="mb-2">Một số trò chơi casino trực tuyến chưa có phiên bản tiếng Việt</li>
-            </ul>
-          </div>
+          React.createElement('h3', { className: "text-xl font-semibold mb-3" }, "Nhược điểm"),
+          React.createElement('ul', { className: "list-disc pl-6 mb-4" },
+            React.createElement('li', { className: "mb-2" }, "Một số khuyến mãi có điều kiện cược khá cao"),
+            React.createElement('li', { className: "mb-2" }, "Thời gian xử lý rút tiền đôi khi chậm vào giờ cao điểm"),
+            React.createElement('li', { className: "mb-2" }, "Một số trò chơi casino trực tuyến chưa có phiên bản tiếng Việt")
+          )
+        ),
 
-          {/* FAQ Section */}
-          <h2 className="text-2xl font-semibold text-[#bc2022] mt-8 mb-4">Các câu hỏi thường gặp về 92Lottery</h2>
+        // FAQ Section
+        React.createElement('h2', { className: "text-2xl font-semibold text-[#bc2022] mt-8 mb-4" }, "Các câu hỏi thường gặp về 92Lottery"),
 
-          <div className="space-y-6 mb-8">
-            {faqItems.map((faq, index) => (
-              <div key={index} className="border-b border-gray-200 pb-4">
-                <h3 className="text-xl font-semibold mb-2">{faq.question}</h3>
-                <p>{faq.answer}</p>
-              </div>
-            ))}
-          </div>
+        React.createElement('div', { className: "space-y-6 mb-8" },
+          faqItems.map((faq, index) =>
+            React.createElement('div', { key: index, className: "border-b border-gray-200 pb-4" },
+              React.createElement('h3', { className: "text-xl font-semibold mb-2" }, faq.question),
+              React.createElement('p', null, faq.answer)
+            )
+          )
+        ),
 
-          {/* Related Articles */}
-          <div className="bg-gray-100 p-6 rounded-lg mt-8">
-            <h3 className="text-xl font-semibold mb-4">Các bài viết liên quan</h3>
-            <ul className="space-y-2">
-              <li>
-                <Link href="/so-sanh-92lottery" className="text-blue-600 hover:text-blue-800">
-                  So sánh 92Lottery với các nhà cái khác
-                </Link>
-              </li>
-              <li>
-                <Link href="/cach-choi-92lottery-hieu-qua" className="text-blue-600 hover:text-blue-800">
-                  Cách chơi 92Lottery hiệu quả - Chiến thuật và mẹo thắng lớn
-                </Link>
-              </li>
-              <li>
-                <Link href="/92lottery-co-lua-dao-khong" className="text-blue-600 hover:text-blue-800">
-                  92Lottery có lừa đảo không? Đánh giá uy tín từ chuyên gia
-                </Link>
-              </li>
-              <li>
-                <Link href="/bao-mat-tai-khoan-92lottery" className="text-blue-600 hover:text-blue-800">
-                  Bảo mật tài khoản 92Lottery - Hướng dẫn và mẹo bảo vệ tài khoản
-                </Link>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </>
+        // Related Articles
+        React.createElement('div', { className: "bg-gray-100 p-6 rounded-lg mt-8" },
+          React.createElement('h3', { className: "text-xl font-semibold mb-4" }, "Các bài viết liên quan"),
+          React.createElement('ul', { className: "space-y-2" },
+            React.createElement('li', null,
+              React.createElement(Link, { href: "/so-sanh-92lottery", className: "text-blue-600 hover:text-blue-800" },
+                "So sánh 92Lottery với các nhà cái khác"
+              )
+            ),
+            React.createElement('li', null,
+              React.createElement(Link, { href: "/cach-choi-92lottery-hieu-qua", className: "text-blue-600 hover:text-blue-800" },
+                "Cách chơi 92Lottery hiệu quả - Chiến thuật và mẹo thắng lớn"
+              )
+            ),
+            React.createElement('li', null,
+              React.createElement(Link, { href: "/92lottery-co-lua-dao-khong", className: "text-blue-600 hover:text-blue-800" },
+                "92Lottery có lừa đảo không? Đánh giá uy tín từ chuyên gia"
+              )
+            ),
+            React.createElement('li', null,
+              React.createElement(Link, { href: "/bao-mat-tai-khoan-92lottery", className: "text-blue-600 hover:text-blue-800" },
+                "Bảo mật tài khoản 92Lottery - Hướng dẫn và mẹo bảo vệ tài khoản"
+              )
+            )
+          )
+        )
+      )
+    )
   );
 }
