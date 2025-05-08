@@ -20,17 +20,17 @@ export default function Header() {
             />
           </div>
         </Link>
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-2">
           <Link
-            href="/huong-dan-dang-nhap"
-            className="relative px-4 py-1.5 rounded-full border border-white/50 text-white text-sm font-medium transition-all duration-300 hover:border-white hover:bg-white/10 hover:shadow-[0_0_10px_rgba(255,255,255,0.3)] group"
+            href="/login"
+            className="relative px-3 py-1 rounded-full border border-white/50 text-white text-xs font-medium transition-all duration-300 hover:border-white hover:bg-white/10 hover:shadow-[0_0_10px_rgba(255,255,255,0.3)] hover:-translate-y-0.5 hover:scale-105"
             aria-label="Đăng nhập"
           >
             <span>Đăng nhập</span>
           </Link>
           <Link
-            href="/huong-dan-dang-ky"
-            className="relative px-4 py-1.5 rounded-full bg-gradient-to-r from-amber-500 to-red-500 text-white text-sm font-bold transition-all duration-300 hover:shadow-[0_0_15px_rgba(239,68,68,0.5)] hover:from-amber-400 hover:to-red-400"
+            href="/register"
+            className="relative px-3 py-1 rounded-full bg-gradient-to-r from-amber-500 to-red-500 text-white text-xs font-bold transition-all duration-300 hover:shadow-[0_0_15px_rgba(239,68,68,0.5)] hover:from-amber-400 hover:to-red-400 hover:-translate-y-0.5 hover:scale-105 animate-float-slow"
             aria-label="Đăng ký"
           >
             <span>Đăng ký</span>
