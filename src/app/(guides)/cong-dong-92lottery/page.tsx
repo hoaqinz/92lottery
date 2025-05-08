@@ -1,3 +1,4 @@
+import React from 'react';
 import { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -47,17 +48,18 @@ export default function CommunityPage() {
   const breadcrumbSchema = generateBreadcrumbSchema(breadcrumbItems);
   const breadcrumbSchemaString = JSON.stringify(breadcrumbSchema);
 
-  return (
-    <div>
-      {/* Schema.org JSON-LD */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: faqSchemaString }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: breadcrumbSchemaString }}
-      />
+  return [
+      // Schema.org JSON-LD
+      React.createElement('script', {
+        key: 'faq-schema',
+        type: 'application/ld+json',
+        dangerouslySetInnerHTML: { __html: faqSchemaString }
+      }),
+      React.createElement('script', {
+        key: 'breadcrumb-schema',
+        type: 'application/ld+json',
+        dangerouslySetInnerHTML: { __html: breadcrumbSchemaString }
+      }),
 
       {/* Breadcrumb */}
       <div className="bg-gray-100 py-2 px-4">
@@ -373,6 +375,5 @@ export default function CommunityPage() {
           </div>
         </div>
       </div>
-    </div>
-  );
+  ];
 }
