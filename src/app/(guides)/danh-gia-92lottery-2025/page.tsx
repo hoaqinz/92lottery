@@ -5,7 +5,7 @@ import Image from 'next/image';
 import { generateFAQSchema, generateBreadcrumbSchema } from '@/lib/schema';
 
 export const metadata: Metadata = {
-  title: 'Đánh giá 92Lottery 2025 - Review chi tiết từ chuyên gia',
+  title: 'Đánh giá 92Lottery 2025 - Review chi tiết từ chuyên gia | 92Lottery',
   description: 'Đánh giá chi tiết về 92Lottery năm 2025. Tìm hiểu về ưu nhược điểm, trò chơi, khuyến mãi, thanh toán và đánh giá từ người chơi thực tế.',
   keywords: ['đánh giá 92lottery', 'review 92lottery', '92lottery 2025', 'nhận xét 92lottery', 'ưu nhược điểm 92lottery', 'đánh giá chuyên gia 92lottery'],
   alternates: {
