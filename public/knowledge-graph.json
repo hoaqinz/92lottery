@@ -1,0 +1,255 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://92lottery.dev/#organization",
+      "name": "92Lottery",
+      "url": "https://92lottery.dev",
+      "logo": {
+        "@type": "ImageObject",
+        "@id": "https://92lottery.dev/#logo",
+        "url": "https://92lottery.dev/anh/favicon.png",
+        "width": 112,
+        "height": 112,
+        "caption": "92Lottery"
+      },
+      "description": "92Lottery là trang xổ số độc quyền nổi bật với các trò chơi như WinGo, K3 Lotre, 5D Lotre, TRX Win trực tuyến đa dạng và uy tín, cùng nhiều sảnh game bài, bắn cá, nổ hũ và casino trực tuyến.",
+      "foundingDate": "2020-01-15",
+      "founders": [
+        {
+          "@type": "Person",
+          "@id": "https://92lottery.dev/doi-ngu-chuyen-gia-92lottery/#person-nguyenvanminh",
+          "name": "Nguyễn Văn Minh",
+          "jobTitle": "Người sáng lập & CEO",
+          "description": "Ông Nguyễn Văn Minh là người sáng lập và CEO của 92Lottery. Với hơn 15 năm kinh nghiệm trong ngành xổ số và cá cược trực tuyến, ông đã xây dựng 92Lottery trở thành một trong những nhà cái uy tín hàng đầu Việt Nam."
+        }
+      ],
+      "address": {
+        "@type": "PostalAddress",
+        "@id": "https://92lottery.dev/#address",
+        "streetAddress": "228 Trần Duy Hưng",
+        "addressLocality": "Hà Nội",
+        "addressRegion": "Hà Nội",
+        "postalCode": "100000",
+        "addressCountry": "VN"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "@id": "https://92lottery.dev/#contactPoint",
+        "telephone": "+84988587888",
+        "contactType": "customer service",
+        "email": "support@92lottery.dev",
+        "availableLanguage": ["Vietnamese", "English"]
+      },
+      "sameAs": [
+        "https://www.facebook.com/92lottery",
+        "https://twitter.com/92lottery",
+        "https://t.me/92lottery_official",
+        "https://www.youtube.com/channel/92lottery"
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "@id": "https://92lottery.dev/#offerCatalog",
+        "name": "Trò chơi 92Lottery",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "@id": "https://92lottery.dev/92lottery-mini-game/#offer-wingo",
+            "name": "WinGo",
+            "description": "Xổ số 1 phút với tỷ lệ trả thưởng cao và công bằng",
+            "url": "https://92lottery.dev/92lottery-mini-game"
+          },
+          {
+            "@type": "Offer",
+            "@id": "https://92lottery.dev/92lottery-mini-game/#offer-k3",
+            "name": "K3 Lotre",
+            "description": "Xổ số 3 phút với nhiều kiểu cược đa dạng",
+            "url": "https://92lottery.dev/92lottery-mini-game"
+          },
+          {
+            "@type": "Offer",
+            "@id": "https://92lottery.dev/92lottery-mini-game/#offer-5d",
+            "name": "5D Lotre",
+            "description": "Xổ số 5 phút với tỷ lệ trả thưởng hấp dẫn",
+            "url": "https://92lottery.dev/92lottery-mini-game"
+          },
+          {
+            "@type": "Offer",
+            "@id": "https://92lottery.dev/92lottery-mini-game/#offer-trx",
+            "name": "TRX Win",
+            "description": "Xổ số blockchain với tính minh bạch tuyệt đối",
+            "url": "https://92lottery.dev/92lottery-mini-game"
+          }
+        ]
+      },
+      "subOrganization": [
+        {
+          "@type": "Organization",
+          "@id": "https://92lottery.dev/92lottery-viet-nam/#organization",
+          "name": "92Lottery Việt Nam",
+          "url": "https://92lottery.dev/92lottery-viet-nam",
+          "parentOrganization": {
+            "@id": "https://92lottery.dev/#organization"
+          },
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "228 Trần Duy Hưng",
+            "addressLocality": "Hà Nội",
+            "addressRegion": "Hà Nội",
+            "postalCode": "100000",
+            "addressCountry": "VN"
+          }
+        }
+      ],
+      "memberOf": [
+        {
+          "@type": "Organization",
+          "name": "Hiệp hội Cá cược Trực tuyến Quốc tế",
+          "url": "https://www.example.com/international-betting-association"
+        }
+      ],
+      "award": [
+        "Nhà cái xổ số trực tuyến tốt nhất Việt Nam 2023",
+        "Ứng dụng cá cược di động tốt nhất 2024"
+      ],
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://92lottery.dev/search?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://92lottery.dev/#website",
+      "url": "https://92lottery.dev",
+      "name": "92Lottery",
+      "description": "Trang xổ số trực tuyến uy tín hàng đầu Việt Nam",
+      "publisher": {
+        "@id": "https://92lottery.dev/#organization"
+      },
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://92lottery.dev/search?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      },
+      "inLanguage": "vi"
+    },
+    {
+      "@type": "MobileApplication",
+      "@id": "https://92lottery.dev/app-92lottery/#mobileapplication",
+      "name": "92Lottery App",
+      "operatingSystem": "Android, iOS",
+      "applicationCategory": "GameApplication",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "VND"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.8",
+        "ratingCount": "1245"
+      },
+      "downloadUrl": "https://92lottery.dev/app-92lottery"
+    },
+    {
+      "@type": "SoftwareApplication",
+      "@id": "https://92lottery.dev/app-92lottery/#softwareapplication",
+      "name": "92Lottery Desktop App",
+      "operatingSystem": "Windows, MacOS",
+      "applicationCategory": "GameApplication",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "VND"
+      },
+      "downloadUrl": "https://92lottery.dev/app-92lottery"
+    },
+    {
+      "@type": "Game",
+      "@id": "https://92lottery.dev/92lottery-mini-game/#game-wingo",
+      "name": "WinGo",
+      "description": "Xổ số 1 phút với tỷ lệ trả thưởng cao và công bằng",
+      "url": "https://92lottery.dev/92lottery-mini-game",
+      "gamePlatform": ["Mobile", "Desktop", "Web"],
+      "applicationCategory": "Game",
+      "genre": "Xổ số trực tuyến",
+      "provider": {
+        "@id": "https://92lottery.dev/#organization"
+      }
+    },
+    {
+      "@type": "Game",
+      "@id": "https://92lottery.dev/92lottery-mini-game/#game-k3",
+      "name": "K3 Lotre",
+      "description": "Xổ số 3 phút với nhiều kiểu cược đa dạng",
+      "url": "https://92lottery.dev/92lottery-mini-game",
+      "gamePlatform": ["Mobile", "Desktop", "Web"],
+      "applicationCategory": "Game",
+      "genre": "Xổ số trực tuyến",
+      "provider": {
+        "@id": "https://92lottery.dev/#organization"
+      }
+    },
+    {
+      "@type": "Game",
+      "@id": "https://92lottery.dev/92lottery-mini-game/#game-5d",
+      "name": "5D Lotre",
+      "description": "Xổ số 5 phút với tỷ lệ trả thưởng hấp dẫn",
+      "url": "https://92lottery.dev/92lottery-mini-game",
+      "gamePlatform": ["Mobile", "Desktop", "Web"],
+      "applicationCategory": "Game",
+      "genre": "Xổ số trực tuyến",
+      "provider": {
+        "@id": "https://92lottery.dev/#organization"
+      }
+    },
+    {
+      "@type": "Game",
+      "@id": "https://92lottery.dev/92lottery-mini-game/#game-trx",
+      "name": "TRX Win",
+      "description": "Xổ số blockchain với tính minh bạch tuyệt đối",
+      "url": "https://92lottery.dev/92lottery-mini-game",
+      "gamePlatform": ["Mobile", "Desktop", "Web"],
+      "applicationCategory": "Game",
+      "genre": "Xổ số trực tuyến",
+      "provider": {
+        "@id": "https://92lottery.dev/#organization"
+      }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://92lottery.dev/doi-ngu-chuyen-gia-92lottery/#person-nguyenvanminh",
+      "name": "Nguyễn Văn Minh",
+      "jobTitle": "Người sáng lập & CEO",
+      "description": "Ông Nguyễn Văn Minh là người sáng lập và CEO của 92Lottery. Với hơn 15 năm kinh nghiệm trong ngành xổ số và cá cược trực tuyến, ông đã xây dựng 92Lottery trở thành một trong những nhà cái uy tín hàng đầu Việt Nam.",
+      "worksFor": {
+        "@id": "https://92lottery.dev/#organization"
+      },
+      "image": "https://92lottery.dev/anh/avata/no1.png"
+    },
+    {
+      "@type": "Person",
+      "@id": "https://92lottery.dev/doi-ngu-chuyen-gia-92lottery/#person-tranthihuong",
+      "name": "Trần Thị Hương",
+      "jobTitle": "Giám đốc Công nghệ (CTO)",
+      "description": "Bà Trần Thị Hương là người đứng sau công nghệ tiên tiến của 92Lottery. Với bằng Tiến sĩ Khoa học Máy tính và hơn 12 năm kinh nghiệm, bà đã phát triển hệ thống bảo mật đa lớp và nền tảng cá cược tốc độ cao cho 92Lottery.",
+      "worksFor": {
+        "@id": "https://92lottery.dev/#organization"
+      },
+      "image": "https://92lottery.dev/anh/avata/no2.png"
+    },
+    {
+      "@type": "Person",
+      "@id": "https://92lottery.dev/doi-ngu-chuyen-gia-92lottery/#person-lequangdat",
+      "name": "Lê Quang Đạt",
+      "jobTitle": "Giám đốc Sản phẩm (CPO)",
+      "description": "Ông Lê Quang Đạt là người chịu trách nhiệm phát triển các sản phẩm độc quyền của 92Lottery như WinGo, K3 Lotre, 5D Lotre và TRX Win. Với kiến thức sâu rộng về hành vi người dùng và xu hướng thị trường, ông đã tạo ra những trò chơi hấp dẫn với tỷ lệ trả thưởng cao.",
+      "worksFor": {
+        "@id": "https://92lottery.dev/#organization"
+      },
+      "image": "https://92lottery.dev/anh/avata/no3.png"
+    }
+  ]
+}
