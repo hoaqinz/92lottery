@@ -16,6 +16,18 @@ export default function Footer() {
         <div className="w-full border-t border-white/20 pt-3">
           <div className="grid grid-cols-2 gap-3 mb-3">
             <Link
+              href="/tat-ca-ve-92lottery"
+              className="text-sm text-center py-2 px-3 bg-white/10 rounded-md hover:bg-white/20 transition-colors font-bold"
+            >
+              Tất cả về 92Lottery
+            </Link>
+            <Link
+              href="/tu-khoa-pho-bien-92lottery"
+              className="text-sm text-center py-2 px-3 bg-white/10 rounded-md hover:bg-white/20 transition-colors font-bold"
+            >
+              Từ khóa phổ biến
+            </Link>
+            <Link
               href="/gioi-thieu"
               className="text-sm text-center py-2 px-3 bg-white/10 rounded-md hover:bg-white/20 transition-colors"
             >
@@ -62,6 +74,12 @@ export default function Footer() {
               className="text-sm text-center py-2 px-3 bg-white/10 rounded-md hover:bg-white/20 transition-colors"
             >
               Tải App
+            </Link>
+            <Link
+              href="/sitemap-html"
+              className="text-sm text-center py-2 px-3 bg-white/10 rounded-md hover:bg-white/20 transition-colors col-span-2"
+            >
+              Sitemap
             </Link>
           </div>
 
