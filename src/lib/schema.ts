@@ -14,16 +14,37 @@ export const generateGamblingWebsiteSchema = () => {
       "target": "https://92lottery.dev/search?q={search_term_string}",
       "query-input": "required name=search_term_string"
     },
-    "description": "92Lottery - Trang web cá cược xổ số, lottery, thể thao và casino trực tuyến hàng đầu Việt Nam.",
+    "description": "92Lottery là trang xổ số độc quyền nổi bật như WinGo, K3 Lotre, 5D Lotre, TRX Win trực tuyến đa dạng và uy tín, nhiều sảnh game bài, bắn cá, nổ hũ và casino trực tuyến.",
     "publisher": {
       "@type": "Organization",
       "name": "92Lottery",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://92lottery.dev/logo.png"
-      }
+        "url": "https://92lottery.dev/anh/favicon.png"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "228 Trần Duy Hưng",
+        "addressLocality": "Hà Nội",
+        "addressRegion": "Hà Nội",
+        "postalCode": "100000",
+        "addressCountry": "VN"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+84988587888",
+        "contactType": "customer service",
+        "email": "support@92lottery.dev",
+        "availableLanguage": ["Vietnamese", "English"]
+      },
+      "sameAs": [
+        "https://www.facebook.com/92lottery",
+        "https://twitter.com/92lottery",
+        "https://t.me/92lottery_official"
+      ]
     },
-    "inLanguage": "vi-VN"
+    "inLanguage": "vi-VN",
+    "keywords": "92lottery, trangchu92lottery, dangky92lottery, dangnhap92lottery, 92lotterykhuyenmai"
   };
 };
 
@@ -178,6 +199,62 @@ export const generateHomePageSchema = () => {
       "query-input": "required name=search_term_string"
     },
     "inLanguage": "vi-VN"
+  };
+
+  // Tạo schema cho tổ chức
+  const organizationSchema = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "92Lottery",
+    "url": "https://92lottery.dev",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://92lottery.dev/logo.png",
+      "width": "180",
+      "height": "60"
+    },
+    "description": "92Lottery - Nhà cái cá cược xổ số và casino trực tuyến uy tín hàng đầu Việt Nam với giấy phép hoạt động hợp pháp và hệ thống bảo mật tiên tiến.",
+    "sameAs": [
+      "https://www.facebook.com/92lottery",
+      "https://twitter.com/92lottery",
+      "https://t.me/92lottery_official",
+      "https://www.youtube.com/channel/92lottery",
+      "https://www.instagram.com/92lottery"
+    ],
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+84-xxx-xxx-xxx",
+      "contactType": "customer service",
+      "availableLanguage": ["Vietnamese", "English"],
+      "contactOption": "TollFree",
+      "areaServed": "VN"
+    }
+  };
+
+  // Tạo schema cho điều hướng trang web
+  const navigationSchema = {
+    "@context": "https://schema.org",
+    "@type": "SiteNavigationElement",
+    "name": [
+      "Trang chủ",
+      "Đăng nhập",
+      "Đăng ký",
+      "Hướng dẫn đăng ký",
+      "Hướng dẫn đăng nhập",
+      "Hướng dẫn nạp tiền",
+      "Rút tiền",
+      "Giới thiệu"
+    ],
+    "url": [
+      "https://92lottery.dev/",
+      "https://92lottery.dev/login",
+      "https://92lottery.dev/register",
+      "https://92lottery.dev/huong-dan-dang-ky",
+      "https://92lottery.dev/huong-dan-dang-nhap",
+      "https://92lottery.dev/huong-dan-nap-tien",
+      "https://92lottery.dev/rut-tien-92lottery",
+      "https://92lottery.dev/gioi-thieu"
+    ]
   };
 
   // Tạo schema cho FAQ

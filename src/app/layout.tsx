@@ -9,10 +9,10 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://92lottery.dev'),
   title: {
     template: '%s | 92Lottery',
-    default: '92Lottery - Trang chủ chính thức'
+    default: '92Lottery - Trang chủ chính thức | Xổ số WinGo, K3, 5D, TRX Win'
   },
-  description: "92Lottery - Trang chủ chính thức cung cấp đăng ký, đăng nhập, tải app, nạp rút tiền, mini game, club VIP. Nhà cái uy tín hàng đầu Việt Nam với tỷ lệ trả thưởng cao nhất thị trường.",
-  keywords: ["92lottery", "92lottery đăng nhập", "92lottery đăng ký", "92lottery bị sập", "92lottery telegram", "92lottery có lừa đảo không", "92lottery mini", "92lottery club", "app 92lottery", "cách đăng ký 92lottery", "rút tiền 92lottery", "nạp tiền 92lottery", "tải 92lottery", "link 92lottery", "92lottery việt nam"],
+  description: "92Lottery là trang xổ số độc quyền nổi bật như WinGo, K3 Lotre, 5D Lotre, TRX Win trực tuyến đa dạng và uy tín, nhiều sảnh game bài, bắn cá, nổ hũ và casino trực tuyến. Giao diện độc quyền cho Mobile và các hệ điều hành máy tính.",
+  keywords: ["92lottery", "trangchu92lottery", "dangky92lottery", "dangnhap92lottery", "92lotterykhuyenmai", "92lottery đăng nhập", "92lottery đăng ký", "92lottery bị sập", "92lottery telegram", "92lottery có lừa đảo không", "92lottery mini", "92lottery club", "app 92lottery", "cách đăng ký 92lottery", "rút tiền 92lottery", "nạp tiền 92lottery", "tải 92lottery", "link 92lottery", "92lottery việt nam", "WinGo", "K3 Lotre", "5D Lotre", "TRX Win"],
   authors: [{ name: "92Lottery" }],
   creator: "92Lottery",
   publisher: "92Lottery",
@@ -20,8 +20,8 @@ export const metadata: Metadata = {
   generator: "Next.js",
   referrer: "origin-when-cross-origin",
   icons: {
-    icon: "/favicon.ico",
-    apple: "/apple-touch-icon.png"
+    icon: "/anh/favicon.png",
+    apple: "/anh/favicon.png"
   },
   manifest: "/manifest.json",
   openGraph: {

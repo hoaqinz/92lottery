@@ -65,9 +65,20 @@ export default function Footer() {
             </Link>
           </div>
 
-          <div className="text-center text-xs opacity-70">
-            <p>© {new Date().getFullYear()} Lottery. All rights reserved.</p>
-            <p className="mt-1">Trò chơi dành cho người trên 18 tuổi.</p>
+          <div className="text-center text-xs opacity-80 mt-3">
+            <div className="mb-2">
+              <p className="font-semibold">Thông tin liên hệ:</p>
+              <p>Thương hiệu: 92Lottery</p>
+              <p>Email: support@92lottery.dev</p>
+              <p>Số điện thoại: 0988 587 888</p>
+              <p>Địa chỉ: 228 Trần Duy Hưng, Hà Nội, Việt Nam</p>
+              <p>Zipcode: 100000</p>
+            </div>
+            <div className="mt-3 pt-2 border-t border-white/20">
+              <p>© {new Date().getFullYear()} 92Lottery. All rights reserved.</p>
+              <p className="mt-1">Trò chơi dành cho người trên 18 tuổi.</p>
+              <p className="mt-2 text-[10px] opacity-70">#92lottery #trangchu92lottery #dangky92lottery #dangnhap92lottery #92lotterykhuyenmai</p>
+            </div>
           </div>
         </div>
       </div>

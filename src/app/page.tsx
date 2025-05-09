@@ -36,8 +36,8 @@ export default function HomePage() {
         <div className="sr-only">
           <h1>92Lottery - Trang chủ chính thức | Đăng ký, đăng nhập, tải app, nạp rút tiền</h1>
           <p>
-            Chào mừng bạn đến với trang chủ chính thức 92Lottery - nền tảng cá cược xổ số, lottery, thể thao và casino trực tuyến uy tín hàng đầu Việt Nam.
-            Tại đây, bạn có thể đăng ký, đăng nhập, tải app, nạp tiền, rút tiền, tham gia mini game và nhiều dịch vụ khác với giao diện thân thiện và bảo mật tuyệt đối.
+            92Lottery là trang xổ số độc quyền nổi bật như WinGo, K3 Lotre, 5D Lotre, TRX Win trực tuyến đa dạng và uy tín, nhiều sảnh game bài, bắn cá, nổ hũ và casino trực tuyến.
+            Giao diện độc quyền cho Mobile và các hệ điều hành máy tính với tốc độ load tải cực nhanh không có độ trễ. Những khuyến mãi độc quyền chỉ 92Lottery đem lại cho tân thủ tốt nhất.
           </p>
 
           <h2>Đăng ký và đăng nhập 92Lottery</h2>
