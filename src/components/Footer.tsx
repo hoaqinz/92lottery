@@ -77,9 +77,27 @@ export default function Footer() {
             </Link>
             <Link
               href="/sitemap-html"
-              className="text-sm text-center py-2 px-3 bg-white/10 rounded-md hover:bg-white/20 transition-colors col-span-2"
+              className="text-sm text-center py-2 px-3 bg-white/10 rounded-md hover:bg-white/20 transition-colors"
             >
               Sitemap
+            </Link>
+            <Link
+              href="/doi-ngu-chuyen-gia-92lottery"
+              className="text-sm text-center py-2 px-3 bg-white/10 rounded-md hover:bg-white/20 transition-colors"
+            >
+              Đội ngũ chuyên gia
+            </Link>
+            <Link
+              href="/giay-phep-va-quy-dinh-92lottery"
+              className="text-sm text-center py-2 px-3 bg-white/10 rounded-md hover:bg-white/20 transition-colors"
+            >
+              Giấy phép
+            </Link>
+            <Link
+              href="/bao-chi-noi-ve-92lottery"
+              className="text-sm text-center py-2 px-3 bg-white/10 rounded-md hover:bg-white/20 transition-colors"
+            >
+              Báo chí
             </Link>
           </div>
 

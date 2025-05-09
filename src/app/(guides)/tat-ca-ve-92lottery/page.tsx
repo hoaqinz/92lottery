@@ -81,7 +81,10 @@ export default function AllAbout92LotteryPage() {
         { text: "Giới thiệu về 92Lottery", url: "/gioi-thieu" },
         { text: "Đánh giá 92Lottery 2025", url: "/danh-gia-92lottery-2025" },
         { text: "So sánh 92Lottery với các nhà cái khác", url: "/so-sanh-92lottery" },
-        { text: "92Lottery có lừa đảo không?", url: "/92lottery-co-lua-dao-khong" }
+        { text: "92Lottery có lừa đảo không?", url: "/92lottery-co-lua-dao-khong" },
+        { text: "Đội ngũ chuyên gia 92Lottery", url: "/doi-ngu-chuyen-gia-92lottery" },
+        { text: "Giấy phép và Quy định 92Lottery", url: "/giay-phep-va-quy-dinh-92lottery" },
+        { text: "Báo chí nói về 92Lottery", url: "/bao-chi-noi-ve-92lottery" }
       ]
     },
     {
@@ -122,7 +125,7 @@ export default function AllAbout92LotteryPage() {
       type: 'application/ld+json',
       dangerouslySetInnerHTML: { __html: breadcrumbSchemaString }
     }),
-    
+
     // Breadcrumb
     React.createElement('div', { className: "bg-gray-100 py-2 px-4" },
       React.createElement('nav', { className: "text-sm" },
@@ -135,42 +138,42 @@ export default function AllAbout92LotteryPage() {
         )
       )
     ),
-    
+
     // Main Content
     React.createElement('div', { className: "px-4 py-6" },
       React.createElement('h1', { className: "text-3xl font-bold text-[#bc2022] mb-6" }, "Tất cả về 92Lottery - Thông tin đầy đủ và chi tiết nhất"),
-      
+
       React.createElement('div', { className: "prose max-w-none" },
-        React.createElement('p', { className: "text-lg mb-6" }, 
+        React.createElement('p', { className: "text-lg mb-6" },
           "92Lottery là trang xổ số độc quyền nổi bật với các trò chơi như WinGo, K3 Lotre, 5D Lotre, TRX Win trực tuyến đa dạng và uy tín, cùng nhiều sảnh game bài, bắn cá, nổ hũ và casino trực tuyến. Trang hướng dẫn này tổng hợp tất cả thông tin bạn cần biết về 92Lottery, từ cách đăng ký, đăng nhập, nạp rút tiền đến các trò chơi và khuyến mãi hấp dẫn."
         ),
-        
+
         React.createElement('h2', { className: "text-2xl font-semibold text-[#bc2022] mt-8 mb-4" }, "Tổng quan về 92Lottery"),
-        
+
         React.createElement('div', { className: "mb-8" },
-          React.createElement('p', { className: "mb-4" }, 
+          React.createElement('p', { className: "mb-4" },
             "92Lottery là nhà cái cá cược trực tuyến uy tín hàng đầu Việt Nam, cung cấp đa dạng các trò chơi với giao diện độc quyền cho Mobile và các hệ điều hành máy tính. Với tốc độ load tải cực nhanh không có độ trễ, 92Lottery mang đến trải nghiệm cá cược mượt mà và tiện lợi cho người chơi."
           ),
-          
-          React.createElement('p', { className: "mb-4" }, 
+
+          React.createElement('p', { className: "mb-4" },
             "Những khuyến mãi độc quyền chỉ 92Lottery đem lại cho tân thủ tốt nhất, cùng với hệ thống bảo mật tiên tiến và đội ngũ hỗ trợ khách hàng chuyên nghiệp 24/7, đã giúp 92Lottery trở thành lựa chọn hàng đầu của người chơi Việt Nam."
           )
         ),
-        
+
         // Danh sách các trang hướng dẫn
         React.createElement('h2', { className: "text-2xl font-semibold text-[#bc2022] mt-8 mb-4" }, "Hướng dẫn đầy đủ về 92Lottery"),
-        
+
         React.createElement('div', { className: "space-y-6 mb-8" },
-          guidePages.map((section, sectionIndex) => 
+          guidePages.map((section, sectionIndex) =>
             React.createElement('div', { key: sectionIndex, className: "bg-gray-50 p-4 rounded-lg border border-gray-200" },
               React.createElement('h3', { className: "text-xl font-semibold mb-3 text-[#bc2022]" }, section.title),
               React.createElement('ul', { className: "space-y-2" },
-                section.links.map((link, linkIndex) => 
+                section.links.map((link, linkIndex) =>
                   React.createElement('li', { key: linkIndex },
-                    React.createElement(Link, { 
-                      href: link.url, 
+                    React.createElement(Link, {
+                      href: link.url,
                       className: "text-blue-600 hover:text-blue-800 flex items-center"
-                    }, 
+                    },
                       React.createElement('span', { className: "mr-2" }, "→"),
                       link.text
                     )
@@ -180,25 +183,25 @@ export default function AllAbout92LotteryPage() {
             )
           )
         ),
-        
+
         // FAQ Section
         React.createElement('h2', { className: "text-2xl font-semibold text-[#bc2022] mt-8 mb-4" }, "Câu hỏi thường gặp về 92Lottery"),
-        
+
         React.createElement('div', { className: "space-y-6 mb-8" },
-          faqItems.map((faq, index) => 
+          faqItems.map((faq, index) =>
             React.createElement('div', { key: index, className: "border-b border-gray-200 pb-4" },
               React.createElement('h3', { className: "text-xl font-semibold mb-2" }, faq.question),
               React.createElement('p', null, faq.answer)
             )
           )
         ),
-        
+
         // Thông tin liên hệ
         React.createElement('div', { className: "bg-gray-100 p-6 rounded-lg mt-8" },
           React.createElement('h3', { className: "text-xl font-semibold mb-4" }, "Thông tin liên hệ 92Lottery"),
           React.createElement('ul', { className: "space-y-2" },
             React.createElement('li', null, "Thương hiệu: 92Lottery"),
-            React.createElement('li', null, "Website: ", 
+            React.createElement('li', null, "Website: ",
               React.createElement(Link, { href: "/", className: "text-blue-600 hover:text-blue-800" }, "https://92lottery.dev")
             ),
             React.createElement('li', null, "Email: support@92lottery.dev"),
