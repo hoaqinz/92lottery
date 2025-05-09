@@ -1,0 +1,98 @@
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "92Lottery Việt Nam",
+  "image": "https://92lottery.dev/anh/favicon.png",
+  "url": "https://92lottery.dev",
+  "telephone": "+84988587888",
+  "email": "support@92lottery.dev",
+  "description": "92Lottery là trang xổ số độc quyền nổi bật như WinGo, K3 Lotre, 5D Lotre, TRX Win trực tuyến đa dạng và uy tín, nhiều sảnh game bài, bắn cá, nổ hũ và casino trực tuyến. Giao diện độc quyền cho Mobile và các hệ điều hành máy tính với tốc độ load tải cực nhanh không có độ trễ.",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "228 Trần Duy Hưng",
+    "addressLocality": "Hà Nội",
+    "addressRegion": "Hà Nội",
+    "postalCode": "100000",
+    "addressCountry": "VN"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 21.0065,
+    "longitude": 105.8306
+  },
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday",
+      "Saturday",
+      "Sunday"
+    ],
+    "opens": "00:00",
+    "closes": "23:59"
+  },
+  "sameAs": [
+    "https://www.facebook.com/92lottery",
+    "https://twitter.com/92lottery",
+    "https://t.me/92lottery_official"
+  ],
+  "priceRange": "$$",
+  "hasMap": "https://www.google.com/maps?q=21.0065,105.8306",
+  "keywords": "92lottery, xổ số trực tuyến, casino trực tuyến, cá cược trực tuyến, nhà cái uy tín, WinGo, K3 Lotre, 5D Lotre, TRX Win",
+  "areaServed": {
+    "@type": "Country",
+    "name": "Vietnam"
+  },
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://92lottery.dev/search?q={search_term_string}",
+    "query-input": "required name=search_term_string"
+  },
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "+84988587888",
+    "contactType": "customer service",
+    "email": "support@92lottery.dev",
+    "availableLanguage": ["Vietnamese", "English"],
+    "contactOption": "TollFree",
+    "areaServed": "VN"
+  },
+  "review": [
+    {
+      "@type": "Review",
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5",
+        "bestRating": "5"
+      },
+      "author": {
+        "@type": "Person",
+        "name": "Nguyễn Văn A"
+      },
+      "datePublished": "2025-01-15",
+      "reviewBody": "92Lottery là nhà cái uy tín nhất mà tôi từng chơi. Giao diện đẹp, nạp rút nhanh chóng và dịch vụ khách hàng tuyệt vời."
+    },
+    {
+      "@type": "Review",
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5",
+        "bestRating": "5"
+      },
+      "author": {
+        "@type": "Person",
+        "name": "Trần Thị B"
+      },
+      "datePublished": "2025-02-20",
+      "reviewBody": "Tôi đã chơi 92Lottery được 2 năm và chưa bao giờ gặp vấn đề gì. Rút tiền nhanh, đội ngũ hỗ trợ nhiệt tình và chuyên nghiệp."
+    }
+  ],
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.8",
+    "reviewCount": "1245"
+  }
+}

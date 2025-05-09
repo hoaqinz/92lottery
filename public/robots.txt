@@ -21,3 +21,7 @@ Sitemap: https://92lottery.dev/sitemap.xml
 
 # Host
 Host: https://92lottery.dev
+
+# AMP version
+User-agent: *
+Allow: /amp/
