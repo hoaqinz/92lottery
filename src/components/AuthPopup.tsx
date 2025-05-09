@@ -3,10 +3,12 @@
 import { useEffect, useState } from 'react';
 import { useAuth } from '@/contexts/AuthContext';
 import Image from 'next/image';
+import { useRouter } from 'next/navigation';
 
 export default function AuthPopup() {
   const { showAuthPopup, closeAuthPopup, login } = useAuth();
   const [isClosing, setIsClosing] = useState(false);
+  const router = useRouter();
 
   // Handle ESC key press to close popup
   useEffect(() => {
@@ -43,6 +45,20 @@ export default function AuthPopup() {
     setTimeout(() => {
       closeAuthPopup();
       setIsClosing(false);
+    }, 300);
+  };
+
+  const handleLogin = () => {
+    handleClose();
+    setTimeout(() => {
+      router.push('/login');
+    }, 300);
+  };
+
+  const handleRegister = () => {
+    handleClose();
+    setTimeout(() => {
+      router.push('/register');
     }, 300);
   };
 
@@ -96,13 +112,13 @@ export default function AuthPopup() {
           <div className="flex gap-3 mb-5">
             <button
               className="flex-1 relative rounded-md bg-transparent border border-[#4CAF50] text-[#4CAF50] font-bold py-2.5 px-4 hover:bg-[#4CAF50] hover:bg-opacity-10 transition-colors shadow-sm before:absolute before:right-1/2 before:top-1/2 before:-z-[1] before:h-3/4 before:w-2/3 before:origin-bottom-left before:-translate-y-1/2 before:translate-x-1/2 before:animate-ping before:rounded-md before:bg-[#4CAF50]"
-              onClick={login}
+              onClick={handleLogin}
             >
               Đăng nhập
             </button>
             <button
               className="flex-1 relative rounded-md bg-[#e62e2e] px-4 py-2.5 font-bold text-white transition-colors duration-300 ease-linear before:absolute before:right-1/2 before:top-1/2 before:-z-[1] before:h-3/4 before:w-2/3 before:origin-bottom-left before:-translate-y-1/2 before:translate-x-1/2 before:animate-ping before:rounded-md before:bg-[#e62e2e] hover:bg-[#d42a2a] hover:before:bg-[#d42a2a]"
-              onClick={login}
+              onClick={handleRegister}
             >
               ĐĂNG KÝ
             </button>
@@ -110,7 +126,7 @@ export default function AuthPopup() {
 
           {/* Bonus button */}
           <div className="relative mt-5">
-            <button type="button" className="lightning-button" onClick={login}>
+            <button type="button" className="lightning-button" onClick={handleRegister}>
               <div className="points_wrapper">
                 <i className="point"></i>
                 <i className="point"></i>
