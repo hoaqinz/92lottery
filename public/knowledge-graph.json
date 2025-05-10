@@ -4,7 +4,7 @@
     {
       "@type": "Organization",
       "@id": "https://92lottery.dev/#organization",
-      "name": "92Lottery",
+      "name": "92LOTTERY",
       "url": "https://92lottery.dev",
       "logo": {
         "@type": "ImageObject",
@@ -12,9 +12,9 @@
         "url": "https://92lottery.dev/anh/favicon.png",
         "width": 112,
         "height": 112,
-        "caption": "92Lottery"
+        "caption": "92LOTTERY"
       },
-      "description": "92Lottery là trang xổ số độc quyền nổi bật với các trò chơi như WinGo, K3 Lotre, 5D Lotre, TRX Win trực tuyến đa dạng và uy tín, cùng nhiều sảnh game bài, bắn cá, nổ hũ và casino trực tuyến.",
+      "description": "92LOTTERY là nhà cái xổ số trực tuyến uy tín hàng đầu Việt Nam, cung cấp WinGo, K3 Lotre, 5D Lotre, TRX Win và nhiều trò chơi hấp dẫn khác. Đăng ký 92LOTTERY ngay để nhận khuyến mãi 100K và trải nghiệm dịch vụ chất lượng cao.",
       "foundingDate": "2020-01-15",
       "founders": [
         {
@@ -22,7 +22,7 @@
           "@id": "https://92lottery.dev/doi-ngu-chuyen-gia-92lottery/#person-nguyenvanminh",
           "name": "Nguyễn Văn Minh",
           "jobTitle": "Người sáng lập & CEO",
-          "description": "Ông Nguyễn Văn Minh là người sáng lập và CEO của 92Lottery. Với hơn 15 năm kinh nghiệm trong ngành xổ số và cá cược trực tuyến, ông đã xây dựng 92Lottery trở thành một trong những nhà cái uy tín hàng đầu Việt Nam."
+          "description": "Ông Nguyễn Văn Minh là người sáng lập và CEO của 92LOTTERY. Với hơn 15 năm kinh nghiệm trong ngành xổ số và cá cược trực tuyến, ông đã xây dựng 92LOTTERY trở thành một trong những nhà cái uy tín hàng đầu Việt Nam."
         }
       ],
       "address": {
@@ -51,7 +51,7 @@
       "hasOfferCatalog": {
         "@type": "OfferCatalog",
         "@id": "https://92lottery.dev/#offerCatalog",
-        "name": "Trò chơi 92Lottery",
+        "name": "Trò chơi 92LOTTERY",
         "itemListElement": [
           {
             "@type": "Offer",
@@ -87,7 +87,7 @@
         {
           "@type": "Organization",
           "@id": "https://92lottery.dev/92lottery-viet-nam/#organization",
-          "name": "92Lottery Việt Nam",
+          "name": "92LOTTERY Việt Nam",
           "url": "https://92lottery.dev/92lottery-viet-nam",
           "parentOrganization": {
             "@id": "https://92lottery.dev/#organization"
@@ -123,8 +123,8 @@
       "@type": "WebSite",
       "@id": "https://92lottery.dev/#website",
       "url": "https://92lottery.dev",
-      "name": "92Lottery",
-      "description": "Trang xổ số trực tuyến uy tín hàng đầu Việt Nam",
+      "name": "92LOTTERY",
+      "description": "Nhà cái xổ số trực tuyến uy tín hàng đầu Việt Nam",
       "publisher": {
         "@id": "https://92lottery.dev/#organization"
       },
@@ -138,7 +138,7 @@
     {
       "@type": "MobileApplication",
       "@id": "https://92lottery.dev/app-92lottery/#mobileapplication",
-      "name": "92Lottery App",
+      "name": "92LOTTERY App",
       "operatingSystem": "Android, iOS",
       "applicationCategory": "GameApplication",
       "offers": {
@@ -156,7 +156,7 @@
     {
       "@type": "SoftwareApplication",
       "@id": "https://92lottery.dev/app-92lottery/#softwareapplication",
-      "name": "92Lottery Desktop App",
+      "name": "92LOTTERY Desktop App",
       "operatingSystem": "Windows, MacOS",
       "applicationCategory": "GameApplication",
       "offers": {
@@ -223,7 +223,7 @@
       "@id": "https://92lottery.dev/doi-ngu-chuyen-gia-92lottery/#person-nguyenvanminh",
       "name": "Nguyễn Văn Minh",
       "jobTitle": "Người sáng lập & CEO",
-      "description": "Ông Nguyễn Văn Minh là người sáng lập và CEO của 92Lottery. Với hơn 15 năm kinh nghiệm trong ngành xổ số và cá cược trực tuyến, ông đã xây dựng 92Lottery trở thành một trong những nhà cái uy tín hàng đầu Việt Nam.",
+      "description": "Ông Nguyễn Văn Minh là người sáng lập và CEO của 92LOTTERY. Với hơn 15 năm kinh nghiệm trong ngành xổ số và cá cược trực tuyến, ông đã xây dựng 92LOTTERY trở thành một trong những nhà cái uy tín hàng đầu Việt Nam.",
       "worksFor": {
         "@id": "https://92lottery.dev/#organization"
       },
@@ -234,7 +234,7 @@
       "@id": "https://92lottery.dev/doi-ngu-chuyen-gia-92lottery/#person-tranthihuong",
       "name": "Trần Thị Hương",
       "jobTitle": "Giám đốc Công nghệ (CTO)",
-      "description": "Bà Trần Thị Hương là người đứng sau công nghệ tiên tiến của 92Lottery. Với bằng Tiến sĩ Khoa học Máy tính và hơn 12 năm kinh nghiệm, bà đã phát triển hệ thống bảo mật đa lớp và nền tảng cá cược tốc độ cao cho 92Lottery.",
+      "description": "Bà Trần Thị Hương là người đứng sau công nghệ tiên tiến của 92LOTTERY. Với bằng Tiến sĩ Khoa học Máy tính và hơn 12 năm kinh nghiệm, bà đã phát triển hệ thống bảo mật đa lớp và nền tảng cá cược tốc độ cao cho 92LOTTERY.",
       "worksFor": {
         "@id": "https://92lottery.dev/#organization"
       },
@@ -245,7 +245,7 @@
       "@id": "https://92lottery.dev/doi-ngu-chuyen-gia-92lottery/#person-lequangdat",
       "name": "Lê Quang Đạt",
       "jobTitle": "Giám đốc Sản phẩm (CPO)",
-      "description": "Ông Lê Quang Đạt là người chịu trách nhiệm phát triển các sản phẩm độc quyền của 92Lottery như WinGo, K3 Lotre, 5D Lotre và TRX Win. Với kiến thức sâu rộng về hành vi người dùng và xu hướng thị trường, ông đã tạo ra những trò chơi hấp dẫn với tỷ lệ trả thưởng cao.",
+      "description": "Ông Lê Quang Đạt là người chịu trách nhiệm phát triển các sản phẩm độc quyền của 92LOTTERY như WinGo, K3 Lotre, 5D Lotre và TRX Win. Với kiến thức sâu rộng về hành vi người dùng và xu hướng thị trường, ông đã tạo ra những trò chơi hấp dẫn với tỷ lệ trả thưởng cao.",
       "worksFor": {
         "@id": "https://92lottery.dev/#organization"
       },

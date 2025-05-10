@@ -7,17 +7,17 @@ export const generateGamblingWebsiteSchema = () => {
   return {
     "@context": "https://schema.org",
     "@type": "WebSite",
-    "name": "92Lottery",
+    "name": "92LOTTERY",
     "url": "https://92lottery.dev",
     "potentialAction": {
       "@type": "SearchAction",
       "target": "https://92lottery.dev/search?q={search_term_string}",
       "query-input": "required name=search_term_string"
     },
-    "description": "92Lottery là trang xổ số độc quyền nổi bật như WinGo, K3 Lotre, 5D Lotre, TRX Win trực tuyến đa dạng và uy tín, nhiều sảnh game bài, bắn cá, nổ hũ và casino trực tuyến.",
+    "description": "92LOTTERY là nhà cái xổ số trực tuyến uy tín hàng đầu Việt Nam, cung cấp WinGo, K3 Lotre, 5D Lotre, TRX Win và nhiều trò chơi hấp dẫn khác. Đăng ký 92LOTTERY ngay để nhận khuyến mãi 100K và trải nghiệm dịch vụ chất lượng cao.",
     "publisher": {
       "@type": "Organization",
-      "name": "92Lottery",
+      "name": "92LOTTERY",
       "logo": {
         "@type": "ImageObject",
         "url": "https://92lottery.dev/anh/favicon.png"
@@ -44,7 +44,7 @@ export const generateGamblingWebsiteSchema = () => {
       ]
     },
     "inLanguage": "vi-VN",
-    "keywords": "92lottery, trangchu92lottery, dangky92lottery, dangnhap92lottery, 92lotterykhuyenmai"
+    "keywords": "92LOTTERY, 92lottery.dev, nhà cái 92lottery, xổ số 92lottery, casino 92lottery, cá cược 92lottery, win go 92lottery, k3 lotre 92lottery, 5d lotre 92lottery, trx win 92lottery, đăng ký 92lottery, đăng nhập 92lottery, app 92lottery, tải 92lottery"
   };
 };
 
@@ -190,9 +190,9 @@ export const generateHomePageSchema = () => {
   const websiteSchema = {
     "@context": "https://schema.org",
     "@type": "WebSite",
-    "name": "92Lottery - Cá cược xổ số & Casino trực tuyến",
+    "name": "92LOTTERY - Xổ Số 1 Phút, Casino Trực Tuyến Uy Tín #1 Việt Nam",
     "url": "https://92lottery.dev",
-    "description": "92Lottery - Trang web cá cược xổ số, lottery, thể thao và casino trực tuyến hàng đầu Việt Nam với tỷ lệ trả thưởng cao nhất thị trường.",
+    "description": "92LOTTERY là nhà cái xổ số trực tuyến uy tín hàng đầu Việt Nam, cung cấp WinGo, K3 Lotre, 5D Lotre, TRX Win và nhiều trò chơi hấp dẫn khác. Đăng ký 92LOTTERY ngay để nhận khuyến mãi 100K và trải nghiệm dịch vụ chất lượng cao.",
     "potentialAction": {
       "@type": "SearchAction",
       "target": "https://92lottery.dev/search?q={search_term_string}",
@@ -205,7 +205,7 @@ export const generateHomePageSchema = () => {
   const organizationSchema = {
     "@context": "https://schema.org",
     "@type": "Organization",
-    "name": "92Lottery",
+    "name": "92LOTTERY",
     "url": "https://92lottery.dev",
     "logo": {
       "@type": "ImageObject",
@@ -213,7 +213,7 @@ export const generateHomePageSchema = () => {
       "width": "180",
       "height": "60"
     },
-    "description": "92Lottery - Nhà cái cá cược xổ số và casino trực tuyến uy tín hàng đầu Việt Nam với giấy phép hoạt động hợp pháp và hệ thống bảo mật tiên tiến.",
+    "description": "92LOTTERY là nhà cái xổ số trực tuyến uy tín hàng đầu Việt Nam, cung cấp WinGo, K3 Lotre, 5D Lotre, TRX Win và nhiều trò chơi hấp dẫn khác. Đăng ký 92LOTTERY ngay để nhận khuyến mãi 100K và trải nghiệm dịch vụ chất lượng cao.",
     "sameAs": [
       "https://www.facebook.com/92lottery",
       "https://twitter.com/92lottery",
@@ -275,7 +275,7 @@ export const generateHomePageSchema = () => {
   const gameListSchema = {
     "@context": "https://schema.org",
     "@type": "ItemList",
-    "name": "Trò chơi nổi bật tại 92Lottery",
+    "name": "Trò chơi nổi bật tại 92LOTTERY",
     "itemListElement": featuredGames.map((game, index) => ({
       "@type": "ListItem",
       "position": index + 1,
@@ -289,7 +289,7 @@ export const generateHomePageSchema = () => {
         "gamePlatform": "Web Browser",
         "provider": {
           "@type": "Organization",
-          "name": "92Lottery"
+          "name": "92LOTTERY"
         }
       }
     }))
