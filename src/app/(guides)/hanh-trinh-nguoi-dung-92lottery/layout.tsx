@@ -1,4 +1,5 @@
-import { Metadata } from 'next';
+import React from 'react';
+import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Hành trình người dùng 92Lottery - Từ người mới đến chuyên gia | 92Lottery',
@@ -12,3 +13,12 @@ export const metadata: Metadata = {
     }
   },
 };
+
+export default function Layout({ children }: { children: React.ReactNode }) {
+  return (
+    <>
+      {/* Schema.org markup sẽ được xử lý ở đây nếu cần */}
+      {children}
+    </>
+  );
+}

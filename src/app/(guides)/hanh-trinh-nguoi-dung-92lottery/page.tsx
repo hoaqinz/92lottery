@@ -2,7 +2,6 @@
 
 import React from 'react';
 import Link from 'next/link';
-import { FAQSchema, BreadcrumbSchema, ArticleSchema } from '@/components/Schema';
 import OptimizedImage from '@/components/OptimizedImage';
 import SemanticContent from '@/components/SemanticContent';
 import UserIntentContent from '@/components/UserIntentContent';
@@ -11,60 +10,10 @@ import LanguageSwitcher from '@/components/LanguageSwitcher';
 import VoiceSearchOptimized from '@/components/VoiceSearchOptimized';
 import CompetitiveGapAnalysis from '@/components/CompetitiveGapAnalysis';
 
-// Metadata được chuyển sang file metadata.ts trong cùng thư mục
-
 export default function UserJourneyPage() {
-  // FAQ Schema Data
-  const faqData = [
-    {
-      question: "92Lottery có uy tín không?",
-      answer: "92Lottery là nhà cái uy tín, được cấp phép bởi PAGCOR (Cơ quan Quản lý Trò chơi và Casino Philippines). 92Lottery hoạt động từ năm 2020 và đã xây dựng được uy tín tốt trong cộng đồng người chơi Việt Nam với chính sách minh bạch, thanh toán nhanh chóng, và dịch vụ khách hàng chuyên nghiệp."
-    },
-    {
-      question: "Làm thế nào để rút tiền từ 92Lottery?",
-      answer: "Để rút tiền từ 92Lottery, bạn cần đăng nhập vào tài khoản, nhấn vào nút 'Rút tiền', chọn phương thức rút tiền, nhập số tiền muốn rút và thông tin tài khoản nhận tiền, sau đó xác nhận yêu cầu rút tiền. Thời gian xử lý rút tiền thường từ 5-30 phút."
-    },
-    {
-      question: "92Lottery có những trò chơi nào?",
-      answer: "92Lottery cung cấp nhiều trò chơi đa dạng, bao gồm: WinGo (xổ số 1 phút), K3 Lotre (xổ số 3 phút), 5D Lotre (xổ số 5 phút), TRX Win (xổ số blockchain), Game bài (Poker, Baccarat, Blackjack), Slot (máy đánh bạc), Bắn cá, Casino trực tuyến, và Thể thao (cá cược thể thao)."
-    },
-    {
-      question: "Làm thế nào để liên hệ với bộ phận hỗ trợ của 92Lottery?",
-      answer: "Bạn có thể liên hệ với bộ phận hỗ trợ của 92Lottery qua Live Chat (24/7), Hotline: 0988 587 888, Email: support@92lottery.dev, Telegram: @92lottery_support, hoặc Facebook: Facebook.com/92lottery. Bộ phận hỗ trợ hoạt động 24/7 và hỗ trợ bằng tiếng Việt."
-    }
-  ];
-
-  // Breadcrumb Schema Data
-  const breadcrumbData = [
-    {
-      name: "Trang chủ",
-      item: "https://92lottery.dev/"
-    },
-    {
-      name: "Hành trình người dùng 92Lottery",
-      item: "https://92lottery.dev/hanh-trinh-nguoi-dung-92lottery"
-    }
-  ];
-
-  // Article Schema Data
-  const articleData = {
-    headline: "Hành trình người dùng 92Lottery - Từ người mới đến chuyên gia",
-    description: "Hướng dẫn toàn diện cho hành trình người dùng 92Lottery từ nhận thức, cân nhắc, quyết định đến trung thành và ủng hộ. Mọi thông tin bạn cần biết ở mỗi giai đoạn.",
-    image: "https://92lottery.dev/anh/hanh-trinh-nguoi-dung.jpg",
-    datePublished: "2023-10-15T08:00:00+07:00",
-    dateModified: "2023-11-20T10:30:00+07:00",
-    author: {
-      name: "Chuyên gia 92Lottery",
-      url: "https://92lottery.dev/chuyen-gia"
-    }
-  };
 
   return (
     <div>
-      {/* Schema.org markup */}
-      <FAQSchema questions={faqData} />
-      <BreadcrumbSchema items={breadcrumbData} />
-      <ArticleSchema {...articleData} />
       {/* Language Switcher */}
       <div className="bg-white py-2 px-4 border-b border-gray-200">
         <div className="flex justify-end">
