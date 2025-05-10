@@ -9,9 +9,9 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://92lottery.dev'),
   title: {
     template: '%s | 92Lottery',
-    default: '92Lottery - Trang chủ chính thức | Xổ số WinGo, K3, 5D, TRX Win'
+    default: '92LOTTERY - Nhà Cái Xổ Số & Casino Trực Tuyến Số 1 Việt Nam'
   },
-  description: "92Lottery là trang xổ số độc quyền nổi bật như WinGo, K3 Lotre, 5D Lotre, TRX Win trực tuyến đa dạng và uy tín, nhiều sảnh game bài, bắn cá, nổ hũ và casino trực tuyến. Giao diện độc quyền cho Mobile và các hệ điều hành máy tính.",
+  description: "92LOTTERY là nhà cái xổ số trực tuyến uy tín hàng đầu Việt Nam, cung cấp WinGo, K3 Lotre, 5D Lotre, TRX Win và nhiều trò chơi hấp dẫn khác. Đăng ký 92LOTTERY ngay để nhận khuyến mãi 100K và trải nghiệm dịch vụ chất lượng cao.",
   keywords: ["92lottery", "trangchu92lottery", "dangky92lottery", "dangnhap92lottery", "92lotterykhuyenmai", "92lottery đăng nhập", "92lottery đăng ký", "92lottery bị sập", "92lottery telegram", "92lottery có lừa đảo không", "92lottery mini", "92lottery club", "app 92lottery", "cách đăng ký 92lottery", "rút tiền 92lottery", "nạp tiền 92lottery", "tải 92lottery", "link 92lottery", "92lottery việt nam", "WinGo", "K3 Lotre", "5D Lotre", "TRX Win"],
   authors: [{ name: "92Lottery" }],
   creator: "92Lottery",
@@ -28,8 +28,8 @@ export const metadata: Metadata = {
     type: "website",
     locale: "vi_VN",
     url: "https://92lottery.dev",
-    title: "92Lottery - Trang chủ chính thức",
-    description: "92Lottery - Trang chủ chính thức cung cấp đăng ký, đăng nhập, tải app, nạp rút tiền, mini game, club VIP. Nhà cái uy tín hàng đầu Việt Nam.",
+    title: "92LOTTERY - Nhà Cái Xổ Số & Casino Trực Tuyến Số 1 Việt Nam",
+    description: "92LOTTERY là nhà cái xổ số trực tuyến uy tín hàng đầu Việt Nam, cung cấp WinGo, K3 Lotre, 5D Lotre, TRX Win và nhiều trò chơi hấp dẫn khác. Đăng ký 92LOTTERY ngay để nhận khuyến mãi 100K.",
     siteName: "92Lottery",
     images: [
       {
@@ -42,8 +42,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "92Lottery - Trang chủ chính thức",
-    description: "92Lottery - Trang chủ chính thức cung cấp đăng ký, đăng nhập, tải app, nạp rút tiền, mini game, club VIP. Nhà cái uy tín hàng đầu Việt Nam.",
+    title: "92LOTTERY - Nhà Cái Xổ Số & Casino Trực Tuyến Số 1 Việt Nam",
+    description: "92LOTTERY là nhà cái xổ số trực tuyến uy tín hàng đầu Việt Nam, cung cấp WinGo, K3 Lotre, 5D Lotre, TRX Win và nhiều trò chơi hấp dẫn khác. Đăng ký 92LOTTERY ngay để nhận khuyến mãi 100K.",
     creator: "@92lottery",
     images: ["https://92lottery.dev/images/twitter-image.jpg"],
   },
