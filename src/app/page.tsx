@@ -152,6 +152,23 @@ export default function HomePage() {
             Không, 92Lottery không lừa đảo. 92Lottery là nhà cái uy tín với giấy phép hoạt động hợp pháp, hệ thống bảo mật tiên tiến,
             chính sách thanh toán minh bạch và đội ngũ hỗ trợ khách hàng chuyên nghiệp.
           </p>
+
+          <h3>Hướng dẫn và thông tin hữu ích về 92Lottery</h3>
+          <ul>
+            <li><a href="/huong-dan-dang-ky">Hướng dẫn đăng ký 92Lottery</a></li>
+            <li><a href="/huong-dan-dang-nhap">Hướng dẫn đăng nhập 92Lottery</a></li>
+            <li><a href="/huong-dan-nap-tien">Hướng dẫn nạp tiền 92Lottery</a></li>
+            <li><a href="/rut-tien-92lottery">Hướng dẫn rút tiền 92Lottery</a></li>
+            <li><a href="/92lottery-co-lua-dao-khong">92Lottery có lừa đảo không?</a></li>
+            <li><a href="/92lottery-bi-sap">92Lottery bị sập - Thông tin chính xác</a></li>
+            <li><a href="/92lottery-telegram">92Lottery Telegram - Kênh thông tin chính thức</a></li>
+            <li><a href="/92lottery-club">92Lottery Club - Cộng đồng người chơi</a></li>
+            <li><a href="/92lottery-mini-game">92Lottery Mini Game - Trò chơi phổ biến</a></li>
+            <li><a href="/app-92lottery">App 92Lottery - Tải và cài đặt</a></li>
+            <li><a href="/hanh-trinh-nguoi-dung-92lottery">Hành trình người dùng 92Lottery</a></li>
+            <li><a href="/tong-quan-92lottery">Tổng quan về 92Lottery</a></li>
+            <li><a href="/wingo-92lottery">WinGo 92Lottery - Xổ số 1 phút</a></li>
+          </ul>
         </div>
 
         <MenuGrid />
