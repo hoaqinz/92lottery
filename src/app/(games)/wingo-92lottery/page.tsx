@@ -4,6 +4,8 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { generateFAQSchema, generateBreadcrumbSchema } from '@/lib/schema';
 
+export const runtime = 'edge';
+
 export const metadata: Metadata = {
   title: 'WinGo 92Lottery - Xổ số 1 phút với tỷ lệ trả thưởng cao | 92Lottery',
   description: 'WinGo 92Lottery - Xổ số 1 phút với tỷ lệ trả thưởng cao và công bằng. Hướng dẫn chơi WinGo, chiến thuật, mẹo và kinh nghiệm từ chuyên gia.',
@@ -103,7 +105,7 @@ export default function WinGoPage() {
       type: 'application/ld+json',
       dangerouslySetInnerHTML: { __html: gameSchemaString }
     }),
-    
+
     // Breadcrumb
     React.createElement('div', { className: "bg-gray-100 py-2 px-4" },
       React.createElement('nav', { className: "text-sm" },
@@ -120,11 +122,11 @@ export default function WinGoPage() {
         )
       )
     ),
-    
+
     // Main Content
     React.createElement('div', { className: "px-4 py-6" },
       React.createElement('h1', { className: "text-3xl font-bold text-[#bc2022] mb-6" }, "WinGo 92Lottery - Xổ số 1 phút với tỷ lệ trả thưởng cao"),
-      
+
       React.createElement('div', { className: "prose max-w-none" },
         // Giới thiệu WinGo
         React.createElement('div', { className: "bg-gray-50 p-6 rounded-lg border border-gray-200 mb-8" },
@@ -140,39 +142,39 @@ export default function WinGoPage() {
               )
             ),
             React.createElement('div', { className: "md:w-2/3" },
-              React.createElement('p', { className: "mb-4" }, 
+              React.createElement('p', { className: "mb-4" },
                 "WinGo 92Lottery là trò chơi xổ số 1 phút độc quyền tại 92Lottery, với tỷ lệ trả thưởng cao và công bằng. Mỗi phiên WinGo kéo dài 1 phút, người chơi có thể đặt cược vào nhiều lựa chọn khác nhau như: Lớn/Nhỏ, Chẵn/Lẻ, Xanh/Đỏ/Tím, và Đoán số cụ thể từ 0-9."
               ),
-              React.createElement('p', { className: "mb-4" }, 
+              React.createElement('p', { className: "mb-4" },
                 "WinGo sử dụng Bộ sinh số ngẫu nhiên (RNG) được chứng nhận bởi iTech Labs, đảm bảo tính công bằng tuyệt đối của mỗi kết quả. Với giao diện đẹp mắt, dễ sử dụng và tốc độ nhanh chóng, WinGo là lựa chọn hàng đầu của người chơi xổ số trực tuyến tại Việt Nam."
               ),
               React.createElement('div', { className: "flex gap-4" },
-                React.createElement(Link, { 
-                  href: "/register", 
+                React.createElement(Link, {
+                  href: "/register",
                   className: "bg-[#bc2022] text-white px-4 py-2 rounded-md hover:bg-[#a51b1b] transition-colors text-sm"
                 }, "Chơi ngay"),
-                React.createElement(Link, { 
-                  href: "/video-92lottery", 
+                React.createElement(Link, {
+                  href: "/video-92lottery",
                   className: "bg-gray-800 text-white px-4 py-2 rounded-md hover:bg-gray-900 transition-colors text-sm"
                 }, "Xem video hướng dẫn")
               )
             )
           )
         ),
-        
+
         // Cách chơi WinGo
         React.createElement('h2', { className: "text-2xl font-semibold text-[#bc2022] mt-8 mb-4" }, "Cách chơi WinGo 92Lottery"),
-        
+
         React.createElement('div', { className: "space-y-4 mb-8" },
           React.createElement('div', { className: "bg-white p-4 rounded-lg border border-gray-200" },
             React.createElement('h3', { className: "text-lg font-semibold mb-2" }, "Bước 1: Đăng nhập và chọn trò chơi"),
-            React.createElement('p', null, 
+            React.createElement('p', null,
               "Đăng nhập vào tài khoản 92Lottery của bạn và chọn trò chơi WinGo từ menu chính hoặc mục Mini Game."
             )
           ),
           React.createElement('div', { className: "bg-white p-4 rounded-lg border border-gray-200" },
             React.createElement('h3', { className: "text-lg font-semibold mb-2" }, "Bước 2: Chọn kiểu cược"),
-            React.createElement('p', { className: "mb-2" }, 
+            React.createElement('p', { className: "mb-2" },
               "WinGo cung cấp nhiều kiểu cược khác nhau:"
             ),
             React.createElement('ul', { className: "list-disc pl-5 space-y-1" },
@@ -184,27 +186,27 @@ export default function WinGoPage() {
           ),
           React.createElement('div', { className: "bg-white p-4 rounded-lg border border-gray-200" },
             React.createElement('h3', { className: "text-lg font-semibold mb-2" }, "Bước 3: Nhập số tiền cược"),
-            React.createElement('p', null, 
+            React.createElement('p', null,
               "Nhập số tiền bạn muốn đặt cược. Số tiền tối thiểu là 1,000 VND và tối đa là 10,000,000 VND cho mỗi lượt cược."
             )
           ),
           React.createElement('div', { className: "bg-white p-4 rounded-lg border border-gray-200" },
             React.createElement('h3', { className: "text-lg font-semibold mb-2" }, "Bước 4: Xác nhận đặt cược"),
-            React.createElement('p', null, 
+            React.createElement('p', null,
               "Kiểm tra lại thông tin cược của bạn và nhấn nút 'Đặt cược' để xác nhận. Sau khi xác nhận, bạn không thể hủy hoặc thay đổi cược."
             )
           ),
           React.createElement('div', { className: "bg-white p-4 rounded-lg border border-gray-200" },
             React.createElement('h3', { className: "text-lg font-semibold mb-2" }, "Bước 5: Chờ kết quả"),
-            React.createElement('p', null, 
+            React.createElement('p', null,
               "Mỗi phiên WinGo kéo dài 1 phút. Sau khi thời gian đặt cược kết thúc, kết quả sẽ được công bố. Nếu dự đoán đúng, tiền thưởng sẽ được cộng vào tài khoản của bạn ngay lập tức."
             )
           )
         ),
-        
+
         // Tỷ lệ trả thưởng
         React.createElement('h2', { className: "text-2xl font-semibold text-[#bc2022] mt-8 mb-4" }, "Tỷ lệ trả thưởng WinGo 92Lottery"),
-        
+
         React.createElement('div', { className: "overflow-x-auto mb-8" },
           React.createElement('table', { className: "w-full border-collapse" },
             React.createElement('thead', null,
@@ -243,37 +245,37 @@ export default function WinGoPage() {
             )
           )
         ),
-        
+
         // Chiến thuật chơi WinGo
         React.createElement('h2', { className: "text-2xl font-semibold text-[#bc2022] mt-8 mb-4" }, "Chiến thuật chơi WinGo hiệu quả"),
-        
+
         React.createElement('div', { className: "space-y-4 mb-8" },
           React.createElement('div', { className: "bg-white p-4 rounded-lg border border-gray-200" },
             React.createElement('h3', { className: "text-lg font-semibold mb-2" }, "1. Chiến thuật Martingale"),
-            React.createElement('p', null, 
+            React.createElement('p', null,
               "Chiến thuật này yêu cầu bạn tăng gấp đôi tiền cược sau mỗi lần thua, và quay lại mức cược ban đầu sau khi thắng. Chiến thuật này hiệu quả với các cược có tỷ lệ thắng 50% như Lớn/Nhỏ, Chẵn/Lẻ."
             )
           ),
           React.createElement('div', { className: "bg-white p-4 rounded-lg border border-gray-200" },
             React.createElement('h3', { className: "text-lg font-semibold mb-2" }, "2. Chiến thuật D'Alembert"),
-            React.createElement('p', null, 
+            React.createElement('p', null,
               "Chiến thuật này ít rủi ro hơn Martingale. Bạn tăng tiền cược một đơn vị sau mỗi lần thua và giảm một đơn vị sau mỗi lần thắng. Chiến thuật này phù hợp cho người chơi muốn quản lý rủi ro tốt hơn."
             )
           ),
           React.createElement('div', { className: "bg-white p-4 rounded-lg border border-gray-200" },
             React.createElement('h3', { className: "text-lg font-semibold mb-2" }, "3. Chiến thuật theo dõi xu hướng"),
-            React.createElement('p', null, 
+            React.createElement('p', null,
               "Theo dõi kết quả gần đây và đặt cược theo xu hướng. Ví dụ, nếu có nhiều kết quả Lớn liên tiếp, bạn có thể đặt cược vào Lớn. Tuy nhiên, cần nhớ rằng mỗi kết quả đều độc lập và không bị ảnh hưởng bởi kết quả trước đó."
             )
           ),
           React.createElement('div', { className: "bg-white p-4 rounded-lg border border-gray-200" },
             React.createElement('h3', { className: "text-lg font-semibold mb-2" }, "4. Chiến thuật quản lý vốn"),
-            React.createElement('p', null, 
+            React.createElement('p', null,
               "Đây là chiến thuật quan trọng nhất. Chỉ cược 1-5% tổng vốn của bạn cho mỗi lượt cược. Đặt ra giới hạn thắng và thua, và tuân thủ nghiêm ngặt. Ví dụ, dừng chơi khi thắng 30% hoặc thua 20% tổng vốn ban đầu."
             )
           )
         ),
-        
+
         // Lưu ý quan trọng
         React.createElement('div', { className: "bg-yellow-50 p-6 rounded-lg border border-yellow-200 mb-8" },
           React.createElement('h3', { className: "text-xl font-semibold mb-4 text-yellow-800" }, "Lưu ý quan trọng"),
@@ -285,28 +287,28 @@ export default function WinGoPage() {
             React.createElement('li', null, "Nếu bạn cảm thấy không kiểm soát được việc chơi, hãy tìm kiếm sự hỗ trợ.")
           )
         ),
-        
+
         // FAQ Section
         React.createElement('h2', { className: "text-2xl font-semibold text-[#bc2022] mt-8 mb-4" }, "Câu hỏi thường gặp về WinGo 92Lottery"),
-        
+
         React.createElement('div', { className: "space-y-6 mb-8" },
-          faqItems.map((faq, index) => 
+          faqItems.map((faq, index) =>
             React.createElement('div', { key: index, className: "border-b border-gray-200 pb-4" },
               React.createElement('h3', { className: "text-xl font-semibold mb-2" }, faq.question),
               React.createElement('p', null, faq.answer)
             )
           )
         ),
-        
+
         // CTA
         React.createElement('div', { className: "bg-gray-100 p-6 rounded-lg mt-8" },
           React.createElement('h3', { className: "text-xl font-semibold mb-4" }, "Trải nghiệm WinGo 92Lottery ngay hôm nay"),
-          React.createElement('p', { className: "mb-4" }, 
+          React.createElement('p', { className: "mb-4" },
             "WinGo 92Lottery mang đến trải nghiệm xổ số trực tuyến hấp dẫn với tỷ lệ trả thưởng cao và công bằng. Đăng ký tài khoản 92Lottery ngay hôm nay để nhận thưởng chào mừng 100K và trải nghiệm WinGo cùng hàng ngàn người chơi khác."
           ),
           React.createElement('div', { className: "flex justify-center" },
-            React.createElement(Link, { 
-              href: "/register", 
+            React.createElement(Link, {
+              href: "/register",
               className: "bg-[#bc2022] text-white px-6 py-3 rounded-md hover:bg-[#a51b1b] transition-colors font-bold"
             }, "Đăng ký và chơi WinGo ngay")
           )

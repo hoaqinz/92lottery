@@ -1,7 +1,7 @@
 'use client';
 
 import Script from 'next/script';
-import { usePathname, useSearchParams } from 'next/navigation';
+import { usePathname } from 'next/navigation';
 import { useEffect } from 'react';
 
 // Thay thế GA_MEASUREMENT_ID bằng ID thực tế của bạn
@@ -19,16 +19,15 @@ declare global {
 
 export default function GoogleAnalytics() {
   const pathname = usePathname();
-  const searchParams = useSearchParams();
 
   useEffect(() => {
     if (pathname && window.gtag) {
       // Gửi pageview khi route thay đổi
       window.gtag('config', GA_MEASUREMENT_ID, {
-        page_path: pathname + (searchParams?.toString() ? `?${searchParams.toString()}` : ''),
+        page_path: pathname,
       });
     }
-  }, [pathname, searchParams]);
+  }, [pathname]);
 
   return (
     <>

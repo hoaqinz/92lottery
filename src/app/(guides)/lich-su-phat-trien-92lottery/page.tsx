@@ -4,6 +4,8 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { generateFAQSchema, generateBreadcrumbSchema } from '@/lib/schema';
 
+export const runtime = 'edge';
+
 export const metadata: Metadata = {
   title: 'Lịch sử phát triển 92Lottery - Từ khi thành lập đến nay',
   description: 'Tìm hiểu lịch sử phát triển của 92Lottery từ khi thành lập đến nay. Các cột mốc quan trọng, sự phát triển và thành tựu của 92Lottery qua các năm.',

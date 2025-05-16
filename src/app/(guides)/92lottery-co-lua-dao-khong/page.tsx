@@ -3,6 +3,8 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { generateFAQSchema, generateBreadcrumbSchema } from '@/lib/schema';
 
+export const runtime = 'edge';
+
 export const metadata: Metadata = {
   title: '92Lottery có lừa đảo không? Đánh giá uy tín từ chuyên gia',
   description: 'Phân tích chi tiết về độ uy tín của 92Lottery. Tìm hiểu 92Lottery có lừa đảo không, giấy phép hoạt động, bảo mật và đánh giá từ chuyên gia cá cược.',
@@ -77,19 +79,19 @@ export default function TrustReviewPage() {
       {/* Main Content */}
       <div className="px-4 py-6">
         <h1 className="text-3xl font-bold text-[#bc2022] mb-6">92Lottery có lừa đảo không? Đánh giá uy tín từ chuyên gia</h1>
-        
+
         <div className="prose max-w-none">
           <p className="text-lg mb-6">
-            Khi tham gia cá cược trực tuyến, câu hỏi "92Lottery có lừa đảo không?" là điều mà nhiều người chơi quan tâm. 
-            Bài viết này sẽ phân tích chi tiết về độ uy tín của 92Lottery dựa trên các tiêu chí khách quan và đánh giá từ chuyên gia 
+            Khi tham gia cá cược trực tuyến, câu hỏi "92Lottery có lừa đảo không?" là điều mà nhiều người chơi quan tâm.
+            Bài viết này sẽ phân tích chi tiết về độ uy tín của 92Lottery dựa trên các tiêu chí khách quan và đánh giá từ chuyên gia
             trong ngành cá cược trực tuyến.
           </p>
 
           <h2 className="text-2xl font-semibold text-[#bc2022] mt-8 mb-4">Giấy phép hoạt động của 92Lottery</h2>
-          
+
           <div className="mb-8">
             <p className="mb-4">
-              Một trong những yếu tố quan trọng nhất để đánh giá độ uy tín của một nhà cái là giấy phép hoạt động. 
+              Một trong những yếu tố quan trọng nhất để đánh giá độ uy tín của một nhà cái là giấy phép hoạt động.
               92Lottery hoạt động dưới giấy phép cá cược trực tuyến hợp pháp được cấp bởi:
             </p>
             <ul className="list-disc pl-6 mb-4">
@@ -97,7 +99,7 @@ export default function TrustReviewPage() {
               <li className="mb-2"><strong>Cơ quan Cá cược Curacao</strong> - Tổ chức cấp phép cá cược quốc tế với các tiêu chuẩn nghiêm ngặt về bảo mật và công bằng.</li>
             </ul>
             <p className="mb-4">
-              Những giấy phép này đảm bảo 92Lottery tuân thủ các quy định và tiêu chuẩn quốc tế về cá cược trực tuyến, 
+              Những giấy phép này đảm bảo 92Lottery tuân thủ các quy định và tiêu chuẩn quốc tế về cá cược trực tuyến,
               bao gồm tính minh bạch, công bằng, và bảo vệ người chơi.
             </p>
             <div className="bg-gray-100 p-4 rounded-lg mb-4">
@@ -107,7 +109,7 @@ export default function TrustReviewPage() {
           </div>
 
           <h2 className="text-2xl font-semibold text-[#bc2022] mt-8 mb-4">Hệ thống bảo mật của 92Lottery</h2>
-          
+
           <div className="mb-8">
             <p className="mb-4">
               92Lottery sử dụng hệ thống bảo mật tiên tiến để bảo vệ thông tin cá nhân và tài chính của người chơi:
@@ -119,13 +121,13 @@ export default function TrustReviewPage() {
               <li className="mb-2"><strong>Bảo vệ dữ liệu</strong> - Tuân thủ các tiêu chuẩn bảo vệ dữ liệu quốc tế.</li>
             </ul>
             <p className="mb-4">
-              Những biện pháp bảo mật này giúp đảm bảo rằng thông tin cá nhân và giao dịch tài chính của người chơi 
+              Những biện pháp bảo mật này giúp đảm bảo rằng thông tin cá nhân và giao dịch tài chính của người chơi
               luôn được bảo vệ an toàn, khẳng định 92Lottery không phải là một nhà cái lừa đảo.
             </p>
           </div>
 
           <h2 className="text-2xl font-semibold text-[#bc2022] mt-8 mb-4">Chính sách thanh toán minh bạch</h2>
-          
+
           <div className="mb-8">
             <p className="mb-4">
               Một nhà cái uy tín phải có chính sách thanh toán minh bạch và đáng tin cậy. 92Lottery đáp ứng tiêu chí này với:
@@ -148,10 +150,10 @@ export default function TrustReviewPage() {
           </div>
 
           <h2 className="text-2xl font-semibold text-[#bc2022] mt-8 mb-4">Đánh giá từ người chơi thực tế</h2>
-          
+
           <div className="mb-8">
             <p className="mb-4">
-              Đánh giá từ người chơi thực tế là một trong những thước đo quan trọng về độ uy tín của nhà cái. 
+              Đánh giá từ người chơi thực tế là một trong những thước đo quan trọng về độ uy tín của nhà cái.
               92Lottery nhận được nhiều đánh giá tích cực từ cộng đồng người chơi về:
             </p>
             <ul className="list-disc pl-6 mb-4">
@@ -167,20 +169,20 @@ export default function TrustReviewPage() {
           </div>
 
           <h2 className="text-2xl font-semibold text-[#bc2022] mt-8 mb-4">Thời gian hoạt động trên thị trường</h2>
-          
+
           <div className="mb-8">
             <p className="mb-4">
-              92Lottery đã hoạt động trên thị trường cá cược trực tuyến từ năm 2018, với hơn 5 năm kinh nghiệm phục vụ người chơi Việt Nam. 
+              92Lottery đã hoạt động trên thị trường cá cược trực tuyến từ năm 2018, với hơn 5 năm kinh nghiệm phục vụ người chơi Việt Nam.
               Thời gian hoạt động lâu dài này là minh chứng cho sự ổn định và uy tín của nhà cái.
             </p>
             <p className="mb-4">
-              Trong suốt quá trình hoạt động, 92Lottery liên tục cải tiến và nâng cấp dịch vụ để mang đến trải nghiệm tốt nhất cho người chơi, 
+              Trong suốt quá trình hoạt động, 92Lottery liên tục cải tiến và nâng cấp dịch vụ để mang đến trải nghiệm tốt nhất cho người chơi,
               đồng thời duy trì cam kết về tính minh bạch và công bằng.
             </p>
           </div>
 
           <h2 className="text-2xl font-semibold text-[#bc2022] mt-8 mb-4">Đánh giá từ chuyên gia</h2>
-          
+
           <div className="mb-8">
             <p className="mb-4">
               Các chuyên gia trong ngành cá cược trực tuyến đánh giá cao 92Lottery về:
@@ -198,7 +200,7 @@ export default function TrustReviewPage() {
           </div>
 
           <h2 className="text-2xl font-semibold text-[#bc2022] mt-8 mb-4">Các câu hỏi thường gặp về uy tín của 92Lottery</h2>
-          
+
           <div className="space-y-6 mb-8">
             {faqItems.map((faq, index) => (
               <div key={index} className="border-b border-gray-200 pb-4">
@@ -209,15 +211,15 @@ export default function TrustReviewPage() {
           </div>
 
           <h2 className="text-2xl font-semibold text-[#bc2022] mt-8 mb-4">Kết luận</h2>
-          
+
           <p className="mb-4">
-            Dựa trên các tiêu chí khách quan như giấy phép hoạt động, hệ thống bảo mật, chính sách thanh toán, 
-            đánh giá từ người chơi và chuyên gia, có thể khẳng định rằng <strong>92Lottery không phải là nhà cái lừa đảo</strong>. 
+            Dựa trên các tiêu chí khách quan như giấy phép hoạt động, hệ thống bảo mật, chính sách thanh toán,
+            đánh giá từ người chơi và chuyên gia, có thể khẳng định rằng <strong>92Lottery không phải là nhà cái lừa đảo</strong>.
             Ngược lại, đây là một nhà cái uy tín với cam kết mạnh mẽ về tính minh bạch, công bằng và bảo vệ người chơi.
           </p>
-          
+
           <p className="mb-4">
-            Nếu bạn đang tìm kiếm một nền tảng cá cược trực tuyến đáng tin cậy, 92Lottery là một lựa chọn đáng cân nhắc. 
+            Nếu bạn đang tìm kiếm một nền tảng cá cược trực tuyến đáng tin cậy, 92Lottery là một lựa chọn đáng cân nhắc.
             Tuy nhiên, hãy luôn nhớ rằng cá cược nên được xem là một hình thức giải trí và cần được thực hiện có trách nhiệm.
           </p>
 
