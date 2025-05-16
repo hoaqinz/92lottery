@@ -112,6 +112,67 @@ footer nav button {
     --chart-4: 280 65% 60%;
     --chart-5: 340 75% 55%;
   }
+
+  /* Mobile-first responsive container */
+  .mobile-container {
+    @apply w-full max-w-[420px] mx-auto overflow-hidden;
+  }
+
+  /* Safe area insets for modern mobile browsers */
+  @supports (padding: max(0px)) {
+    .safe-bottom {
+      padding-bottom: max(0.5rem, env(safe-area-inset-bottom));
+    }
+    
+    .safe-top {
+      padding-top: max(0.5rem, env(safe-area-inset-top));
+    }
+  }
+
+  /* Better touch targets for mobile */
+  .touch-target {
+    @apply min-h-[44px] min-w-[44px] flex items-center justify-center;
+  }
+
+  /* Smooth scrolling for mobile */
+  .smooth-scroll {
+    -webkit-overflow-scrolling: touch;
+    scroll-behavior: smooth;
+  }
+
+  /* Prevent text size adjustment on orientation change */
+  html {
+    -webkit-text-size-adjust: 100%;
+  }
+
+  /* Mobile optimizations */
+  @media (max-width: 420px) {
+    .dock-item-container:hover .dock-item {
+      transform: scale(1.2);
+    }
+
+    .menu-badge {
+      transform: scale(1);
+    }
+
+    .marketing-button::before {
+      inset: -3px;
+    }
+
+    .winner-item {
+      font-size: 0.875rem;
+    }
+  }
+
+  /* Better tap highlights for mobile */
+  @media (hover: none) {
+    .tap-highlight {
+      -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+      &:active {
+        @apply bg-opacity-10 bg-current;
+      }
+    }
+  }
 }
 
 @layer base {

@@ -3,56 +3,51 @@ import "./globals.css";
 import { generateGamblingWebsiteSchema } from "@/lib/schema";
 import { AuthProvider } from "@/contexts/AuthContext";
 import AuthPopup from "@/components/AuthPopup";
-import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://92lottery.dev'),
   title: {
-    template: '%s | 92LOTTERY',
-    default: '92LOTTERY - Xổ Số 1 Phút, Casino Trực Tuyến Uy Tín #1 Việt Nam'
+    template: '%s | 92Lottery - Cá cược xổ số & Casino trực tuyến',
+    default: '92Lottery - Xổ số & Casino trực tuyến | Cá cược uy tín hàng đầu Việt Nam'
   },
-  description: "92LOTTERY là nhà cái xổ số trực tuyến uy tín hàng đầu Việt Nam, cung cấp WinGo, K3 Lotre, 5D Lotre, TRX Win và nhiều trò chơi hấp dẫn khác. Đăng ký 92LOTTERY ngay để nhận khuyến mãi 100K và trải nghiệm dịch vụ chất lượng cao.",
-  keywords: ["92lottery", "trangchu92lottery", "dangky92lottery", "dangnhap92lottery", "92lotterykhuyenmai", "92lottery đăng nhập", "92lottery đăng ký", "92lottery bị sập", "92lottery telegram", "92lottery có lừa đảo không", "92lottery mini", "92lottery club", "app 92lottery", "cách đăng ký 92lottery", "rút tiền 92lottery", "nạp tiền 92lottery", "tải 92lottery", "link 92lottery", "92lottery việt nam", "WinGo", "K3 Lotre", "5D Lotre", "TRX Win"],
-  authors: [{ name: "92LOTTERY" }],
-  creator: "92LOTTERY",
-  publisher: "92LOTTERY",
-  applicationName: "92LOTTERY",
+  description: "92Lottery - Trang web cá cược xổ số, lottery, thể thao và casino trực tuyến hàng đầu Việt Nam với tỷ lệ trả thưởng cao nhất thị trường. Đăng ký ngay để nhận khuyến mãi đặc biệt từ 92lottery.",
+  keywords: ["92lottery", "cá cược", "xổ số", "lottery", "thể thao", "casino", "trò chơi trực tuyến", "đánh bài", "cá cược trực tuyến", "nhà cái uy tín", "92lottery việt nam"],
+  authors: [{ name: "92Lottery" }],
+  creator: "92Lottery",
+  publisher: "92Lottery",
+  applicationName: "92Lottery",
   generator: "Next.js",
   referrer: "origin-when-cross-origin",
   icons: {
-    icon: "/anh/favicon.png",
-    apple: "/anh/favicon.png"
+    icon: "/favicon.ico",
+    apple: "/apple-touch-icon.png"
   },
   manifest: "/manifest.json",
   openGraph: {
     type: "website",
     locale: "vi_VN",
     url: "https://92lottery.dev",
-    title: "92LOTTERY - Xổ Số 1 Phút, Casino Trực Tuyến Uy Tín #1 Việt Nam",
-    description: "92LOTTERY là nhà cái xổ số trực tuyến uy tín hàng đầu Việt Nam, cung cấp WinGo, K3 Lotre, 5D Lotre, TRX Win và nhiều trò chơi hấp dẫn khác. Đăng ký 92LOTTERY ngay để nhận khuyến mãi 100K.",
-    siteName: "92LOTTERY",
+    title: "92Lottery - Cá cược xổ số & Casino trực tuyến hàng đầu",
+    description: "92Lottery - Trang web cá cược xổ số, lottery, thể thao và casino trực tuyến hàng đầu Việt Nam. Đăng ký ngay để nhận khuyến mãi hấp dẫn.",
+    siteName: "92Lottery",
     images: [
       {
         url: "https://92lottery.dev/images/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "92LOTTERY - Xổ Số 1 Phút, Casino Trực Tuyến Uy Tín #1 Việt Nam",
+        alt: "92Lottery - Cá cược xổ số & Casino trực tuyến",
       }
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "92LOTTERY - Xổ Số 1 Phút, Casino Trực Tuyến Uy Tín #1 Việt Nam",
-    description: "92LOTTERY là nhà cái xổ số trực tuyến uy tín hàng đầu Việt Nam, cung cấp WinGo, K3 Lotre, 5D Lotre, TRX Win và nhiều trò chơi hấp dẫn khác. Đăng ký 92LOTTERY ngay để nhận khuyến mãi 100K.",
-    creator: "@92LOTTERY",
+    title: "92Lottery - Cá cược xổ số & Casino trực tuyến hàng đầu",
+    description: "92Lottery - Trang web cá cược xổ số, lottery, thể thao và casino trực tuyến hàng đầu Việt Nam.",
+    creator: "@92lottery",
     images: ["https://92lottery.dev/images/twitter-image.jpg"],
   },
   alternates: {
     canonical: "https://92lottery.dev",
-    languages: {
-      'vi': 'https://92lottery.dev',
-      'x-default': 'https://92lottery.dev'
-    }
   },
   robots: {
     index: true,
@@ -98,10 +93,8 @@ export default function RootLayout({
         <link rel="dns-prefetch" href="https://npq43b.com" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="black" />
-        <meta name="apple-mobile-web-app-title" content="92LOTTERY" />
+        <meta name="apple-mobile-web-app-title" content="92Lottery" />
         <link rel="manifest" href="/manifest.json" />
-        <link rel="alternate" type="application/json" href="/google-business-profile.json" />
-        <link rel="alternate" type="application/json" href="/knowledge-graph.json" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: schemaString }}
@@ -111,7 +104,6 @@ export default function RootLayout({
         <AuthProvider>
           <div className="w-full max-w-[420px] min-h-screen bg-white rounded-lg shadow-2xl relative overflow-x-hidden">
             {children}
-            <Footer />
             <AuthPopup />
           </div>
         </AuthProvider>
