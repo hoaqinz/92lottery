@@ -6,6 +6,8 @@ import Image from 'next/image';
 import { generateBreadcrumbSchema } from '@/lib/schema';
 import type { Metadata } from 'next';
 
+export const runtime = 'edge';
+
 // Dữ liệu video mẫu
 const videoData = {
   1: {
@@ -64,14 +66,14 @@ const relatedVideos = [
 export async function generateMetadata({ params }: { params: { id: string } }): Promise<Metadata> {
   const videoId = parseInt(params.id);
   const video = videoData[videoId as keyof typeof videoData];
-  
+
   if (!video) {
     return {
       title: 'Video không tồn tại - 92LOTTERY',
       description: 'Video bạn đang tìm kiếm không tồn tại hoặc đã bị xóa.',
     };
   }
-  
+
   return {
     title: `${video.title} - Video 92LOTTERY`,
     description: video.description,
@@ -85,12 +87,12 @@ export async function generateMetadata({ params }: { params: { id: string } }): 
 export default function VideoDetailPage({ params }: { params: { id: string } }) {
   const videoId = parseInt(params.id);
   const video = videoData[videoId as keyof typeof videoData];
-  
+
   if (!video) {
     return (
       <div className="flex flex-col w-full min-h-screen bg-[#f6f1f1]">
         <Header />
-        
+
         <main className="flex-1 max-w-[420px] mx-auto w-full bg-white pb-16 flex items-center justify-center">
           <div className="text-center p-4">
             <h1 className="text-2xl font-bold text-[#bc2022] mb-4">Video không tồn tại</h1>
@@ -100,19 +102,19 @@ export default function VideoDetailPage({ params }: { params: { id: string } }) 
             </Link>
           </div>
         </main>
-        
+
         <TabBar />
       </div>
     );
   }
-  
+
   // Generate breadcrumb schema
   const breadcrumbSchema = generateBreadcrumbSchema([
     { name: "Trang chủ", url: "https://92lottery.dev" },
     { name: "Video", url: "https://92lottery.dev/video" },
     { name: video.title, url: `https://92lottery.dev/video/${video.id}` }
   ]);
-  
+
   // Generate video schema
   const videoSchema = {
     "@context": "https://schema.org",
@@ -140,7 +142,7 @@ export default function VideoDetailPage({ params }: { params: { id: string } }) 
       }
     }
   };
-  
+
   return (
     <div className="flex flex-col w-full min-h-screen bg-[#f6f1f1]">
       {/* Schema.org JSON-LD */}
@@ -152,9 +154,9 @@ export default function VideoDetailPage({ params }: { params: { id: string } }) 
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(videoSchema) }}
       />
-      
+
       <Header />
-      
+
       <main className="flex-1 max-w-[420px] mx-auto w-full bg-white pb-16">
         <div className="p-4">
           {/* Breadcrumb */}
@@ -165,11 +167,11 @@ export default function VideoDetailPage({ params }: { params: { id: string } }) 
             <span className="mx-2">/</span>
             <span className="text-gray-700 truncate">{video.title}</span>
           </div>
-          
+
           {/* Video Player */}
           <div className="mb-6">
             <div className="relative w-full pt-[56.25%] bg-black rounded-lg overflow-hidden">
-              <iframe 
+              <iframe
                 className="absolute inset-0 w-full h-full"
                 src={`https://www.youtube.com/embed/${video.youtubeId}`}
                 title={video.title}
@@ -179,11 +181,11 @@ export default function VideoDetailPage({ params }: { params: { id: string } }) 
               ></iframe>
             </div>
           </div>
-          
+
           {/* Video Info */}
           <div className="mb-6">
             <h1 className="text-xl font-bold mb-2">{video.title}</h1>
-            
+
             <div className="flex items-center text-sm text-gray-500 mb-4">
               <span>{video.views} lượt xem</span>
               <span className="mx-2">•</span>
@@ -191,7 +193,7 @@ export default function VideoDetailPage({ params }: { params: { id: string } }) 
               <span className="mx-2">•</span>
               <span className="text-[#bc2022]">{video.category}</span>
             </div>
-            
+
             <div className="flex space-x-3 mb-4">
               <button className="flex items-center space-x-1 text-gray-700">
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -199,14 +201,14 @@ export default function VideoDetailPage({ params }: { params: { id: string } }) 
                 </svg>
                 <span>Thích</span>
               </button>
-              
+
               <button className="flex items-center space-x-1 text-gray-700">
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z"></path>
                 </svg>
                 <span>Chia sẻ</span>
               </button>
-              
+
               <button className="flex items-center space-x-1 text-gray-700">
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z"></path>
@@ -214,15 +216,15 @@ export default function VideoDetailPage({ params }: { params: { id: string } }) 
                 <span>Lưu</span>
               </button>
             </div>
-            
+
             <div className="bg-gray-50 p-4 rounded-lg">
               <h2 className="font-bold mb-2">Mô tả:</h2>
               <p className="text-gray-700 text-sm">{video.description}</p>
-              
+
               <div className="mt-3 flex flex-wrap gap-2">
                 {video.tags.map((tag, index) => (
-                  <Link 
-                    href={`/video/tag/${tag}`} 
+                  <Link
+                    href={`/video/tag/${tag}`}
                     key={index}
                     className="px-2 py-1 bg-gray-200 text-gray-700 rounded-full text-xs hover:bg-gray-300"
                   >
@@ -232,12 +234,12 @@ export default function VideoDetailPage({ params }: { params: { id: string } }) 
               </div>
             </div>
           </div>
-          
+
           {/* Channel Info */}
           <div className="mb-6 flex items-center">
             <div className="w-12 h-12 rounded-full overflow-hidden relative mr-3">
-              <Image 
-                src="/anh/favicon.png" 
+              <Image
+                src="/anh/favicon.png"
                 alt="92LOTTERY Channel"
                 fill
                 style={{objectFit: 'cover'}}
@@ -247,16 +249,16 @@ export default function VideoDetailPage({ params }: { params: { id: string } }) 
               <h3 className="font-bold">92LOTTERY Official</h3>
               <p className="text-sm text-gray-600">50K+ người đăng ký</p>
             </div>
-            <a 
-              href="https://www.youtube.com/channel/92lottery" 
-              target="_blank" 
+            <a
+              href="https://www.youtube.com/channel/92lottery"
+              target="_blank"
               rel="noopener noreferrer"
               className="px-4 py-1.5 bg-red-600 text-white rounded-lg text-sm font-medium"
             >
               Đăng ký
             </a>
           </div>
-          
+
           {/* Transcript */}
           <div className="mb-8">
             <h2 className="text-lg font-bold mb-3">Phụ đề video</h2>
@@ -264,18 +266,18 @@ export default function VideoDetailPage({ params }: { params: { id: string } }) 
               <p className="text-gray-700 text-sm whitespace-pre-line">{video.transcript}</p>
             </div>
           </div>
-          
+
           {/* Related Videos */}
           <div className="mb-8">
             <h2 className="text-lg font-bold mb-4">Video liên quan</h2>
-            
+
             <div className="space-y-4">
               {relatedVideos.map(video => (
                 <Link href={`/video/${video.id}`} key={video.id} className="block">
                   <div className="flex border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
                     <div className="relative h-24 w-32 flex-shrink-0">
-                      <Image 
-                        src={video.thumbnail} 
+                      <Image
+                        src={video.thumbnail}
                         alt={video.title}
                         fill
                         style={{objectFit: 'cover'}}
@@ -291,7 +293,7 @@ export default function VideoDetailPage({ params }: { params: { id: string } }) 
                         {video.duration}
                       </span>
                     </div>
-                    
+
                     <div className="p-3 flex-1">
                       <h3 className="font-medium text-sm line-clamp-2">{video.title}</h3>
                       <span className="text-xs text-[#bc2022] mt-1 block">{video.category}</span>
@@ -300,7 +302,7 @@ export default function VideoDetailPage({ params }: { params: { id: string } }) 
                 </Link>
               ))}
             </div>
-            
+
             <div className="mt-4">
               <Link href="/video" className="text-[#bc2022] font-medium flex items-center">
                 Xem tất cả video
@@ -310,35 +312,35 @@ export default function VideoDetailPage({ params }: { params: { id: string } }) 
               </Link>
             </div>
           </div>
-          
+
           {/* Comments */}
           <div className="mb-8">
             <h2 className="text-lg font-bold mb-4">Bình luận (24)</h2>
-            
+
             <div className="mb-4 flex">
               <div className="w-10 h-10 rounded-full overflow-hidden relative mr-3 flex-shrink-0">
-                <Image 
-                  src="/anh/avata/no1.png" 
+                <Image
+                  src="/anh/avata/no1.png"
                   alt="User Avatar"
                   fill
                   style={{objectFit: 'cover'}}
                 />
               </div>
               <div className="flex-1">
-                <input 
-                  type="text" 
-                  placeholder="Viết bình luận..." 
+                <input
+                  type="text"
+                  placeholder="Viết bình luận..."
                   className="w-full p-2 border border-gray-300 rounded-lg"
                 />
               </div>
             </div>
-            
+
             <div className="space-y-4">
               {/* Comment 1 */}
               <div className="flex">
                 <div className="w-10 h-10 rounded-full overflow-hidden relative mr-3 flex-shrink-0">
-                  <Image 
-                    src="/anh/avata/no2.png" 
+                  <Image
+                    src="/anh/avata/no2.png"
                     alt="User Avatar"
                     fill
                     style={{objectFit: 'cover'}}
@@ -361,12 +363,12 @@ export default function VideoDetailPage({ params }: { params: { id: string } }) 
                   </div>
                 </div>
               </div>
-              
+
               {/* Comment 2 */}
               <div className="flex">
                 <div className="w-10 h-10 rounded-full overflow-hidden relative mr-3 flex-shrink-0">
-                  <Image 
-                    src="/anh/avata/no3.png" 
+                  <Image
+                    src="/anh/avata/no3.png"
                     alt="User Avatar"
                     fill
                     style={{objectFit: 'cover'}}
@@ -390,14 +392,14 @@ export default function VideoDetailPage({ params }: { params: { id: string } }) 
                 </div>
               </div>
             </div>
-            
+
             <button className="mt-4 w-full py-2 border border-gray-300 rounded-lg text-gray-700 font-medium">
               Xem thêm bình luận
             </button>
           </div>
         </div>
       </main>
-      
+
       <TabBar />
     </div>
   );

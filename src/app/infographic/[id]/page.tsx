@@ -6,6 +6,8 @@ import Image from 'next/image';
 import { generateBreadcrumbSchema } from '@/lib/schema';
 import type { Metadata } from 'next';
 
+export const runtime = 'edge';
+
 // Dữ liệu infographic mẫu
 const infographicData = {
   1: {
@@ -59,14 +61,14 @@ const relatedInfographics = [
 export async function generateMetadata({ params }: { params: { id: string } }): Promise<Metadata> {
   const infographicId = parseInt(params.id);
   const infographic = infographicData[infographicId as keyof typeof infographicData];
-  
+
   if (!infographic) {
     return {
       title: 'Infographic không tồn tại - 92LOTTERY',
       description: 'Infographic bạn đang tìm kiếm không tồn tại hoặc đã bị xóa.',
     };
   }
-  
+
   return {
     title: `${infographic.title} - Infographic 92LOTTERY`,
     description: infographic.description,
@@ -80,12 +82,12 @@ export async function generateMetadata({ params }: { params: { id: string } }): 
 export default function InfographicDetailPage({ params }: { params: { id: string } }) {
   const infographicId = parseInt(params.id);
   const infographic = infographicData[infographicId as keyof typeof infographicData];
-  
+
   if (!infographic) {
     return (
       <div className="flex flex-col w-full min-h-screen bg-[#f6f1f1]">
         <Header />
-        
+
         <main className="flex-1 max-w-[420px] mx-auto w-full bg-white pb-16 flex items-center justify-center">
           <div className="text-center p-4">
             <h1 className="text-2xl font-bold text-[#bc2022] mb-4">Infographic không tồn tại</h1>
@@ -95,19 +97,19 @@ export default function InfographicDetailPage({ params }: { params: { id: string
             </Link>
           </div>
         </main>
-        
+
         <TabBar />
       </div>
     );
   }
-  
+
   // Generate breadcrumb schema
   const breadcrumbSchema = generateBreadcrumbSchema([
     { name: "Trang chủ", url: "https://92lottery.dev" },
     { name: "Infographic", url: "https://92lottery.dev/infographic" },
     { name: infographic.title, url: `https://92lottery.dev/infographic/${infographic.id}` }
   ]);
-  
+
   // Generate image schema
   const imageSchema = {
     "@context": "https://schema.org",
@@ -123,7 +125,7 @@ export default function InfographicDetailPage({ params }: { params: { id: string
     "copyrightNotice": "© 92LOTTERY",
     "license": "https://92lottery.dev/terms"
   };
-  
+
   return (
     <div className="flex flex-col w-full min-h-screen bg-[#f6f1f1]">
       {/* Schema.org JSON-LD */}
@@ -135,9 +137,9 @@ export default function InfographicDetailPage({ params }: { params: { id: string
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(imageSchema) }}
       />
-      
+
       <Header />
-      
+
       <main className="flex-1 max-w-[420px] mx-auto w-full bg-white pb-16">
         <div className="p-4">
           {/* Breadcrumb */}
@@ -148,10 +150,10 @@ export default function InfographicDetailPage({ params }: { params: { id: string
             <span className="mx-2">/</span>
             <span className="text-gray-700 truncate">{infographic.title}</span>
           </div>
-          
+
           {/* Infographic Header */}
           <h1 className="text-2xl font-bold text-[#bc2022] mb-4">{infographic.title}</h1>
-          
+
           <div className="flex items-center text-sm text-gray-500 mb-4">
             <span>{infographic.date}</span>
             <span className="mx-2">•</span>
@@ -159,19 +161,19 @@ export default function InfographicDetailPage({ params }: { params: { id: string
             <span className="mx-2">•</span>
             <span className="text-[#bc2022]">{infographic.category}</span>
           </div>
-          
+
           {/* Infographic Image */}
           <div className="mb-6">
             <div className="relative w-full pt-[100%] bg-gray-100 rounded-lg overflow-hidden border border-gray-200">
-              <Image 
-                src={infographic.image} 
+              <Image
+                src={infographic.image}
                 alt={infographic.title}
                 fill
                 style={{objectFit: 'contain'}}
                 priority
               />
             </div>
-            
+
             <div className="flex justify-between mt-4">
               <button className="flex items-center space-x-1 text-gray-700">
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -179,7 +181,7 @@ export default function InfographicDetailPage({ params }: { params: { id: string
                 </svg>
                 <span>Tải xuống</span>
               </button>
-              
+
               <div className="flex space-x-3">
                 <button className="flex items-center space-x-1 text-gray-700">
                   <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -187,7 +189,7 @@ export default function InfographicDetailPage({ params }: { params: { id: string
                   </svg>
                   <span>Chia sẻ</span>
                 </button>
-                
+
                 <button className="flex items-center space-x-1 text-gray-700">
                   <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z"></path>
@@ -197,14 +199,14 @@ export default function InfographicDetailPage({ params }: { params: { id: string
               </div>
             </div>
           </div>
-          
+
           {/* Infographic Info */}
           <div className="mb-6">
             <div className="bg-gray-50 p-4 rounded-lg mb-4">
               <h2 className="font-bold mb-2">Mô tả:</h2>
               <p className="text-gray-700 text-sm">{infographic.description}</p>
             </div>
-            
+
             <div className="bg-gray-50 p-4 rounded-lg">
               <h2 className="font-bold mb-2">Nội dung chi tiết:</h2>
               <div className="text-gray-700 text-sm whitespace-pre-line">
@@ -212,14 +214,14 @@ export default function InfographicDetailPage({ params }: { params: { id: string
               </div>
             </div>
           </div>
-          
+
           {/* Tags */}
           <div className="mb-6">
             <h2 className="font-bold mb-2">Tags:</h2>
             <div className="flex flex-wrap gap-2">
               {infographic.tags.map((tag, index) => (
-                <Link 
-                  href={`/infographic/tag/${tag}`} 
+                <Link
+                  href={`/infographic/tag/${tag}`}
                   key={index}
                   className="px-2 py-1 bg-gray-200 text-gray-700 rounded-full text-xs hover:bg-gray-300"
                 >
@@ -228,7 +230,7 @@ export default function InfographicDetailPage({ params }: { params: { id: string
               ))}
             </div>
           </div>
-          
+
           {/* Download Stats */}
           <div className="mb-8 bg-gray-50 p-4 rounded-lg flex items-center justify-between">
             <div>
@@ -242,24 +244,24 @@ export default function InfographicDetailPage({ params }: { params: { id: string
               Tải xuống
             </button>
           </div>
-          
+
           {/* Related Infographics */}
           <div className="mb-8">
             <h2 className="text-lg font-bold mb-4">Infographic liên quan</h2>
-            
+
             <div className="grid grid-cols-1 gap-4">
               {relatedInfographics.map(infographic => (
                 <Link href={`/infographic/${infographic.id}`} key={infographic.id} className="block">
                   <div className="flex border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
                     <div className="relative h-24 w-24 flex-shrink-0">
-                      <Image 
-                        src={infographic.image} 
+                      <Image
+                        src={infographic.image}
                         alt={infographic.title}
                         fill
                         style={{objectFit: 'cover'}}
                       />
                     </div>
-                    
+
                     <div className="p-3 flex-1">
                       <span className="text-xs text-[#bc2022] font-medium">{infographic.category}</span>
                       <h3 className="font-medium text-sm mt-1 line-clamp-2">{infographic.title}</h3>
@@ -268,7 +270,7 @@ export default function InfographicDetailPage({ params }: { params: { id: string
                 </Link>
               ))}
             </div>
-            
+
             <div className="mt-4">
               <Link href="/infographic" className="text-[#bc2022] font-medium flex items-center">
                 Xem tất cả infographic
@@ -278,35 +280,35 @@ export default function InfographicDetailPage({ params }: { params: { id: string
               </Link>
             </div>
           </div>
-          
+
           {/* Comments */}
           <div className="mb-8">
             <h2 className="text-lg font-bold mb-4">Bình luận (8)</h2>
-            
+
             <div className="mb-4 flex">
               <div className="w-10 h-10 rounded-full overflow-hidden relative mr-3 flex-shrink-0">
-                <Image 
-                  src="/anh/avata/no1.png" 
+                <Image
+                  src="/anh/avata/no1.png"
                   alt="User Avatar"
                   fill
                   style={{objectFit: 'cover'}}
                 />
               </div>
               <div className="flex-1">
-                <input 
-                  type="text" 
-                  placeholder="Viết bình luận..." 
+                <input
+                  type="text"
+                  placeholder="Viết bình luận..."
                   className="w-full p-2 border border-gray-300 rounded-lg"
                 />
               </div>
             </div>
-            
+
             <div className="space-y-4">
               {/* Comment 1 */}
               <div className="flex">
                 <div className="w-10 h-10 rounded-full overflow-hidden relative mr-3 flex-shrink-0">
-                  <Image 
-                    src="/anh/avata/no2.png" 
+                  <Image
+                    src="/anh/avata/no2.png"
                     alt="User Avatar"
                     fill
                     style={{objectFit: 'cover'}}
@@ -329,12 +331,12 @@ export default function InfographicDetailPage({ params }: { params: { id: string
                   </div>
                 </div>
               </div>
-              
+
               {/* Comment 2 */}
               <div className="flex">
                 <div className="w-10 h-10 rounded-full overflow-hidden relative mr-3 flex-shrink-0">
-                  <Image 
-                    src="/anh/avata/no3.png" 
+                  <Image
+                    src="/anh/avata/no3.png"
                     alt="User Avatar"
                     fill
                     style={{objectFit: 'cover'}}
@@ -358,14 +360,14 @@ export default function InfographicDetailPage({ params }: { params: { id: string
                 </div>
               </div>
             </div>
-            
+
             <button className="mt-4 w-full py-2 border border-gray-300 rounded-lg text-gray-700 font-medium">
               Xem thêm bình luận
             </button>
           </div>
         </div>
       </main>
-      
+
       <TabBar />
     </div>
   );
