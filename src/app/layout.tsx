@@ -7,15 +7,15 @@ import AuthPopup from "@/components/AuthPopup";
 export const metadata: Metadata = {
   metadataBase: new URL('https://92lottery.dev'),
   title: {
-    template: '%s | 92Lottery - Cá cược xổ số & Casino trực tuyến',
-    default: '92Lottery - Xổ số & Casino trực tuyến | Cá cược uy tín hàng đầu Việt Nam'
+    template: '%s | 92LOTTERY - Cá cược xổ số & Casino trực tuyến',
+    default: '92LOTTERY - Nhà cái xổ số & Casino trực tuyến uy tín hàng đầu Việt Nam'
   },
-  description: "92Lottery - Trang web cá cược xổ số, lottery, thể thao và casino trực tuyến hàng đầu Việt Nam với tỷ lệ trả thưởng cao nhất thị trường. Đăng ký ngay để nhận khuyến mãi đặc biệt từ 92lottery.",
-  keywords: ["92lottery", "cá cược", "xổ số", "lottery", "thể thao", "casino", "trò chơi trực tuyến", "đánh bài", "cá cược trực tuyến", "nhà cái uy tín", "92lottery việt nam"],
-  authors: [{ name: "92Lottery" }],
-  creator: "92Lottery",
-  publisher: "92Lottery",
-  applicationName: "92Lottery",
+  description: "92LOTTERY - Nhà cái xổ số, lottery, thể thao và casino trực tuyến uy tín hàng đầu Việt Nam với tỷ lệ trả thưởng cao nhất. Đăng ký 92LOTTERY ngay để nhận khuyến mãi 100K và trải nghiệm WinGo, K3 Lotre, 5D Lotre, TRX Win.",
+  keywords: ["92lottery", "92LOTTERY", "nhà cái 92lottery", "xổ số 92lottery", "92lottery việt nam", "đăng ký 92lottery", "đăng nhập 92lottery", "app 92lottery", "win go 92lottery", "k3 lotre", "5d lotre", "trx win"],
+  authors: [{ name: "92LOTTERY" }],
+  creator: "92LOTTERY",
+  publisher: "92LOTTERY",
+  applicationName: "92LOTTERY",
   generator: "Next.js",
   referrer: "origin-when-cross-origin",
   icons: {
@@ -27,22 +27,22 @@ export const metadata: Metadata = {
     type: "website",
     locale: "vi_VN",
     url: "https://92lottery.dev",
-    title: "92Lottery - Cá cược xổ số & Casino trực tuyến hàng đầu",
-    description: "92Lottery - Trang web cá cược xổ số, lottery, thể thao và casino trực tuyến hàng đầu Việt Nam. Đăng ký ngay để nhận khuyến mãi hấp dẫn.",
-    siteName: "92Lottery",
+    title: "92LOTTERY - Nhà cái xổ số & Casino trực tuyến uy tín hàng đầu Việt Nam",
+    description: "92LOTTERY - Nhà cái xổ số, lottery, thể thao và casino trực tuyến uy tín hàng đầu Việt Nam với tỷ lệ trả thưởng cao nhất. Đăng ký 92LOTTERY ngay để nhận khuyến mãi 100K.",
+    siteName: "92LOTTERY",
     images: [
       {
         url: "https://92lottery.dev/images/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "92Lottery - Cá cược xổ số & Casino trực tuyến",
+        alt: "92LOTTERY - Nhà cái xổ số & Casino trực tuyến uy tín hàng đầu Việt Nam",
       }
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "92Lottery - Cá cược xổ số & Casino trực tuyến hàng đầu",
-    description: "92Lottery - Trang web cá cược xổ số, lottery, thể thao và casino trực tuyến hàng đầu Việt Nam.",
+    title: "92LOTTERY - Nhà cái xổ số & Casino trực tuyến uy tín hàng đầu Việt Nam",
+    description: "92LOTTERY - Nhà cái xổ số, lottery, thể thao và casino trực tuyến uy tín hàng đầu Việt Nam với tỷ lệ trả thưởng cao nhất. Đăng ký 92LOTTERY ngay để nhận khuyến mãi 100K.",
     creator: "@92lottery",
     images: ["https://92lottery.dev/images/twitter-image.jpg"],
   },
