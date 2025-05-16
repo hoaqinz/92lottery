@@ -12,12 +12,12 @@ export const runtime = 'edge';
 const infographicData = {
   1: {
     id: 1,
-    title: "Phân tích xu hướng Win Go tháng 11/2023",
+    title: "Phân tích xu hướng Win Go tháng 5/2025",
     image: "/anh/infographic/wingo-trend-analysis.jpg",
-    description: "Phân tích chi tiết xu hướng kết quả Win Go trong tháng 11/2023, bao gồm tần suất xuất hiện của các số và màu, chuỗi kết quả, và thời điểm xuất hiện.",
-    content: "Infographic này phân tích chi tiết xu hướng kết quả Win Go trong tháng 11/2023 dựa trên dữ liệu từ hơn 43,200 lượt quay (30 ngày x 24 giờ x 60 phút). Các phát hiện chính bao gồm:\n\n1. Phân bố màu: Đỏ (41.2%), Xanh (39.8%), Tím (19.0%)\n\n2. Số xuất hiện nhiều nhất: 7 (Đỏ) - 11.3%, 4 (Xanh) - 10.8%, 9 (Đỏ) - 10.5%\n\n3. Số xuất hiện ít nhất: 0 (Tím) - 9.2%, 5 (Tím) - 9.8%, 2 (Xanh) - 9.9%\n\n4. Chuỗi màu dài nhất: Đỏ - 8 lần liên tiếp, Xanh - 7 lần liên tiếp, Tím - 3 lần liên tiếp\n\n5. Thời điểm xuất hiện màu Tím nhiều nhất: 20:00 - 22:00\n\n6. Tỷ lệ chẵn/lẻ: Chẵn (49.7%), Lẻ (50.3%)\n\n7. Tỷ lệ lớn/nhỏ: Lớn (50.5%), Nhỏ (49.5%)\n\nDựa trên phân tích này, chúng tôi đề xuất một số chiến thuật cá cược:\n\n- Đặt cược vào màu Đỏ trong khung giờ 8:00 - 12:00\n- Đặt cược vào màu Xanh trong khung giờ 14:00 - 18:00\n- Đặt cược vào màu Tím trong khung giờ 20:00 - 22:00\n- Sử dụng chiến thuật Martingale với giới hạn 3 lần gấp đôi\n- Theo dõi chuỗi 3 lần Đỏ hoặc Xanh liên tiếp và đặt cược ngược lại\n\nLưu ý: Đây là phân tích dựa trên dữ liệu lịch sử và không đảm bảo kết quả trong tương lai. Luôn chơi có trách nhiệm và quản lý vốn cẩn thận.",
+    description: "Phân tích chi tiết xu hướng kết quả Win Go trong tháng 5/2025, bao gồm tần suất xuất hiện của các số và màu, chuỗi kết quả, và thời điểm xuất hiện.",
+    content: "Infographic này phân tích chi tiết xu hướng kết quả Win Go trong tháng 5/2025 dựa trên dữ liệu từ hơn 43,200 lượt quay (30 ngày x 24 giờ x 60 phút). Các phát hiện chính bao gồm:\n\n1. Phân bố màu: Đỏ (41.2%), Xanh (39.8%), Tím (19.0%)\n\n2. Số xuất hiện nhiều nhất: 7 (Đỏ) - 11.3%, 4 (Xanh) - 10.8%, 9 (Đỏ) - 10.5%\n\n3. Số xuất hiện ít nhất: 0 (Tím) - 9.2%, 5 (Tím) - 9.8%, 2 (Xanh) - 9.9%\n\n4. Chuỗi màu dài nhất: Đỏ - 8 lần liên tiếp, Xanh - 7 lần liên tiếp, Tím - 3 lần liên tiếp\n\n5. Thời điểm xuất hiện màu Tím nhiều nhất: 20:00 - 22:00\n\n6. Tỷ lệ chẵn/lẻ: Chẵn (49.7%), Lẻ (50.3%)\n\n7. Tỷ lệ lớn/nhỏ: Lớn (50.5%), Nhỏ (49.5%)\n\nDựa trên phân tích này, chúng tôi đề xuất một số chiến thuật cá cược:\n\n- Đặt cược vào màu Đỏ trong khung giờ 8:00 - 12:00\n- Đặt cược vào màu Xanh trong khung giờ 14:00 - 18:00\n- Đặt cược vào màu Tím trong khung giờ 20:00 - 22:00\n- Sử dụng chiến thuật Martingale với giới hạn 3 lần gấp đôi\n- Theo dõi chuỗi 3 lần Đỏ hoặc Xanh liên tiếp và đặt cược ngược lại\n\nLưu ý: Đây là phân tích dựa trên dữ liệu lịch sử và không đảm bảo kết quả trong tương lai. Luôn chơi có trách nhiệm và quản lý vốn cẩn thận.",
     category: "Win Go",
-    date: "15/11/2023",
+    date: "12/05/2025",
     author: "Chuyên gia 92LOTTERY",
     downloads: 1245,
     tags: ["win go", "phân tích", "xu hướng", "thống kê", "chiến thuật"]

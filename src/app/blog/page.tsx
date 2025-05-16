@@ -24,7 +24,7 @@ const blogPosts = [
     excerpt: 'Khám phá những chiến thuật Win Go hiệu quả nhất giúp tăng tỷ lệ thắng tại 92LOTTERY. Phân tích dữ liệu, nhận diện mẫu và áp dụng quản lý vốn thông minh.',
     image: '/anh/blog/win-go-strategy.jpg',
     category: 'Chiến thuật',
-    date: '2023-11-15',
+    date: '2025-05-10',
     author: 'Chuyên gia 92LOTTERY',
     readTime: '8 phút đọc'
   },
@@ -35,18 +35,18 @@ const blogPosts = [
     excerpt: 'Bài viết hướng dẫn chi tiết cách chơi K3 Lotre từ A-Z dành cho người mới. Tìm hiểu luật chơi, các kiểu cược và chiến thuật cơ bản để bắt đầu.',
     image: '/anh/blog/k3-lotre-guide.jpg',
     category: 'Hướng dẫn',
-    date: '2023-11-10',
+    date: '2025-05-05',
     author: 'Chuyên gia 92LOTTERY',
     readTime: '10 phút đọc'
   },
   {
     id: 3,
-    title: 'Phân tích xu hướng xổ số 5D Lotre trong tháng 11/2023',
+    title: 'Phân tích xu hướng xổ số 5D Lotre trong tháng 4/2025',
     slug: 'phan-tich-xu-huong-xo-so-5d-lotre',
-    excerpt: 'Phân tích chuyên sâu về xu hướng kết quả 5D Lotre trong tháng 11/2023. Thống kê số ra nhiều, ít và các mẫu xuất hiện thường xuyên.',
+    excerpt: 'Phân tích chuyên sâu về xu hướng kết quả 5D Lotre trong tháng 4/2025. Thống kê số ra nhiều, ít và các mẫu xuất hiện thường xuyên.',
     image: '/anh/blog/5d-lotre-analysis.jpg',
     category: 'Phân tích',
-    date: '2023-11-05',
+    date: '2025-04-28',
     author: 'Chuyên gia 92LOTTERY',
     readTime: '12 phút đọc'
   },
@@ -111,9 +111,9 @@ export default function BlogPage() {
     { name: "Trang chủ", url: "https://92lottery.dev" },
     { name: "Blog", url: "https://92lottery.dev/blog" }
   ]);
-  
+
   const faqSchema = generateFAQSchema(blogFaqs);
-  
+
   return (
     <div className="flex flex-col w-full min-h-screen bg-[#f6f1f1]">
       {/* Schema.org JSON-LD */}
@@ -125,13 +125,13 @@ export default function BlogPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
-      
+
       <Header />
-      
+
       <main className="flex-1 max-w-[420px] mx-auto w-full bg-white pb-16">
         <div className="p-4">
           <h1 className="text-2xl font-bold text-[#bc2022] mb-4">Blog 92LOTTERY</h1>
-          
+
           <div className="mb-6">
             <div className="flex overflow-x-auto space-x-2 py-2 mb-4">
               <button className="px-4 py-2 bg-[#bc2022] text-white rounded-full whitespace-nowrap">Tất cả</button>
@@ -140,11 +140,11 @@ export default function BlogPage() {
               <button className="px-4 py-2 bg-gray-200 text-gray-700 rounded-full whitespace-nowrap">Phân tích</button>
               <button className="px-4 py-2 bg-gray-200 text-gray-700 rounded-full whitespace-nowrap">Tin tức</button>
             </div>
-            
+
             <div className="relative">
-              <input 
-                type="text" 
-                placeholder="Tìm kiếm bài viết..." 
+              <input
+                type="text"
+                placeholder="Tìm kiếm bài viết..."
                 className="w-full p-3 border border-gray-300 rounded-lg pl-10"
               />
               <svg className="w-5 h-5 absolute left-3 top-3.5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -152,14 +152,14 @@ export default function BlogPage() {
               </svg>
             </div>
           </div>
-          
+
           <div className="space-y-6">
             {blogPosts.map(post => (
               <Link href={`/blog/${post.slug}`} key={post.id} className="block">
                 <div className="border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
                   <div className="relative h-48 w-full">
-                    <Image 
-                      src={post.image} 
+                    <Image
+                      src={post.image}
                       alt={post.title}
                       fill
                       style={{objectFit: 'cover'}}
@@ -169,17 +169,17 @@ export default function BlogPage() {
                       {post.category}
                     </span>
                   </div>
-                  
+
                   <div className="p-4">
                     <div className="flex items-center text-xs text-gray-500 mb-2">
                       <span>{post.date}</span>
                       <span className="mx-2">•</span>
                       <span>{post.readTime}</span>
                     </div>
-                    
+
                     <h2 className="text-lg font-bold mb-2 line-clamp-2">{post.title}</h2>
                     <p className="text-gray-600 text-sm line-clamp-3 mb-3">{post.excerpt}</p>
-                    
+
                     <div className="flex justify-between items-center">
                       <span className="text-xs text-gray-500">{post.author}</span>
                       <span className="text-[#bc2022] text-sm font-medium">Đọc tiếp →</span>
@@ -189,17 +189,17 @@ export default function BlogPage() {
               </Link>
             ))}
           </div>
-          
+
           <div className="mt-8 flex justify-center">
             <button className="px-6 py-3 bg-[#bc2022] text-white rounded-lg font-medium">
               Xem thêm bài viết
             </button>
           </div>
-          
+
           {/* FAQ Section */}
           <div className="mt-12 border-t pt-8">
             <h2 className="text-xl font-bold mb-6">Câu hỏi thường gặp</h2>
-            
+
             <div className="space-y-4">
               {blogFaqs.map((faq, index) => (
                 <div key={index} className="border border-gray-200 rounded-lg p-4">
@@ -211,7 +211,7 @@ export default function BlogPage() {
           </div>
         </div>
       </main>
-      
+
       <TabBar />
     </div>
   );

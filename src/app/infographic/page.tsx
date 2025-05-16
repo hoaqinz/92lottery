@@ -41,18 +41,18 @@ export default function InfographicPage() {
     { name: "Trang chủ", url: "https://92lottery.dev" },
     { name: "Infographic", url: "https://92lottery.dev/infographic" }
   ]);
-  
+
   const faqSchema = generateFAQSchema(infographicFaqs);
-  
+
   // Dữ liệu infographic
   const featuredInfographics = [
     {
       id: 1,
-      title: "Phân tích xu hướng Win Go tháng 11/2023",
+      title: "Phân tích xu hướng Win Go tháng 5/2025",
       image: "/anh/infographic/wingo-trend-analysis.jpg",
-      description: "Phân tích chi tiết xu hướng kết quả Win Go trong tháng 11/2023, bao gồm tần suất xuất hiện của các số và màu, chuỗi kết quả, và thời điểm xuất hiện.",
+      description: "Phân tích chi tiết xu hướng kết quả Win Go trong tháng 5/2025, bao gồm tần suất xuất hiện của các số và màu, chuỗi kết quả, và thời điểm xuất hiện.",
       category: "Win Go",
-      date: "15/11/2023",
+      date: "12/05/2025",
       downloads: 1245
     },
     {
@@ -61,11 +61,11 @@ export default function InfographicPage() {
       image: "/anh/infographic/win-rate-comparison.jpg",
       description: "So sánh trực quan tỷ lệ thắng giữa các trò chơi tại 92LOTTERY, giúp người chơi lựa chọn trò chơi phù hợp với chiến thuật và mục tiêu của mình.",
       category: "So sánh",
-      date: "10/11/2023",
+      date: "05/05/2025",
       downloads: 987
     }
   ];
-  
+
   const statisticsInfographics = [
     {
       id: 3,
@@ -96,31 +96,31 @@ export default function InfographicPage() {
       date: "15/11/2023"
     }
   ];
-  
+
   const strategyInfographics = [
     {
       id: 7,
       title: "5 chiến thuật quản lý vốn hiệu quả",
       image: "/anh/infographic/bankroll-management.jpg",
       category: "Chiến thuật",
-      date: "05/11/2023"
+      date: "01/05/2025"
     },
     {
       id: 8,
       title: "Chiến thuật Martingale cho Win Go",
       image: "/anh/infographic/martingale-strategy.jpg",
       category: "Chiến thuật",
-      date: "01/11/2023"
+      date: "28/04/2025"
     },
     {
       id: 9,
       title: "Chiến thuật D'Alembert cho K3 Lotre",
       image: "/anh/infographic/dalembert-strategy.jpg",
       category: "Chiến thuật",
-      date: "28/10/2023"
+      date: "25/04/2025"
     }
   ];
-  
+
   return (
     <div className="flex flex-col w-full min-h-screen bg-[#f6f1f1]">
       {/* Schema.org JSON-LD */}
@@ -132,13 +132,13 @@ export default function InfographicPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
-      
+
       <Header />
-      
+
       <main className="flex-1 max-w-[420px] mx-auto w-full bg-white pb-16">
         <div className="p-4">
           <h1 className="text-2xl font-bold text-[#bc2022] mb-4">Infographic 92LOTTERY</h1>
-          
+
           {/* Infographic Categories */}
           <div className="mb-6">
             <div className="flex overflow-x-auto space-x-2 py-2 mb-4">
@@ -149,11 +149,11 @@ export default function InfographicPage() {
               <button className="px-4 py-2 bg-gray-200 text-gray-700 rounded-full whitespace-nowrap">TRX Win</button>
               <button className="px-4 py-2 bg-gray-200 text-gray-700 rounded-full whitespace-nowrap">Chiến thuật</button>
             </div>
-            
+
             <div className="relative">
-              <input 
-                type="text" 
-                placeholder="Tìm kiếm infographic..." 
+              <input
+                type="text"
+                placeholder="Tìm kiếm infographic..."
                 className="w-full p-3 border border-gray-300 rounded-lg pl-10"
               />
               <svg className="w-5 h-5 absolute left-3 top-3.5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -161,18 +161,18 @@ export default function InfographicPage() {
               </svg>
             </div>
           </div>
-          
+
           {/* Featured Infographics */}
           <div className="mb-8">
             <h2 className="text-lg font-bold mb-4">Infographic Nổi bật</h2>
-            
+
             <div className="space-y-4">
               {featuredInfographics.map(infographic => (
                 <Link href={`/infographic/${infographic.id}`} key={infographic.id} className="block">
                   <div className="border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
                     <div className="relative h-48 w-full">
-                      <Image 
-                        src={infographic.image} 
+                      <Image
+                        src={infographic.image}
                         alt={infographic.title}
                         fill
                         style={{objectFit: 'cover'}}
@@ -181,7 +181,7 @@ export default function InfographicPage() {
                         {infographic.category}
                       </span>
                     </div>
-                    
+
                     <div className="p-4">
                       <h3 className="font-bold mb-2 line-clamp-2">{infographic.title}</h3>
                       <p className="text-sm text-gray-600 mb-3 line-clamp-2">{infographic.description}</p>
@@ -195,18 +195,18 @@ export default function InfographicPage() {
               ))}
             </div>
           </div>
-          
+
           {/* Statistics Infographics */}
           <div className="mb-8">
             <h2 className="text-lg font-bold mb-4">Thống kê Kết quả</h2>
-            
+
             <div className="grid grid-cols-2 gap-4">
               {statisticsInfographics.map(infographic => (
                 <Link href={`/infographic/${infographic.id}`} key={infographic.id} className="block">
                   <div className="border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
                     <div className="relative h-32 w-full">
-                      <Image 
-                        src={infographic.image} 
+                      <Image
+                        src={infographic.image}
                         alt={infographic.title}
                         fill
                         style={{objectFit: 'cover'}}
@@ -215,7 +215,7 @@ export default function InfographicPage() {
                         {infographic.category}
                       </span>
                     </div>
-                    
+
                     <div className="p-3">
                       <h3 className="font-medium text-sm line-clamp-2">{infographic.title}</h3>
                       <div className="flex items-center text-xs text-gray-500 mt-1">
@@ -226,7 +226,7 @@ export default function InfographicPage() {
                 </Link>
               ))}
             </div>
-            
+
             <div className="mt-4">
               <Link href="/infographic/thong-ke" className="text-[#bc2022] font-medium flex items-center">
                 Xem tất cả thống kê
@@ -236,24 +236,24 @@ export default function InfographicPage() {
               </Link>
             </div>
           </div>
-          
+
           {/* Strategy Infographics */}
           <div className="mb-8">
             <h2 className="text-lg font-bold mb-4">Chiến thuật & Mẹo hay</h2>
-            
+
             <div className="space-y-4">
               {strategyInfographics.map(infographic => (
                 <Link href={`/infographic/${infographic.id}`} key={infographic.id} className="block">
                   <div className="flex border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
                     <div className="relative h-24 w-32 flex-shrink-0">
-                      <Image 
-                        src={infographic.image} 
+                      <Image
+                        src={infographic.image}
                         alt={infographic.title}
                         fill
                         style={{objectFit: 'cover'}}
                       />
                     </div>
-                    
+
                     <div className="p-3 flex-1">
                       <span className="text-xs text-[#bc2022] font-medium">{infographic.category}</span>
                       <h3 className="font-medium text-sm mt-1 line-clamp-2">{infographic.title}</h3>
@@ -265,7 +265,7 @@ export default function InfographicPage() {
                 </Link>
               ))}
             </div>
-            
+
             <div className="mt-4">
               <Link href="/infographic/chien-thuat" className="text-[#bc2022] font-medium flex items-center">
                 Xem tất cả chiến thuật
@@ -275,25 +275,25 @@ export default function InfographicPage() {
               </Link>
             </div>
           </div>
-          
+
           {/* Create Infographic */}
           <div className="mb-8 bg-gray-50 p-4 rounded-lg">
             <h2 className="text-lg font-bold mb-3">Tạo Infographic Tùy chỉnh</h2>
             <p className="text-sm text-gray-600 mb-4">
               Tạo infographic tùy chỉnh dựa trên dữ liệu và chiến thuật của riêng bạn. Chọn trò chơi, khoảng thời gian và các thông số bạn muốn phân tích.
             </p>
-            <Link 
-              href="/infographic/tao-moi" 
+            <Link
+              href="/infographic/tao-moi"
               className="block w-full bg-[#bc2022] text-white text-center py-2 rounded-lg font-medium"
             >
               Tạo Infographic
             </Link>
           </div>
-          
+
           {/* FAQ Section */}
           <div className="mt-8">
             <h2 className="text-xl font-bold mb-6">Câu hỏi thường gặp</h2>
-            
+
             <div className="space-y-4">
               {infographicFaqs.map((faq, index) => (
                 <div key={index} className="border border-gray-200 rounded-lg p-4">
@@ -305,7 +305,7 @@ export default function InfographicPage() {
           </div>
         </div>
       </main>
-      
+
       <TabBar />
     </div>
   );

@@ -42,9 +42,9 @@ export default function BlogPostPage() {
     { name: "Blog", url: "https://92lottery.dev/blog" },
     { name: "Chiến thuật Win Go hiệu quả nhất", url: "https://92lottery.dev/blog/chien-thuat-win-go-hieu-qua-nhat" }
   ]);
-  
+
   const faqSchema = generateFAQSchema(postFaqs);
-  
+
   // Dữ liệu bài viết liên quan
   const relatedPosts = [
     {
@@ -66,7 +66,7 @@ export default function BlogPostPage() {
       image: '/anh/blog/wingo-vs-5d.jpg',
     }
   ];
-  
+
   return (
     <div className="flex flex-col w-full min-h-screen bg-[#f6f1f1]">
       {/* Schema.org JSON-LD */}
@@ -78,9 +78,9 @@ export default function BlogPostPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
-      
+
       <Header />
-      
+
       <main className="flex-1 max-w-[420px] mx-auto w-full bg-white pb-16">
         <div className="p-4">
           {/* Breadcrumb */}
@@ -91,29 +91,29 @@ export default function BlogPostPage() {
             <span className="mx-2">/</span>
             <span className="text-gray-700">Chiến thuật Win Go</span>
           </div>
-          
+
           {/* Article Header */}
           <h1 className="text-2xl font-bold text-[#bc2022] mb-4">Chiến thuật Win Go hiệu quả nhất tại 92LOTTERY</h1>
-          
+
           <div className="flex items-center text-sm text-gray-500 mb-4">
-            <span>15/11/2023</span>
+            <span>10/05/2025</span>
             <span className="mx-2">•</span>
             <span>Chuyên gia 92LOTTERY</span>
             <span className="mx-2">•</span>
             <span>8 phút đọc</span>
           </div>
-          
+
           {/* Featured Image */}
           <div className="relative h-64 w-full mb-6 rounded-lg overflow-hidden">
-            <Image 
-              src="/anh/blog/win-go-strategy.jpg" 
+            <Image
+              src="/anh/blog/win-go-strategy.jpg"
               alt="Chiến thuật Win Go hiệu quả nhất tại 92LOTTERY"
               fill
               style={{objectFit: 'cover'}}
               priority
             />
           </div>
-          
+
           {/* Table of Contents */}
           <div className="bg-gray-50 p-4 rounded-lg mb-6">
             <h2 className="font-bold mb-2">Mục lục:</h2>
@@ -126,13 +126,13 @@ export default function BlogPostPage() {
               <li><a href="#ket-luan" className="hover:underline">6. Kết luận</a></li>
             </ul>
           </div>
-          
+
           {/* Article Content */}
           <div className="prose max-w-none">
             <section id="gioi-thieu">
               <h2 className="text-xl font-bold mb-3">1. Giới thiệu về Win Go</h2>
               <p className="mb-4">
-                Win Go là một trong những trò chơi xổ số phổ biến nhất tại 92LOTTERY với chu kỳ quay thưởng chỉ 1 phút. 
+                Win Go là một trong những trò chơi xổ số phổ biến nhất tại 92LOTTERY với chu kỳ quay thưởng chỉ 1 phút.
                 Người chơi có thể đặt cược vào kết quả số (0-9) hoặc màu sắc (Xanh/Đỏ/Tím). Mỗi số sẽ tương ứng với một màu:
               </p>
               <ul className="list-disc pl-5 mb-4">
@@ -149,15 +149,15 @@ export default function BlogPostPage() {
                 <li>Đặt màu Tím: Tỷ lệ 1:4.5</li>
               </ul>
               <p className="mb-4">
-                Với chu kỳ quay thưởng nhanh và tỷ lệ trả thưởng hấp dẫn, Win Go là lựa chọn lý tưởng cho những người muốn 
+                Với chu kỳ quay thưởng nhanh và tỷ lệ trả thưởng hấp dẫn, Win Go là lựa chọn lý tưởng cho những người muốn
                 trải nghiệm cảm giác hồi hộp và có cơ hội thắng thưởng nhanh chóng.
               </p>
             </section>
-            
+
             <section id="chien-thuat-1" className="mt-8">
               <h2 className="text-xl font-bold mb-3">2. Chiến thuật Martingale cho Win Go</h2>
               <p className="mb-4">
-                Chiến thuật Martingale là một trong những phương pháp phổ biến nhất khi chơi Win Go. Nguyên tắc cơ bản là 
+                Chiến thuật Martingale là một trong những phương pháp phổ biến nhất khi chơi Win Go. Nguyên tắc cơ bản là
                 gấp đôi tiền cược sau mỗi lần thua, và quay lại mức cược ban đầu sau khi thắng.
               </p>
               <div className="bg-gray-50 p-4 rounded-lg mb-4">
@@ -173,11 +173,11 @@ export default function BlogPostPage() {
                 <strong>Ưu điểm:</strong> Chiến thuật này có xác suất thắng cao trong ngắn hạn, đặc biệt khi đặt vào màu Đỏ/Xanh với tỷ lệ gần 50%.
               </p>
               <p className="mb-4">
-                <strong>Nhược điểm:</strong> Yêu cầu vốn lớn và có thể dẫn đến thua lỗ nặng nếu gặp chuỗi thua dài. Vì vậy, cần đặt giới hạn 
+                <strong>Nhược điểm:</strong> Yêu cầu vốn lớn và có thể dẫn đến thua lỗ nặng nếu gặp chuỗi thua dài. Vì vậy, cần đặt giới hạn
                 số lần gấp đôi (thường là 3-4 lần) để bảo vệ vốn.
               </p>
             </section>
-            
+
             <section id="chien-thuat-2" className="mt-8">
               <h2 className="text-xl font-bold mb-3">3. Chiến thuật theo dõi xu hướng</h2>
               <p className="mb-4">
@@ -199,17 +199,17 @@ export default function BlogPostPage() {
                 <strong>Nhược điểm:</strong> Đòi hỏi thời gian theo dõi và phân tích. Xu hướng có thể thay đổi đột ngột.
               </p>
             </section>
-            
+
             {/* Phần nội dung còn lại sẽ được thêm vào tương tự */}
-            
+
             <section id="ket-luan" className="mt-8">
               <h2 className="text-xl font-bold mb-3">6. Kết luận</h2>
               <p className="mb-4">
-                Win Go là trò chơi hấp dẫn tại 92LOTTERY với cơ hội thắng thưởng nhanh chóng. Bằng cách áp dụng các chiến thuật 
+                Win Go là trò chơi hấp dẫn tại 92LOTTERY với cơ hội thắng thưởng nhanh chóng. Bằng cách áp dụng các chiến thuật
                 đã chia sẻ và tuân thủ nguyên tắc quản lý vốn, bạn có thể tăng đáng kể tỷ lệ thắng của mình.
               </p>
               <p className="mb-4">
-                Hãy nhớ rằng không có chiến thuật nào đảm bảo 100% thắng lợi. Quan trọng nhất là chơi có trách nhiệm, 
+                Hãy nhớ rằng không có chiến thuật nào đảm bảo 100% thắng lợi. Quan trọng nhất là chơi có trách nhiệm,
                 đặt giới hạn rõ ràng và xem Win Go như một hình thức giải trí thay vì cách kiếm tiền.
               </p>
               <p className="mb-4">
@@ -217,12 +217,12 @@ export default function BlogPostPage() {
               </p>
             </section>
           </div>
-          
+
           {/* Author Info */}
           <div className="mt-8 border-t border-b py-4 flex items-center">
             <div className="w-16 h-16 rounded-full overflow-hidden relative mr-4">
-              <Image 
-                src="/anh/avata/no1.png" 
+              <Image
+                src="/anh/avata/no1.png"
                 alt="Chuyên gia 92LOTTERY"
                 fill
                 style={{objectFit: 'cover'}}
@@ -233,11 +233,11 @@ export default function BlogPostPage() {
               <p className="text-sm text-gray-600">Chuyên gia phân tích và chiến thuật cá cược với hơn 10 năm kinh nghiệm trong ngành.</p>
             </div>
           </div>
-          
+
           {/* FAQ Section */}
           <div className="mt-8">
             <h2 className="text-xl font-bold mb-6">Câu hỏi thường gặp</h2>
-            
+
             <div className="space-y-4">
               {postFaqs.map((faq, index) => (
                 <div key={index} className="border border-gray-200 rounded-lg p-4">
@@ -247,18 +247,18 @@ export default function BlogPostPage() {
               ))}
             </div>
           </div>
-          
+
           {/* Related Posts */}
           <div className="mt-8">
             <h2 className="text-xl font-bold mb-4">Bài viết liên quan</h2>
-            
+
             <div className="grid grid-cols-1 gap-4">
               {relatedPosts.map(post => (
                 <Link href={`/blog/${post.slug}`} key={post.id} className="block">
                   <div className="flex border border-gray-200 rounded-lg overflow-hidden">
                     <div className="relative h-24 w-24 flex-shrink-0">
-                      <Image 
-                        src={post.image} 
+                      <Image
+                        src={post.image}
                         alt={post.title}
                         fill
                         style={{objectFit: 'cover'}}
@@ -273,7 +273,7 @@ export default function BlogPostPage() {
               ))}
             </div>
           </div>
-          
+
           {/* Share Buttons */}
           <div className="mt-8 flex justify-center space-x-4">
             <button className="px-4 py-2 bg-blue-600 text-white rounded-lg flex items-center">
@@ -297,7 +297,7 @@ export default function BlogPostPage() {
           </div>
         </div>
       </main>
-      
+
       <TabBar />
     </div>
   );
