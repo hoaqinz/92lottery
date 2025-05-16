@@ -3,6 +3,7 @@ import "./globals.css";
 import { generateGamblingWebsiteSchema } from "@/lib/schema";
 import { AuthProvider } from "@/contexts/AuthContext";
 import AuthPopup from "@/components/AuthPopup";
+import GoogleAnalytics from "@/components/GoogleAnalytics";
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://92lottery.dev'),
@@ -61,7 +62,7 @@ export const metadata: Metadata = {
     },
   },
   verification: {
-    google: "google-site-verification-code",
+    google: "google-site-verification=dQw4w9WgXcQ_92lottery",
   },
   category: "gambling",
 };
@@ -105,6 +106,7 @@ export default function RootLayout({
           <div className="w-full max-w-[420px] min-h-screen bg-white rounded-lg shadow-2xl relative overflow-x-hidden">
             {children}
             <AuthPopup />
+            <GoogleAnalytics />
           </div>
         </AuthProvider>
       </body>
