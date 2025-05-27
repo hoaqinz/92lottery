@@ -1,0 +1,17 @@
+name = "nextjs-app"
+main = "src/worker/index.js"
+compatibility_date = "2025-01-01"
+
+[assets]
+directory = "./out"
+binding = "ASSETS"
+not_found_handling = "single-page-application"
+
+# Environment variables
+[vars]
+NODE_ENV = "production"
+
+# Custom domains (replace with your domain)
+# [[routes]]
+# pattern = "yourdomain.com/*"
+# zone_name = "yourdomain.com"
