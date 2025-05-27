@@ -1,11 +1,8 @@
 name = "nextjs-app"
-main = "src/worker/index.js"
 compatibility_date = "2025-01-01"
 
-[assets]
-directory = "./out"
-binding = "ASSETS"
-not_found_handling = "single-page-application"
+# Cloudflare Pages configuration
+pages_build_output_dir = ".next"
 
 # Environment variables
 [vars]

@@ -9,7 +9,8 @@
     "lint": "bunx biome lint --write && bunx tsc --noEmit",
     "format": "bunx biome format --write",
     "deploy:cloudflare": "./deploy-cloudflare.sh",
-    "preview:cloudflare": "wrangler dev"
+    "preview:cloudflare": "wrangler dev",
+    "pages:build": "next build"
   },
   "dependencies": {
     "class-variance-authority": "^0.7.1",
