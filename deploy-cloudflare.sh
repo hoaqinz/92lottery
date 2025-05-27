@@ -8,15 +8,28 @@ if ! command -v wrangler &> /dev/null; then
     npm install -g wrangler
 fi
 
-# Build the Next.js app
-echo "🏗️ Building Next.js app..."
-bun run build
+# Backup original next.config.js
+echo "💾 Backing up Next.js config..."
+cp next.config.js next.config.backup.js
+
+# Use Cloudflare-specific config
+echo "⚙️ Using Cloudflare config..."
+cp next.config.cloudflare.js next.config.js
+
+# Build the Next.js app for Cloudflare
+echo "🏗️ Building Next.js app for Cloudflare..."
+npm run build
+
+# Restore original config
+echo "🔄 Restoring original config..."
+cp next.config.backup.js next.config.js
+rm next.config.backup.js
 
 # Check if out directory exists (Next.js export creates 'out' directory)
 if [ -d "out" ]; then
     echo "📁 Using 'out' directory for static assets"
     # Update wrangler.toml to use 'out' directory
-    sed -i.bak 's|directory = "./.next/static"|directory = "./out"|g' wrangler.toml
+    sed -i.bak 's|directory = "./out"|directory = "./out"|g' wrangler.toml
 fi
 
 # Deploy to Cloudflare Workers

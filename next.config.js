@@ -1,8 +1,5 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // Optimize for Cloudflare Workers
-  output: 'export',
-  trailingSlash: true,
   images: {
     unoptimized: true,
     domains: [
